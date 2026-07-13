@@ -1,15 +1,15 @@
 # AI Ops Office
 
-An interactive 2D pixel-office demo that visualizes Human + AI agent collaboration and artifact-based handoffs across PM, Dev, and QA teams.
+一个交互式 2D 像素办公室演示项目，用于呈现产品、开发与测试团队中，人类与 AI Agent 的协作方式，以及以标准化产物为单位的交接流程。
 
-## Highlights
+## 功能概览
 
-- A visual office map for PM, Dev, QA, and a central Artifact Hub
-- Human avatars and AI-agent status indicators
-- Artifact-based handoffs: PRD → Feature → Test Report
-- Contextual inspector panel and guided demo story controls
+- PM、Dev、QA 与中央 Artifact Hub 的可视化办公室地图
+- 人物头像及 AI Agent 状态提示
+- 以产物为中心的交接链路：PRD → Feature → Test Report
+- 结合地图选择的详情面板和演示流程控制
 
-## Run locally
+## 本地运行
 
 ```bash
 cd apps/office-demo
@@ -17,7 +17,7 @@ npm install
 npm run dev
 ```
 
-## Verify
+## 验证项目
 
 ```bash
 cd apps/office-demo
@@ -25,8 +25,8 @@ npm test
 npm run build
 ```
 
-## Project structure
+## 项目结构
 
-- `apps/office-demo/` — React + Vite interactive demo
-- `docs/` — product design, layout, and implementation documentation
-- `images/` — source visual assets
+- `apps/office-demo/`：React + Vite 交互式演示应用
+- `docs/`：产品设计、布局与实施文档
+- `images/`：源视觉素材

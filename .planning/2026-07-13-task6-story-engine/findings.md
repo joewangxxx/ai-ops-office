@@ -1,0 +1,17 @@
+# Task 6 findings
+
+- Task 5 is present as a nine-state Alice/Jack PRD story with a boolean `storyIsPlaying` and actor waypoint animation held in a hook. It needs a runtime that owns both playback status and waypoint progress.
+- Task 5’s completed plan confirms prior Task 4/4.1 visual work and has an explicit history of correcting seated placement only through JSON anchors.
+- Browser automation instructions were loaded. The Task 6 visual check will use a stable `agent-browser` session and save artifacts under `apps/office-demo/screenshots`.
+- Pre-change 1440×900 screenshot is saved as `apps/office-demo/screenshots/task6-before.png`. The scene, Inspector and Controller are all visible; the baseline has Hub counts PRD 1 / Feature 3 / Report 1 on screen, while Task 6 requires Feature 2 until Feature storage.
+- Current JSON already contains PRD producer/consumer routes, Hub slots, and Task 5 artifact/status anchors. It needs explicit Dev producer and QA consumer routes plus Quinn-specific Feature, receipt, and testing anchors.
+- Current frame/components are specifically typed for Alice/Jack and one PRD (`artifact.location` branches in the component). This confirms the generic StoryFrame should carry resolved actors, artifacts, signals, and counts rather than have React infer story business state.
+- Root cause for pause: `OfficeScene` unconditionally passes `false` as the pause argument to `useStoryActorPosition`, while the hook owns waypoint state independently of the story state. The playback boolean only clears the state-transition timer, so actor motion continues.
+- `StoryControllerShell` determines completion by the hard-coded `dev-coding` terminal state. The new terminal state must be `qa-testing`, and completion must be a playback status, not an inferred label.
+- Existing Inspector projections already support dynamic Workspace metric lists and artifact detail navigation. The story projection only needs to provide consistent artifact status, person task/input fields, workspace metric IDs, Hub counts, and capped handoffs.
+- Existing tests intentionally assert Feature 3 at the Hub in the ready frame. Task 6 changes that product rule to Feature 2 before storage, so those assertions must be updated as part of the specified behavior change rather than treated as a regression.
+- The JSON now defines `devProducerRoute` (Jack) and `qaConsumerRoute` (Quinn), plus Quinn’s carried Feature offset, desk anchor, receipt bubble anchor, and testing label anchor. The QA route exits via the clear west side of the shallow QA room and uses a public-corridor approach point below-left of the Hub.
+- The new engine test was observed red because the requested runtime API did not exist. It is now green, together with a UI test that freezes the actual Alice waypoint and resumes from the retained coordinate.
+- Full regression is green after updating legacy Task 5 expectations to the new manual-step behavior and adapting the initial Hub Feature count to 2. The production build is also green.
+- Browser pause evidence: while Jack carried the Feature, the browser reported identical inline position styles before and 900 ms after Pause (`left: 51.9737%`, `top: 34.2189%`); resuming was performed through the retained runtime route, not a reset.
+- The first broad screenshot batches captured some later manual states than their filenames implied. The application state itself is test-covered, but each final screenshot will be re-captured only after directly querying `story-state` in the live DOM.
