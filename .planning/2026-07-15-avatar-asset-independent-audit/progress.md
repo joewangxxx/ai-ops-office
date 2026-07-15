@@ -1,0 +1,33 @@
+# Independent Audit Progress
+
+## 2026-07-15
+- Started an independent post-generation audit of the 42 avatar assets.
+- Loaded the completed generation plan, findings, and progress for expected filenames and known risk areas.
+- Completed the independent filename/file-presence inventory: 42/42 targets present with a consistent 7 x 6 matrix.
+- Regenerated independent validator evidence: 42/42 automated technical pass, 0 missing, 0 failures.
+- Re-ran the validator unit suite: 12/12 tests pass.
+- Inspected the independently regenerated seated and movement contact sheets at original resolution.
+- Flagged Alice carry-up readability and five characters' side-seated geometry for targeted raw/composite inspection; all other movement semantics look correct so far.
+- Reviewed per-file alpha geometry, residue/component metrics, foot anchors, and all seven seated-pair comparisons; no technical anomaly was found.
+- Cleared Alice carry-up after raw inspection; confirmed Bob's side-seated geometry requires a product-standard decision.
+- Raw inspection of Jack and Rita confirms the side-seated pattern is systematic rather than a contact-sheet illusion.
+- Confirmed the working-pose consequence on Bob and Kara: hands point right rather than toward the top-aligned keyboard. Classified the same five characters' seated pairs as rework candidates.
+- Confirmed Alice and Quinn seated-working assets match the intended centered, monitor-facing workstation geometry.
+- Compared all final movement rows against the legacy reference sheet; identity, direction, palette, and movement-scale consistency pass.
+- Rechecked the written generation standard and confirmed workstation fit is a required acceptance criterion, supporting rejection of the five side-facing seated pairs.
+- Confirmed all 28 legacy reference assets are unchanged and each character retains six target files.
+- Wrote `audit-report.md` with exact pass/fail counts, ten rework paths, causes, and regeneration standards.
+- Completed the independent audit.
+- Final fresh verification: validator again reports 42 expected/present, 42 automated technical pass, 0 missing/failure; filesystem assertion confirms 32 frontend-ready and 10 rework assets.
+- Began Phase 4 to independently recheck the ten regenerated seated assets.
+- Logged a non-destructive PowerShell formatting error from the first metadata-inventory attempt; no image was read incompletely or modified.
+- Confirmed all ten target files were replaced on 2026-07-15 and remain 1254x1254 alpha images.
+- Fresh post-replacement validator run passes all 42 assets technically with no missing files or automated failures.
+- Inspected the regenerated seated contact sheet at original resolution; all five reworked character pairs now use centered rear-facing workstation geometry.
+- Targeted raw inspection of Leo and Rita working poses confirms raised forearms toward the desk despite subtler hand visibility at 150px.
+- Reviewed post-replacement seated-pair drift, upper-silhouette overlap, fixed-150px size, and source-center metrics; all five pairs are stable and in range.
+- Replaced the first-audit report with the final recheck report: 42/42 pass, 0 rework.
+- Logged a final-assertion schema error: report UTF-8 check passed, but validator counts resolved blank because the script used shortened field names instead of the JSON's `*_count` names; no image validation failed.
+- Second assertion confirmed expected=42, present=42, missing=0, technical pass=42, but still used the wrong technical-failure key; switched to explicit property enumeration before the final attempt.
+- Enumerated the validator schema and completed the final assertion successfully: expected/present/pass=42, missing/technical failure/decode failure=0; the report contains the final 42/42 result and no stale 32/42 conclusion.
+- Fresh validator unit suite remains 12/12 passing.

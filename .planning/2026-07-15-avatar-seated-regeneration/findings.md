@@ -1,0 +1,30 @@
+# Findings
+
+- 工作区存在七名角色各四张旧身份参考；Bob、Jack、Kara、Leo、Rita 的身份特征在参考审计表中一致。
+- Alice 与 Quinn 的坐姿对照构成合格几何基准：正背面、头肩/躯干沿中轴、腿收于座椅区，Working 双手朝画面上方。
+- 被返工五人的旧坐姿均为后右侧 3/4，不能作为姿势模板，只能用于身份/服装细节参考。
+- 旧生成记录表明，独立生成 Idle 与 Working 容易产生姿势与锚点漂移；从已验收 Idle 派生 Working 更能锁定身份、尺度与座位锚点。
+- 当前工作树包含大量与本任务无关的既有改动；返工必须严格限制在 10 张目标资产、临时 QA 证据和本任务规划/报告文件。
+- 旧提示中的 “back-facing three-quarter top-down” 把相机俯角与人物偏航混在一起，是侧向姿势的主要诱因。新提示必须写明：相机略俯视，但人物 yaw=0°，严格朝画面 12 点；不得再用 “three-quarter” 描述人物姿势。
+- 推荐方案：每角色先独立生成严格背面 Idle，通过后以该 Idle 为主要编辑参考，只改变双臂派生 Working。五名角色可并行，但单角色必须串行 Idle→Working。
+- Idle 不引用失败 seated 或右向 `walk.png`/`carry.png`；优先使用本角色 `walk-up.png` 锁背面身份，`idle.png`/`at-desk.png` 锁颜色比例，Alice/Quinn 合格 seated 锁姿势。
+- Working 使用新通过 Idle + Alice/Quinn Working；头发、躯干、骨盆、腿、尺度和锚点保持不变，仅双前臂与手对称朝 12 点伸出。
+- 身份硬锁：Bob 圆蓬乱黑发/深海军蓝；Jack 高耸尖刺黑发/亮钴蓝/无眼镜；Kara 紫罗兰 bob/背面无徽章；Leo 侧扫黑发/暗海军蓝/瘦小；Rita 坐姿散开齐肩栗发/白衬衫/无马尾或发髻。
+- 视觉硬门：头—脊柱—骨盆沿中轴、双肩近水平、无可见脸、腿收在椅区；Working 双手同高且对称朝上；150px 合成中中轴对准键盘/显示器，任何侧坐观感一票否决。
+- 自动技术检查不能代替朝向验收；旧坏样本的上半轮廓 IoU 仍可高达 0.982–0.997。
+- 设计自检要求：Working 完全不改变躯干/前倾；建立 imagegen 输入白名单；替换前保存 32 张通过目标与 28 张旧参考的 SHA-256 基线；增加硬像素边缘、像素密度、有限色板与分块阴影风格门。
+- Bob Idle attempt 1：bbox `(431,258)-(826,974)`，1254×1254 RGBA，单连通主体，green/chroma=0；原图为严格正背面，肩/骨盆/腿居中，双手低放；150px 工位合成中中轴对准显示器/键盘，视觉通过并晋级为 accepted Idle。
+- Jack Idle attempt 1：bbox `(437,237)-(816,962)`，技术全通过；尖刺黑发、亮钴蓝上衣、无眼镜/背徽，头肩与腿沿中轴，双手低放，工位合成严格面向上方，晋级 accepted Idle。
+- Kara Idle attempt 1：bbox `(441,254)-(817,889)`，技术全通过；紫罗兰圆顶 bob 与外翻发梢、紫色上衣、娇小比例正确，背/袖无徽章；正背面中轴和工位方向通过，晋级 accepted Idle。
+- Leo Idle attempt 1：bbox `(459,271)-(807,960)`，技术全通过；顺滑侧扫黑发、暗去饱和海军蓝与窄肩比例正确，无镜片/脸/背徽；150px 可见高度约 82.3px，工位合成比例仍协调，正背面中轴通过，晋级 accepted Idle。
+- Rita Idle attempt 1：bbox `(454,276)-(801,932)`，150px 可见高度约 78.4px，技术全通过；散开齐肩栗发、白衬衫、纤细比例正确，无马尾/发髻；双腿和鞋收于躯干中轴，工位合成读取为背坐，晋级 accepted Idle。
+- Bob Working attempt 1：技术 pass、pair center-X drift 8.5px、upper IoU 0.972，但场景人工门 FAIL。双手在头侧抬得过高且间距过宽，掌面/手指朝镜头像举手，未落在中央键盘宽度内；候选保留在 tmp，不晋级。
+- Bob Working attempt 2：针对性收窄/下移双手后通过。bbox `(448,261)-(813,968)`，技术 pass，center-X drift 2.0px、top/bottom 漂移在 15px 内、upper IoU 0.961；下半身与身份稳定，双前臂对称向上且双手落在键盘宽度内，晋级 accepted Working。
+- Jack Working attempt 1：bbox `(437,252)-(817,959)`，技术 pass，center-X drift 0.5px、纵向中心漂移 6px、upper IoU 0.924；尖刺黑发、钴蓝上衣、下半身与锚点保持稳定，双手紧凑对称地向上内收并落在中央键盘宽度内，晋级 accepted Working。
+- Kara Working attempt 1：bbox `(441,255)-(817,888)`，技术 pass，中心漂移 0px、尺寸变化仅 `(0,-2)`、upper IoU 0.993；紫罗兰 bob、紫色躯干、腿与锚点近乎逐像素保持，双臂紧凑对称向上内收并在工位合成中对准键盘，晋级 accepted Working。
+- Leo Working attempt 1：bbox `(460,272)-(808,956)`，技术 pass，中心漂移 `(1,-1.5)`px、尺寸变化 `(0,-5)`、upper IoU 0.975；侧扫黑发、暗海军蓝躯干、下半身与锚点稳定，无脸/镜片/背徽，双臂姿势与 Quinn 合格基准一致并在工位层叠中指向键盘，晋级 accepted Working。
+- Rita Working attempt 1：技术与配对几何通过（中心漂移 `(-0.5,1)`px、upper IoU 0.978），发型、白衬衫与下半身稳定；但原图及工位合成均看不到肤色手部，Working 动作不够明确，人工动作门 FAIL。候选保留在 tmp，不晋级；下一次仅补出袖口内侧、中央键盘宽度内的两只小型肤色手部。
+- Rita Working attempt 2：定点补足双手后通过。bbox `(456,279)-(798,930)`，技术 pass，中心漂移 `(-0.5,0.5)`px、尺寸变化 `(-5,-5)`、upper IoU 0.982；双手在原图与工位合成中均清晰可见并指向中央键盘，发型、白衬衫、腿与锚点保持稳定，晋级 accepted Working。
+- 整组候选对照复核撤销 Kara Working attempt 1 的晋级：双臂方向正确，但肤色双手完全被紫色袖口吞没；与 Alice/Quinn 的 Working 动作可读性不一致。最终路径尚未覆盖；将仅补出中央键盘宽度内的小型肤色手部后重新验收。
+- Kara Working attempt 2：定点补手后通过。bbox `(443,256)-(816,888)`，技术 pass，中心漂移 `(0.5,0.5)`px、尺寸变化 `(-3,-3)`、upper IoU 0.985；双手在袖口上方清晰可见并朝中央键盘，紫罗兰 bob、紫色躯干、腿、无背徽身份锁与锚点保持稳定，重新晋级 accepted Working。
+- 第三路独立身份/配对 QA 判定 Leo 通过，但 Kara 与 Rita 暂不满足“Idle/Working 只改变手臂”的严格门：Kara Working 的头发、紫衣及下半身整体更亮偏洋红，Rita Working 的栗发更红橙、更亮，状态切换存在整身/发色色彩闪变。已撤销这两张 Working 的最终通过，保留姿势，仅统一非手臂色板后再验收。

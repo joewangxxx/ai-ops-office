@@ -1,0 +1,67 @@
+{
+  "Bob": {
+    "idle_status": "pass",
+    "working_status": "pass",
+    "center_delta": [
+      2.0,
+      -1.5
+    ],
+    "size_delta": [
+      -30,
+      -9
+    ],
+    "upper_iou": 0.961371
+  },
+  "Jack": {
+    "idle_status": "pass",
+    "working_status": "pass",
+    "center_delta": [
+      0.5,
+      6.0
+    ],
+    "size_delta": [
+      1,
+      -18
+    ],
+    "upper_iou": 0.924329
+  },
+  "Kara": {
+    "idle_status": "pass",
+    "working_status": "pass",
+    "center_delta": [
+      0.5,
+      0.5
+    ],
+    "size_delta": [
+      -3,
+      -3
+    ],
+    "upper_iou": 0.98503
+  },
+  "Leo": {
+    "idle_status": "pass",
+    "working_status": "pass",
+    "center_delta": [
+      1.0,
+      -1.5
+    ],
+    "size_delta": [
+      0,
+      -5
+    ],
+    "upper_iou": 0.974877
+  },
+  "Rita": {
+    "idle_status": "pass",
+    "working_status": "pass",
+    "center_delta": [
+      -0.5,
+      0.5
+    ],
+    "size_delta": [
+      -5,
+      -5
+    ],
+    "upper_iou": 0.981686
+  }
+}

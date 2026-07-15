@@ -1,0 +1,4507 @@
+{
+  "schema_version": 1,
+  "root": "C:/Users/29929/Desktop/AI-Wrokspace",
+  "metric_definitions": {
+    "alpha_bbox": "Pillow exclusive-right/exclusive-bottom bbox of alpha>0",
+    "partial_alpha_count": "pixels with 0<alpha<255",
+    "visible_alpha_count": "pixels with alpha>=64; scale floor is 0.2% area, 8% width, and 20% height",
+    "green_dominant_count": "visible pixels where G>=96, G>=R+32, and G>=B+32",
+    "chroma_key_like_count": "visible pixels where G>=220, R<=48, and B<=48",
+    "component_count_8": "8-connected components across alpha>0",
+    "foot_anchor": "stable bottom center from alpha>=64; sparse low rows are ignored"
+  },
+  "summary": {
+    "expected_count": 42,
+    "present_count": 42,
+    "missing_count": 0,
+    "automated_technical_pass_count": 42,
+    "automated_technical_failure_count": 0,
+    "decode_failure_count": 0,
+    "manual_reviewed_count": 0,
+    "overall_status": "manual_review_required"
+  },
+  "assets": {
+    "Alice": {
+      "seated-idle-back.png": {
+        "path": "images/avatars/Alice/seated-idle-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Alice/seated-idle-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Alice/idle.png",
+          "images/avatars/Alice/at-desk.png",
+          "images/avatars/Alice/walk.png",
+          "images/avatars/Alice/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          458,
+          277,
+          800,
+          965
+        ],
+        "nonzero_alpha_count": 188871,
+        "partial_alpha_count": 3310,
+        "visible_alpha_count": 187851,
+        "visible_alpha_bbox": [
+          459,
+          277,
+          799,
+          965
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "seated-working-back.png": {
+        "path": "images/avatars/Alice/seated-working-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Alice/seated-working-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Alice/idle.png",
+          "images/avatars/Alice/at-desk.png",
+          "images/avatars/Alice/walk.png",
+          "images/avatars/Alice/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          445,
+          280,
+          810,
+          964
+        ],
+        "nonzero_alpha_count": 188092,
+        "partial_alpha_count": 3225,
+        "visible_alpha_count": 187364,
+        "visible_alpha_bbox": [
+          445,
+          281,
+          810,
+          964
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "walk-up.png": {
+        "path": "images/avatars/Alice/walk-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Alice/walk-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Alice/idle.png",
+          "images/avatars/Alice/at-desk.png",
+          "images/avatars/Alice/walk.png",
+          "images/avatars/Alice/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          470,
+          219,
+          773,
+          996
+        ],
+        "nonzero_alpha_count": 161873,
+        "partial_alpha_count": 2385,
+        "visible_alpha_count": 161418,
+        "visible_alpha_bbox": [
+          470,
+          219,
+          772,
+          996
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            601.0,
+            995
+          ],
+          "normalized": [
+            0.479649,
+            0.794094
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 16,
+          "foot_band": [
+            965,
+            995
+          ],
+          "foot_span": [
+            573,
+            629
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "walk-down.png": {
+        "path": "images/avatars/Alice/walk-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Alice/walk-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Alice/idle.png",
+          "images/avatars/Alice/at-desk.png",
+          "images/avatars/Alice/walk.png",
+          "images/avatars/Alice/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          454,
+          182,
+          788,
+          1067
+        ],
+        "nonzero_alpha_count": 195654,
+        "partial_alpha_count": 3170,
+        "visible_alpha_count": 195014,
+        "visible_alpha_bbox": [
+          454,
+          183,
+          788,
+          1067
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            653.0,
+            1066
+          ],
+          "normalized": [
+            0.521149,
+            0.850758
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 17,
+          "foot_band": [
+            1032,
+            1066
+          ],
+          "foot_span": [
+            624,
+            682
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-up.png": {
+        "path": "images/avatars/Alice/carry-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Alice/carry-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Alice/idle.png",
+          "images/avatars/Alice/at-desk.png",
+          "images/avatars/Alice/walk.png",
+          "images/avatars/Alice/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          462,
+          178,
+          829,
+          1016
+        ],
+        "nonzero_alpha_count": 188155,
+        "partial_alpha_count": 3328,
+        "visible_alpha_count": 187273,
+        "visible_alpha_bbox": [
+          463,
+          179,
+          829,
+          1016
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            665.5,
+            1015
+          ],
+          "normalized": [
+            0.531125,
+            0.810056
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 18,
+          "foot_band": [
+            983,
+            1015
+          ],
+          "foot_span": [
+            639,
+            692
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-down.png": {
+        "path": "images/avatars/Alice/carry-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Alice/carry-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Alice/idle.png",
+          "images/avatars/Alice/at-desk.png",
+          "images/avatars/Alice/walk.png",
+          "images/avatars/Alice/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          466,
+          164,
+          786,
+          1044
+        ],
+        "nonzero_alpha_count": 180922,
+        "partial_alpha_count": 2905,
+        "visible_alpha_count": 180174,
+        "visible_alpha_bbox": [
+          466,
+          165,
+          786,
+          1044
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            649.5,
+            1043
+          ],
+          "normalized": [
+            0.518356,
+            0.832402
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 16,
+          "foot_band": [
+            1009,
+            1043
+          ],
+          "foot_span": [
+            623,
+            676
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      }
+    },
+    "Bob": {
+      "seated-idle-back.png": {
+        "path": "images/avatars/Bob/seated-idle-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Bob/seated-idle-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Bob/idle.png",
+          "images/avatars/Bob/at-desk.png",
+          "images/avatars/Bob/walk.png",
+          "images/avatars/Bob/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          431,
+          258,
+          826,
+          974
+        ],
+        "nonzero_alpha_count": 233216,
+        "partial_alpha_count": 3176,
+        "visible_alpha_count": 232630,
+        "visible_alpha_bbox": [
+          431,
+          259,
+          825,
+          974
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "seated-working-back.png": {
+        "path": "images/avatars/Bob/seated-working-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Bob/seated-working-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Bob/idle.png",
+          "images/avatars/Bob/at-desk.png",
+          "images/avatars/Bob/walk.png",
+          "images/avatars/Bob/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          448,
+          261,
+          813,
+          968
+        ],
+        "nonzero_alpha_count": 216299,
+        "partial_alpha_count": 3564,
+        "visible_alpha_count": 215401,
+        "visible_alpha_bbox": [
+          448,
+          262,
+          812,
+          968
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "walk-up.png": {
+        "path": "images/avatars/Bob/walk-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Bob/walk-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Bob/idle.png",
+          "images/avatars/Bob/at-desk.png",
+          "images/avatars/Bob/walk.png",
+          "images/avatars/Bob/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          448,
+          189,
+          784,
+          1015
+        ],
+        "nonzero_alpha_count": 184378,
+        "partial_alpha_count": 3475,
+        "visible_alpha_count": 182987,
+        "visible_alpha_bbox": [
+          448,
+          190,
+          784,
+          1015
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            658.0,
+            1014
+          ],
+          "normalized": [
+            0.52514,
+            0.809258
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 17,
+          "foot_band": [
+            982,
+            1014
+          ],
+          "foot_span": [
+            628,
+            688
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "walk-down.png": {
+        "path": "images/avatars/Bob/walk-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Bob/walk-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Bob/idle.png",
+          "images/avatars/Bob/at-desk.png",
+          "images/avatars/Bob/walk.png",
+          "images/avatars/Bob/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          453,
+          148,
+          809,
+          1027
+        ],
+        "nonzero_alpha_count": 219922,
+        "partial_alpha_count": 3182,
+        "visible_alpha_count": 218999,
+        "visible_alpha_bbox": [
+          453,
+          148,
+          808,
+          1027
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            592.5,
+            1026
+          ],
+          "normalized": [
+            0.472865,
+            0.818835
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 18,
+          "foot_band": [
+            992,
+            1026
+          ],
+          "foot_span": [
+            560,
+            625
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-up.png": {
+        "path": "images/avatars/Bob/carry-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Bob/carry-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Bob/idle.png",
+          "images/avatars/Bob/at-desk.png",
+          "images/avatars/Bob/walk.png",
+          "images/avatars/Bob/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          458,
+          167,
+          911,
+          1034
+        ],
+        "nonzero_alpha_count": 207642,
+        "partial_alpha_count": 3559,
+        "visible_alpha_count": 206225,
+        "visible_alpha_bbox": [
+          458,
+          167,
+          911,
+          1034
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            650.5,
+            1033
+          ],
+          "normalized": [
+            0.519154,
+            0.824421
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 22,
+          "foot_band": [
+            999,
+            1033
+          ],
+          "foot_span": [
+            620,
+            681
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-down.png": {
+        "path": "images/avatars/Bob/carry-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Bob/carry-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Bob/idle.png",
+          "images/avatars/Bob/at-desk.png",
+          "images/avatars/Bob/walk.png",
+          "images/avatars/Bob/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          431,
+          138,
+          874,
+          1080
+        ],
+        "nonzero_alpha_count": 240531,
+        "partial_alpha_count": 3957,
+        "visible_alpha_count": 239470,
+        "visible_alpha_bbox": [
+          431,
+          139,
+          873,
+          1080
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            584.5,
+            1079
+          ],
+          "normalized": [
+            0.46648,
+            0.861133
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 22,
+          "foot_band": [
+            1042,
+            1079
+          ],
+          "foot_span": [
+            549,
+            620
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      }
+    },
+    "Jack": {
+      "seated-idle-back.png": {
+        "path": "images/avatars/Jack/seated-idle-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Jack/seated-idle-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Jack/idle.png",
+          "images/avatars/Jack/at-desk.png",
+          "images/avatars/Jack/walk.png",
+          "images/avatars/Jack/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          437,
+          237,
+          816,
+          962
+        ],
+        "nonzero_alpha_count": 218028,
+        "partial_alpha_count": 3374,
+        "visible_alpha_count": 217148,
+        "visible_alpha_bbox": [
+          437,
+          237,
+          816,
+          961
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "seated-working-back.png": {
+        "path": "images/avatars/Jack/seated-working-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Jack/seated-working-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Jack/idle.png",
+          "images/avatars/Jack/at-desk.png",
+          "images/avatars/Jack/walk.png",
+          "images/avatars/Jack/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          437,
+          252,
+          817,
+          959
+        ],
+        "nonzero_alpha_count": 217692,
+        "partial_alpha_count": 3814,
+        "visible_alpha_count": 216857,
+        "visible_alpha_bbox": [
+          437,
+          252,
+          817,
+          959
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "walk-up.png": {
+        "path": "images/avatars/Jack/walk-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Jack/walk-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Jack/idle.png",
+          "images/avatars/Jack/at-desk.png",
+          "images/avatars/Jack/walk.png",
+          "images/avatars/Jack/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          420,
+          141,
+          824,
+          1089
+        ],
+        "nonzero_alpha_count": 237862,
+        "partial_alpha_count": 3567,
+        "visible_alpha_count": 236937,
+        "visible_alpha_bbox": [
+          420,
+          141,
+          823,
+          1088
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            666.5,
+            1087
+          ],
+          "normalized": [
+            0.531923,
+            0.867518
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 20,
+          "foot_band": [
+            1050,
+            1087
+          ],
+          "foot_span": [
+            628,
+            705
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "walk-down.png": {
+        "path": "images/avatars/Jack/walk-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Jack/walk-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Jack/idle.png",
+          "images/avatars/Jack/at-desk.png",
+          "images/avatars/Jack/walk.png",
+          "images/avatars/Jack/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          413,
+          166,
+          832,
+          1062
+        ],
+        "nonzero_alpha_count": 254289,
+        "partial_alpha_count": 4035,
+        "visible_alpha_count": 253173,
+        "visible_alpha_bbox": [
+          413,
+          166,
+          832,
+          1062
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            666.0,
+            1061
+          ],
+          "normalized": [
+            0.531524,
+            0.846768
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 21,
+          "foot_band": [
+            1026,
+            1061
+          ],
+          "foot_span": [
+            629,
+            703
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-up.png": {
+        "path": "images/avatars/Jack/carry-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Jack/carry-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Jack/idle.png",
+          "images/avatars/Jack/at-desk.png",
+          "images/avatars/Jack/walk.png",
+          "images/avatars/Jack/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          438,
+          127,
+          945,
+          1045
+        ],
+        "nonzero_alpha_count": 243401,
+        "partial_alpha_count": 3776,
+        "visible_alpha_count": 242504,
+        "visible_alpha_bbox": [
+          438,
+          128,
+          944,
+          1045
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            666.5,
+            1044
+          ],
+          "normalized": [
+            0.531923,
+            0.8332
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 25,
+          "foot_band": [
+            1008,
+            1044
+          ],
+          "foot_span": [
+            630,
+            703
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-down.png": {
+        "path": "images/avatars/Jack/carry-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Jack/carry-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Jack/idle.png",
+          "images/avatars/Jack/at-desk.png",
+          "images/avatars/Jack/walk.png",
+          "images/avatars/Jack/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          418,
+          163,
+          826,
+          1056
+        ],
+        "nonzero_alpha_count": 241975,
+        "partial_alpha_count": 3517,
+        "visible_alpha_count": 241079,
+        "visible_alpha_bbox": [
+          418,
+          164,
+          826,
+          1056
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            661.5,
+            1055
+          ],
+          "normalized": [
+            0.527933,
+            0.841979
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 21,
+          "foot_band": [
+            1020,
+            1055
+          ],
+          "foot_span": [
+            624,
+            699
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      }
+    },
+    "Kara": {
+      "seated-idle-back.png": {
+        "path": "images/avatars/Kara/seated-idle-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Kara/seated-idle-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Kara/idle.png",
+          "images/avatars/Kara/at-desk.png",
+          "images/avatars/Kara/walk.png",
+          "images/avatars/Kara/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          441,
+          254,
+          817,
+          889
+        ],
+        "nonzero_alpha_count": 187240,
+        "partial_alpha_count": 2344,
+        "visible_alpha_count": 186369,
+        "visible_alpha_bbox": [
+          441,
+          255,
+          817,
+          889
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "seated-working-back.png": {
+        "path": "images/avatars/Kara/seated-working-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Kara/seated-working-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Kara/idle.png",
+          "images/avatars/Kara/at-desk.png",
+          "images/avatars/Kara/walk.png",
+          "images/avatars/Kara/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          443,
+          256,
+          816,
+          888
+        ],
+        "nonzero_alpha_count": 184299,
+        "partial_alpha_count": 2549,
+        "visible_alpha_count": 183566,
+        "visible_alpha_bbox": [
+          443,
+          257,
+          816,
+          888
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "walk-up.png": {
+        "path": "images/avatars/Kara/walk-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Kara/walk-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Kara/idle.png",
+          "images/avatars/Kara/at-desk.png",
+          "images/avatars/Kara/walk.png",
+          "images/avatars/Kara/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          422,
+          167,
+          835,
+          978
+        ],
+        "nonzero_alpha_count": 205766,
+        "partial_alpha_count": 3008,
+        "visible_alpha_count": 204902,
+        "visible_alpha_bbox": [
+          422,
+          167,
+          835,
+          978
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            666.0,
+            976
+          ],
+          "normalized": [
+            0.531524,
+            0.778931
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 21,
+          "foot_band": [
+            945,
+            976
+          ],
+          "foot_span": [
+            634,
+            698
+          ],
+          "ignored_pixels_below_anchor": 1,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "walk-down.png": {
+        "path": "images/avatars/Kara/walk-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Kara/walk-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Kara/idle.png",
+          "images/avatars/Kara/at-desk.png",
+          "images/avatars/Kara/walk.png",
+          "images/avatars/Kara/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          429,
+          176,
+          825,
+          948
+        ],
+        "nonzero_alpha_count": 190048,
+        "partial_alpha_count": 2442,
+        "visible_alpha_count": 189125,
+        "visible_alpha_bbox": [
+          429,
+          176,
+          825,
+          948
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            660.0,
+            947
+          ],
+          "normalized": [
+            0.526736,
+            0.755786
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 20,
+          "foot_band": [
+            917,
+            947
+          ],
+          "foot_span": [
+            635,
+            685
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-up.png": {
+        "path": "images/avatars/Kara/carry-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Kara/carry-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Kara/idle.png",
+          "images/avatars/Kara/at-desk.png",
+          "images/avatars/Kara/walk.png",
+          "images/avatars/Kara/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          425,
+          193,
+          865,
+          991
+        ],
+        "nonzero_alpha_count": 194589,
+        "partial_alpha_count": 3163,
+        "visible_alpha_count": 193685,
+        "visible_alpha_bbox": [
+          426,
+          193,
+          865,
+          991
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            638.5,
+            989
+          ],
+          "normalized": [
+            0.509577,
+            0.789306
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 20,
+          "foot_band": [
+            958,
+            989
+          ],
+          "foot_span": [
+            604,
+            673
+          ],
+          "ignored_pixels_below_anchor": 16,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-down.png": {
+        "path": "images/avatars/Kara/carry-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Kara/carry-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Kara/idle.png",
+          "images/avatars/Kara/at-desk.png",
+          "images/avatars/Kara/walk.png",
+          "images/avatars/Kara/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          441,
+          218,
+          828,
+          974
+        ],
+        "nonzero_alpha_count": 187701,
+        "partial_alpha_count": 2936,
+        "visible_alpha_count": 186712,
+        "visible_alpha_bbox": [
+          441,
+          219,
+          828,
+          974
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            597.0,
+            973
+          ],
+          "normalized": [
+            0.476457,
+            0.776536
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            944,
+            973
+          ],
+          "foot_span": [
+            569,
+            625
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      }
+    },
+    "Leo": {
+      "seated-idle-back.png": {
+        "path": "images/avatars/Leo/seated-idle-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Leo/seated-idle-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Leo/idle.png",
+          "images/avatars/Leo/at-desk.png",
+          "images/avatars/Leo/walk.png",
+          "images/avatars/Leo/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          459,
+          271,
+          807,
+          960
+        ],
+        "nonzero_alpha_count": 200489,
+        "partial_alpha_count": 3195,
+        "visible_alpha_count": 199815,
+        "visible_alpha_bbox": [
+          460,
+          271,
+          807,
+          959
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "seated-working-back.png": {
+        "path": "images/avatars/Leo/seated-working-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Leo/seated-working-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Leo/idle.png",
+          "images/avatars/Leo/at-desk.png",
+          "images/avatars/Leo/walk.png",
+          "images/avatars/Leo/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          460,
+          272,
+          808,
+          956
+        ],
+        "nonzero_alpha_count": 196907,
+        "partial_alpha_count": 3553,
+        "visible_alpha_count": 196041,
+        "visible_alpha_bbox": [
+          460,
+          273,
+          808,
+          956
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "walk-up.png": {
+        "path": "images/avatars/Leo/walk-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Leo/walk-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Leo/idle.png",
+          "images/avatars/Leo/at-desk.png",
+          "images/avatars/Leo/walk.png",
+          "images/avatars/Leo/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          447,
+          167,
+          811,
+          1012
+        ],
+        "nonzero_alpha_count": 209574,
+        "partial_alpha_count": 3100,
+        "visible_alpha_count": 208923,
+        "visible_alpha_bbox": [
+          448,
+          167,
+          811,
+          1012
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            665.0,
+            1011
+          ],
+          "normalized": [
+            0.530726,
+            0.806864
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            978,
+            1011
+          ],
+          "foot_span": [
+            629,
+            701
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "walk-down.png": {
+        "path": "images/avatars/Leo/walk-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Leo/walk-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Leo/idle.png",
+          "images/avatars/Leo/at-desk.png",
+          "images/avatars/Leo/walk.png",
+          "images/avatars/Leo/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          454,
+          188,
+          824,
+          968
+        ],
+        "nonzero_alpha_count": 188631,
+        "partial_alpha_count": 2841,
+        "visible_alpha_count": 188043,
+        "visible_alpha_bbox": [
+          455,
+          189,
+          824,
+          968
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            597.5,
+            967
+          ],
+          "normalized": [
+            0.476856,
+            0.771748
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            937,
+            967
+          ],
+          "foot_span": [
+            565,
+            630
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-up.png": {
+        "path": "images/avatars/Leo/carry-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Leo/carry-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Leo/idle.png",
+          "images/avatars/Leo/at-desk.png",
+          "images/avatars/Leo/walk.png",
+          "images/avatars/Leo/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          441,
+          161,
+          903,
+          1044
+        ],
+        "nonzero_alpha_count": 246445,
+        "partial_alpha_count": 3773,
+        "visible_alpha_count": 245172,
+        "visible_alpha_bbox": [
+          441,
+          162,
+          903,
+          1044
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            581.5,
+            1043
+          ],
+          "normalized": [
+            0.464086,
+            0.832402
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 23,
+          "foot_band": [
+            1009,
+            1043
+          ],
+          "foot_span": [
+            549,
+            614
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-down.png": {
+        "path": "images/avatars/Leo/carry-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Leo/carry-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Leo/idle.png",
+          "images/avatars/Leo/at-desk.png",
+          "images/avatars/Leo/walk.png",
+          "images/avatars/Leo/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          457,
+          189,
+          817,
+          1012
+        ],
+        "nonzero_alpha_count": 198777,
+        "partial_alpha_count": 3031,
+        "visible_alpha_count": 197984,
+        "visible_alpha_bbox": [
+          457,
+          189,
+          816,
+          1012
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            595.5,
+            1011
+          ],
+          "normalized": [
+            0.475259,
+            0.806864
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 18,
+          "foot_band": [
+            979,
+            1011
+          ],
+          "foot_span": [
+            567,
+            624
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      }
+    },
+    "Quinn": {
+      "seated-idle-back.png": {
+        "path": "images/avatars/Quinn/seated-idle-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Quinn/seated-idle-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Quinn/idle.png",
+          "images/avatars/Quinn/at-desk.png",
+          "images/avatars/Quinn/walk.png",
+          "images/avatars/Quinn/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          415,
+          259,
+          823,
+          966
+        ],
+        "nonzero_alpha_count": 233285,
+        "partial_alpha_count": 3259,
+        "visible_alpha_count": 232479,
+        "visible_alpha_bbox": [
+          415,
+          259,
+          822,
+          965
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "seated-working-back.png": {
+        "path": "images/avatars/Quinn/seated-working-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Quinn/seated-working-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Quinn/idle.png",
+          "images/avatars/Quinn/at-desk.png",
+          "images/avatars/Quinn/walk.png",
+          "images/avatars/Quinn/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          408,
+          270,
+          827,
+          958
+        ],
+        "nonzero_alpha_count": 231554,
+        "partial_alpha_count": 3219,
+        "visible_alpha_count": 230949,
+        "visible_alpha_bbox": [
+          408,
+          270,
+          826,
+          958
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "walk-up.png": {
+        "path": "images/avatars/Quinn/walk-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Quinn/walk-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Quinn/idle.png",
+          "images/avatars/Quinn/at-desk.png",
+          "images/avatars/Quinn/walk.png",
+          "images/avatars/Quinn/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          457,
+          216,
+          799,
+          987
+        ],
+        "nonzero_alpha_count": 185769,
+        "partial_alpha_count": 3524,
+        "visible_alpha_count": 184872,
+        "visible_alpha_bbox": [
+          458,
+          216,
+          798,
+          987
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            673.0,
+            986
+          ],
+          "normalized": [
+            0.537111,
+            0.786911
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 17,
+          "foot_band": [
+            956,
+            986
+          ],
+          "foot_span": [
+            639,
+            707
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "walk-down.png": {
+        "path": "images/avatars/Quinn/walk-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Quinn/walk-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Quinn/idle.png",
+          "images/avatars/Quinn/at-desk.png",
+          "images/avatars/Quinn/walk.png",
+          "images/avatars/Quinn/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          447,
+          224,
+          811,
+          996
+        ],
+        "nonzero_alpha_count": 195858,
+        "partial_alpha_count": 3290,
+        "visible_alpha_count": 194950,
+        "visible_alpha_bbox": [
+          447,
+          224,
+          811,
+          995
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            682.0,
+            994
+          ],
+          "normalized": [
+            0.544294,
+            0.793296
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            964,
+            994
+          ],
+          "foot_span": [
+            652,
+            712
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-up.png": {
+        "path": "images/avatars/Quinn/carry-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Quinn/carry-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Quinn/idle.png",
+          "images/avatars/Quinn/at-desk.png",
+          "images/avatars/Quinn/walk.png",
+          "images/avatars/Quinn/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          441,
+          171,
+          893,
+          962
+        ],
+        "nonzero_alpha_count": 225354,
+        "partial_alpha_count": 3659,
+        "visible_alpha_count": 224345,
+        "visible_alpha_bbox": [
+          441,
+          171,
+          893,
+          962
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            666.5,
+            961
+          ],
+          "normalized": [
+            0.531923,
+            0.766959
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 23,
+          "foot_band": [
+            930,
+            961
+          ],
+          "foot_span": [
+            631,
+            702
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-down.png": {
+        "path": "images/avatars/Quinn/carry-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Quinn/carry-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Quinn/idle.png",
+          "images/avatars/Quinn/at-desk.png",
+          "images/avatars/Quinn/walk.png",
+          "images/avatars/Quinn/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          448,
+          190,
+          813,
+          1012
+        ],
+        "nonzero_alpha_count": 213657,
+        "partial_alpha_count": 3040,
+        "visible_alpha_count": 213054,
+        "visible_alpha_bbox": [
+          448,
+          190,
+          813,
+          1011
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            680.5,
+            1010
+          ],
+          "normalized": [
+            0.543097,
+            0.806065
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            978,
+            1010
+          ],
+          "foot_span": [
+            652,
+            709
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      }
+    },
+    "Rita": {
+      "seated-idle-back.png": {
+        "path": "images/avatars/Rita/seated-idle-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Rita/seated-idle-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Rita/idle.png",
+          "images/avatars/Rita/at-desk.png",
+          "images/avatars/Rita/walk.png",
+          "images/avatars/Rita/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          454,
+          276,
+          801,
+          932
+        ],
+        "nonzero_alpha_count": 178013,
+        "partial_alpha_count": 2620,
+        "visible_alpha_count": 177227,
+        "visible_alpha_bbox": [
+          454,
+          277,
+          800,
+          932
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "seated-working-back.png": {
+        "path": "images/avatars/Rita/seated-working-back.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Rita/seated-working-back.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Rita/idle.png",
+          "images/avatars/Rita/at-desk.png",
+          "images/avatars/Rita/walk.png",
+          "images/avatars/Rita/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          456,
+          279,
+          798,
+          930
+        ],
+        "nonzero_alpha_count": 173604,
+        "partial_alpha_count": 2875,
+        "visible_alpha_count": 172862,
+        "visible_alpha_bbox": [
+          456,
+          279,
+          798,
+          930
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear"
+      },
+      "walk-up.png": {
+        "path": "images/avatars/Rita/walk-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Rita/walk-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Rita/idle.png",
+          "images/avatars/Rita/at-desk.png",
+          "images/avatars/Rita/walk.png",
+          "images/avatars/Rita/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          457,
+          195,
+          776,
+          985
+        ],
+        "nonzero_alpha_count": 164199,
+        "partial_alpha_count": 3186,
+        "visible_alpha_count": 163299,
+        "visible_alpha_bbox": [
+          457,
+          196,
+          776,
+          985
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            640.0,
+            984
+          ],
+          "normalized": [
+            0.510774,
+            0.785315
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 15,
+          "foot_band": [
+            953,
+            984
+          ],
+          "foot_span": [
+            615,
+            665
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "walk-down.png": {
+        "path": "images/avatars/Rita/walk-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Rita/walk-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Rita/idle.png",
+          "images/avatars/Rita/at-desk.png",
+          "images/avatars/Rita/walk.png",
+          "images/avatars/Rita/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          423,
+          209,
+          786,
+          986
+        ],
+        "nonzero_alpha_count": 167674,
+        "partial_alpha_count": 3010,
+        "visible_alpha_count": 166902,
+        "visible_alpha_bbox": [
+          424,
+          209,
+          786,
+          986
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            651.0,
+            985
+          ],
+          "normalized": [
+            0.519553,
+            0.786113
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 18,
+          "foot_band": [
+            955,
+            985
+          ],
+          "foot_span": [
+            626,
+            676
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-up.png": {
+        "path": "images/avatars/Rita/carry-up.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Rita/carry-up.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Rita/idle.png",
+          "images/avatars/Rita/at-desk.png",
+          "images/avatars/Rita/walk.png",
+          "images/avatars/Rita/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          443,
+          190,
+          878,
+          985
+        ],
+        "nonzero_alpha_count": 173814,
+        "partial_alpha_count": 3677,
+        "visible_alpha_count": 172942,
+        "visible_alpha_bbox": [
+          443,
+          190,
+          877,
+          985
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            628.0,
+            984
+          ],
+          "normalized": [
+            0.501197,
+            0.785315
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 20,
+          "foot_band": [
+            953,
+            984
+          ],
+          "foot_span": [
+            605,
+            651
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        }
+      },
+      "carry-down.png": {
+        "path": "images/avatars/Rita/carry-down.png",
+        "absolute_path": "C:/Users/29929/Desktop/AI-Wrokspace/images/avatars/Rita/carry-down.png",
+        "exists": true,
+        "references": [
+          "images/avatars/Rita/idle.png",
+          "images/avatars/Rita/at-desk.png",
+          "images/avatars/Rita/walk.png",
+          "images/avatars/Rita/carry.png",
+          "images/furniture/desk-standard-transparent.png",
+          "images/furniture/desk-chair-back.png",
+          "images/furniture/desk-front.png",
+          "images/scene/office-shell.png"
+        ],
+        "manual_review": {
+          "identity": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "action_direction": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "prohibited_content": {
+            "status": "not_assessed",
+            "notes": null
+          },
+          "scene_composite": {
+            "status": "not_assessed",
+            "notes": null
+          }
+        },
+        "image_format": "PNG",
+        "mode": "RGBA",
+        "size": [
+          1254,
+          1254
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bbox": [
+          411,
+          198,
+          823,
+          986
+        ],
+        "nonzero_alpha_count": 182634,
+        "partial_alpha_count": 3430,
+        "visible_alpha_count": 181502,
+        "visible_alpha_bbox": [
+          411,
+          198,
+          823,
+          986
+        ],
+        "visible_alpha_requirements": {
+          "minimum_pixels": 3145,
+          "minimum_bbox_width": 100,
+          "minimum_bbox_height": 251
+        },
+        "green_dominant_count": 0,
+        "chroma_key_like_count": 0,
+        "component_count_8": 1,
+        "automated_checks": {
+          "png": true,
+          "rgba": true,
+          "size_1254_square": true,
+          "transparent_corners": true,
+          "nonempty_alpha": true,
+          "meaningful_visible_alpha": true,
+          "clear_of_canvas_edges": true,
+          "single_component_8": true,
+          "no_green_dominant_pixels": true,
+          "no_chroma_key_like_pixels": true,
+          "valid_foot_anchor": true
+        },
+        "automated_technical_status": "pass",
+        "green_dominant_interpretation": "clear",
+        "foot_anchor": {
+          "source": [
+            642.5,
+            984
+          ],
+          "normalized": [
+            0.512769,
+            0.785315
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 18,
+          "foot_band": [
+            953,
+            984
+          ],
+          "foot_span": [
+            617,
+            668
+          ],
+          "ignored_pixels_below_anchor": 1,
+          "ignored_nonmain_component_pixels": 0
+        }
+      }
+    }
+  },
+  "seated_pair_comparisons": {
+    "Alice": {
+      "comparable": true,
+      "idle_bbox": [
+        458,
+        277,
+        800,
+        965
+      ],
+      "working_bbox": [
+        445,
+        280,
+        810,
+        964
+      ],
+      "bbox_center_delta": [
+        -1.5,
+        1.0
+      ],
+      "bbox_size_delta": [
+        23,
+        -4
+      ],
+      "upper_hair_mask_overlap": {
+        "status": "proxy_only",
+        "definition": "alpha>=64 upper-silhouette proxy for hair; not a semantic hair segmentation",
+        "upper_fraction": 0.42,
+        "region": [
+          445,
+          277,
+          810,
+          566
+        ],
+        "idle_pixels": 78529,
+        "working_pixels": 76916,
+        "intersection_pixels": 76862,
+        "union_pixels": 78583,
+        "iou": 0.9781,
+        "dice": 0.988929
+      },
+      "manual_review": {
+        "identity_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "pose_change_only": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "hair_shape_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        }
+      }
+    },
+    "Bob": {
+      "comparable": true,
+      "idle_bbox": [
+        431,
+        258,
+        826,
+        974
+      ],
+      "working_bbox": [
+        448,
+        261,
+        813,
+        968
+      ],
+      "bbox_center_delta": [
+        2.0,
+        -1.5
+      ],
+      "bbox_size_delta": [
+        -30,
+        -9
+      ],
+      "upper_hair_mask_overlap": {
+        "status": "proxy_only",
+        "definition": "alpha>=64 upper-silhouette proxy for hair; not a semantic hair segmentation",
+        "upper_fraction": 0.42,
+        "region": [
+          431,
+          258,
+          826,
+          559
+        ],
+        "idle_pixels": 97059,
+        "working_pixels": 93500,
+        "intersection_pixels": 93403,
+        "union_pixels": 97156,
+        "iou": 0.961371,
+        "dice": 0.980305
+      },
+      "manual_review": {
+        "identity_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "pose_change_only": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "hair_shape_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        }
+      }
+    },
+    "Jack": {
+      "comparable": true,
+      "idle_bbox": [
+        437,
+        237,
+        816,
+        962
+      ],
+      "working_bbox": [
+        437,
+        252,
+        817,
+        959
+      ],
+      "bbox_center_delta": [
+        0.5,
+        6.0
+      ],
+      "bbox_size_delta": [
+        1,
+        -18
+      ],
+      "upper_hair_mask_overlap": {
+        "status": "proxy_only",
+        "definition": "alpha>=64 upper-silhouette proxy for hair; not a semantic hair segmentation",
+        "upper_fraction": 0.42,
+        "region": [
+          437,
+          237,
+          817,
+          541
+        ],
+        "idle_pixels": 85151,
+        "working_pixels": 78798,
+        "intersection_pixels": 78751,
+        "union_pixels": 85198,
+        "iou": 0.924329,
+        "dice": 0.960677
+      },
+      "manual_review": {
+        "identity_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "pose_change_only": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "hair_shape_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        }
+      }
+    },
+    "Kara": {
+      "comparable": true,
+      "idle_bbox": [
+        441,
+        254,
+        817,
+        889
+      ],
+      "working_bbox": [
+        443,
+        256,
+        816,
+        888
+      ],
+      "bbox_center_delta": [
+        0.5,
+        0.5
+      ],
+      "bbox_size_delta": [
+        -3,
+        -3
+      ],
+      "upper_hair_mask_overlap": {
+        "status": "proxy_only",
+        "definition": "alpha>=64 upper-silhouette proxy for hair; not a semantic hair segmentation",
+        "upper_fraction": 0.42,
+        "region": [
+          441,
+          254,
+          817,
+          521
+        ],
+        "idle_pixels": 76343,
+        "working_pixels": 75216,
+        "intersection_pixels": 75208,
+        "union_pixels": 76351,
+        "iou": 0.98503,
+        "dice": 0.992458
+      },
+      "manual_review": {
+        "identity_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "pose_change_only": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "hair_shape_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        }
+      }
+    },
+    "Leo": {
+      "comparable": true,
+      "idle_bbox": [
+        459,
+        271,
+        807,
+        960
+      ],
+      "working_bbox": [
+        460,
+        272,
+        808,
+        956
+      ],
+      "bbox_center_delta": [
+        1.0,
+        -1.5
+      ],
+      "bbox_size_delta": [
+        0,
+        -5
+      ],
+      "upper_hair_mask_overlap": {
+        "status": "proxy_only",
+        "definition": "alpha>=64 upper-silhouette proxy for hair; not a semantic hair segmentation",
+        "upper_fraction": 0.42,
+        "region": [
+          459,
+          271,
+          808,
+          560
+        ],
+        "idle_pixels": 85600,
+        "working_pixels": 84117,
+        "intersection_pixels": 83779,
+        "union_pixels": 85938,
+        "iou": 0.974877,
+        "dice": 0.987279
+      },
+      "manual_review": {
+        "identity_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "pose_change_only": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "hair_shape_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        }
+      }
+    },
+    "Quinn": {
+      "comparable": true,
+      "idle_bbox": [
+        415,
+        259,
+        823,
+        966
+      ],
+      "working_bbox": [
+        408,
+        270,
+        827,
+        958
+      ],
+      "bbox_center_delta": [
+        -1.5,
+        1.5
+      ],
+      "bbox_size_delta": [
+        11,
+        -19
+      ],
+      "upper_hair_mask_overlap": {
+        "status": "proxy_only",
+        "definition": "alpha>=64 upper-silhouette proxy for hair; not a semantic hair segmentation",
+        "upper_fraction": 0.42,
+        "region": [
+          408,
+          259,
+          827,
+          556
+        ],
+        "idle_pixels": 99133,
+        "working_pixels": 91660,
+        "intersection_pixels": 91471,
+        "union_pixels": 99322,
+        "iou": 0.920954,
+        "dice": 0.958851
+      },
+      "manual_review": {
+        "identity_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "pose_change_only": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "hair_shape_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        }
+      }
+    },
+    "Rita": {
+      "comparable": true,
+      "idle_bbox": [
+        454,
+        276,
+        801,
+        932
+      ],
+      "working_bbox": [
+        456,
+        279,
+        798,
+        930
+      ],
+      "bbox_center_delta": [
+        -0.5,
+        0.5
+      ],
+      "bbox_size_delta": [
+        -5,
+        -5
+      ],
+      "upper_hair_mask_overlap": {
+        "status": "proxy_only",
+        "definition": "alpha>=64 upper-silhouette proxy for hair; not a semantic hair segmentation",
+        "upper_fraction": 0.42,
+        "region": [
+          454,
+          276,
+          801,
+          552
+        ],
+        "idle_pixels": 74572,
+        "working_pixels": 73343,
+        "intersection_pixels": 73274,
+        "union_pixels": 74641,
+        "iou": 0.981686,
+        "dice": 0.990758
+      },
+      "manual_review": {
+        "identity_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "pose_change_only": {
+          "status": "not_assessed",
+          "notes": null
+        },
+        "hair_shape_consistency": {
+          "status": "not_assessed",
+          "notes": null
+        }
+      }
+    }
+  }
+}
