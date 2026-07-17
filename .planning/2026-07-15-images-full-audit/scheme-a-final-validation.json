@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "completed_at": "2026-07-16T13:06:33.6354834+08:00",
+  "objective": "Execute and verify image asset repair Scheme A without replacing accepted visuals unless runtime composite QA proves a sprite defect.",
+  "commands": [
+    {
+      "command": "npm run verify",
+      "cwd": "apps/office-demo",
+      "exit_code": 0,
+      "result": "9/9 test files, 57/57 tests; asset manifest 10/10; TypeScript and Vite build passed"
+    },
+    {
+      "command": "python -m pytest tests/test_audit_image_assets.py tests/test_transparent_rgb_sanitizer.py -q",
+      "cwd": ".",
+      "exit_code": 0,
+      "result": "50/50 passed"
+    },
+    {
+      "command": "python tools/audit_image_assets.py --root . --layout docs/office-layout.json --json .planning/2026-07-15-images-full-audit/scheme-a-final-asset-audit.json",
+      "cwd": ".",
+      "exit_code": 0,
+      "result": "81/81 passed; 0 error findings; 0 duplicate SHA groups"
+    },
+    {
+      "command": "immutable transaction/baseline invariant verifier",
+      "cwd": ".",
+      "exit_code": 0,
+      "result": "35 targets verified; 46 non-target SHA values unchanged; 35 backups and 35 candidates retained; no issues"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": ".",
+      "exit_code": 0,
+      "result": "no whitespace errors; only existing Windows LF-to-CRLF warnings"
+    },
+    {
+      "command": "registry/documentation/eager-load static comparison",
+      "cwd": ".",
+      "exit_code": 0,
+      "result": "81 registered, 81 documented, 0 missing, 0 extra, 0 eager-load patterns"
+    }
+  ],
+  "asset_audit": {
+    "expected": 81,
+    "registered": 81,
+    "on_disk": 81,
+    "audited": 81,
+    "passed": 81,
+    "failed": 0,
+    "duplicate_sha_groups": 0,
+    "compressed_bytes_total": 24223891,
+    "categories": {
+      "avatars": 70,
+      "furniture": 4,
+      "artifact": 3,
+      "orb": 3,
+      "scene": 1
+    },
+    "report": ".planning/2026-07-15-images-full-audit/scheme-a-final-asset-audit.json"
+  },
+  "sanitation": {
+    "transaction_status": "applied",
+    "run_directory": ".planning/2026-07-15-images-full-audit/scheme-a-runs/20260716T032947567Z-immutable-snapshot-apply-04230893",
+    "targets": 35,
+    "committed": 35,
+    "pixels_cleared": 43261599,
+    "bytes_before": 33781582,
+    "bytes_after": 10502131,
+    "alpha_mismatches": 0,
+    "visible_rgba_mismatches": 0,
+    "bbox_mismatches": 0,
+    "far_transparent_rgb_after": 0,
+    "non_targets_unchanged": 46,
+    "backups_retained": 35,
+    "candidates_retained": 35
+  },
+  "runtime_qa": {
+    "browser": "Chrome via Playwright CLI",
+    "viewport": {
+      "width": 1920,
+      "height": 1080,
+      "device_pixel_ratio": 1
+    },
+    "logical_render_sizes": {
+      "seated": 150,
+      "movement": 180
+    },
+    "observed_browser_boxes": {
+      "seated": 133.49,
+      "movement": 160.19
+    },
+    "layer_z_indexes": {
+      "chair_back": 5,
+      "avatar": 10,
+      "desk_front": 20,
+      "story_artifact": 30,
+      "labels": 40
+    },
+    "state_evidence": {
+      "ready": "Alice/Bob/Kara/Leo/Rita Working; Jack/Quinn Idle",
+      "dev-coding": "Jack seatedWorkingBack",
+      "qa-testing": "Quinn seatedWorkingBack and Jack seatedIdleBack",
+      "carry_up": "/avatars/Alice/carry-up.png with PRD",
+      "carry_down": "/avatars/Alice/carry-down.png with PRD",
+      "walk_up": "/avatars/Alice/walk-up.png without Artifact",
+      "walk_down": "/avatars/Alice/walk-down.png without Artifact"
+    },
+    "visual_failures": 0,
+    "application_or_asset_console_errors": 0,
+    "unrelated_console_note": "GET /favicon.ico returned 404"
+  },
+  "imagegen": {
+    "skill_loaded": true,
+    "calls": 0,
+    "reason": "no_visual_asset_failure_after_runtime_integration"
+  },
+  "review": {
+    "independent_task_reviews": {
+      "task_1": "approved with no findings",
+      "task_2": "approved with no findings",
+      "task_3": "promotion authorized and post-apply evidence approved"
+    },
+    "manual_final_review": "completed",
+    "manual_review_finding_fixed": "RGB Scene exact #00ff00 coverage was added through a separate failing test and minimal fix",
+    "coderabbit": "not installed; CLI prerequisite check returned NOT_INSTALLED"
+  },
+  "changed_paths": {
+    "non_image": [
+      "apps/office-demo/package.json",
+      "apps/office-demo/src/app/App.tsx",
+      "apps/office-demo/src/components/office/AvatarSprite.tsx",
+      "apps/office-demo/src/components/office/OfficeScene.tsx",
+      "apps/office-demo/src/components/office/StoryActorSprite.tsx",
+      "apps/office-demo/src/data/officeLayout.ts",
+      "apps/office-demo/src/story/prdHandoffStory.ts",
+      "apps/office-demo/src/utils/avatarPresentation.ts",
+      "apps/office-demo/tests/asset-manifest.test.ts",
+      "apps/office-demo/tests/avatar-presentation.test.tsx",
+      "apps/office-demo/tests/static-office-map.test.tsx",
+      "apps/office-demo/tests/task41-static-calibration.test.tsx",
+      "apps/office-demo/tests/task6-story-engine.test.tsx",
+      "docs/office-layout.json",
+      "docs/office-assets-and-layout.md",
+      "docs/avatar-asset-generation-report.md",
+      "tools/sanitize_transparent_rgb.py",
+      "tools/audit_image_assets.py",
+      "tests/test_transparent_rgb_sanitizer.py",
+      "tests/test_audit_image_assets.py",
+      "docs/superpowers/plans/2026-07-16-image-assets-scheme-a.md",
+      ".planning/2026-07-15-images-full-audit/audit-report.md"
+    ],
+    "image_target_count": 35,
+    "image_targets": [
+      "images/artifact/feature-green.png",
+      "images/artifact/prd-blue.png",
+      "images/artifact/report-purple.png",
+      "images/avatars/Alice/at-desk.png",
+      "images/avatars/Alice/carry.png",
+      "images/avatars/Alice/idle.png",
+      "images/avatars/Alice/walk.png",
+      "images/avatars/Jack/at-desk.png",
+      "images/avatars/Jack/carry.png",
+      "images/avatars/Jack/idle.png",
+      "images/avatars/Jack/walk.png",
+      "images/avatars/Kara/at-desk.png",
+      "images/avatars/Kara/carry.png",
+      "images/avatars/Kara/idle.png",
+      "images/avatars/Kara/walk-down.png",
+      "images/avatars/Kara/walk.png",
+      "images/avatars/Leo/at-desk.png",
+      "images/avatars/Leo/carry.png",
+      "images/avatars/Leo/idle.png",
+      "images/avatars/Leo/walk.png",
+      "images/avatars/Quinn/at-desk.png",
+      "images/avatars/Quinn/carry.png",
+      "images/avatars/Quinn/idle.png",
+      "images/avatars/Quinn/walk.png",
+      "images/avatars/Rita/at-desk.png",
+      "images/avatars/Rita/carry.png",
+      "images/avatars/Rita/idle.png",
+      "images/avatars/Rita/walk.png",
+      "images/furniture/artifact-hub-transparent.png",
+      "images/furniture/desk-chair-back.png",
+      "images/furniture/desk-front.png",
+      "images/furniture/desk-standard-transparent.png",
+      "images/orb/orb_blue.png",
+      "images/orb/orb_gray.png",
+      "images/orb/orb_yellow.png"
+    ]
+  },
+  "evidence": {
+    "runtime_desktop": {
+      "path": ".planning/2026-07-15-images-full-audit/scheme-a-runtime-desktop.png",
+      "sha256": "c171a0a3e97eac1845f1b61093bc50d0529aca3388fa72ef39a76b610464dffb"
+    },
+    "runtime_contact_sheet": {
+      "path": ".planning/2026-07-15-images-full-audit/scheme-a-runtime-contact-sheet.png",
+      "sha256": "a13bcc05b06220ae38d13926c6dd896190bdfb6b3cbc49160be5afb03e4f4ea0"
+    },
+    "asset_audit": {
+      "path": ".planning/2026-07-15-images-full-audit/scheme-a-final-asset-audit.json",
+      "sha256": "ed9c8d315d9aff2b7a4aca4636ee2d67c23d1cebc26b31a8fa861206e0686ee0"
+    },
+    "runtime_report": ".planning/2026-07-15-images-full-audit/task-5-runtime-report.md",
+    "implementation_progress": ".planning/2026-07-15-images-full-audit/implementation-progress.md"
+  },
+  "workspace_notes": [
+    "Work was intentionally performed in the pre-existing dirty main checkout because five accepted uncommitted sprites were part of the frozen baseline.",
+    "No reset, stash, clean, stage, commit, push, or PR action was performed.",
+    "The Vite and Playwright processes started for runtime QA were closed after evidence capture."
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "mode": "dry-run",
+  "status": "dry_run_complete",
+  "targets": [
+    {
+      "path": "images/artifact/feature-green.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/artifact/prd-blue.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/artifact/report-purple.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Alice/at-desk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Alice/carry.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Alice/idle.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Alice/walk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Jack/at-desk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Jack/carry.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Jack/idle.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Jack/walk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Kara/at-desk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Kara/carry.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Kara/idle.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Kara/walk-down.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Kara/walk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Leo/at-desk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Leo/carry.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Leo/idle.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Leo/walk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Quinn/at-desk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Quinn/carry.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Quinn/idle.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Quinn/walk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Rita/at-desk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Rita/carry.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Rita/idle.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/avatars/Rita/walk.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/furniture/artifact-hub-transparent.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/furniture/desk-chair-back.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/furniture/desk-front.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/furniture/desk-standard-transparent.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/orb/orb_blue.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/orb/orb_gray.png",
+      "state": "candidate_verified"
+    },
+    {
+      "path": "images/orb/orb_yellow.png",
+      "state": "candidate_verified"
+    }
+  ]
+}

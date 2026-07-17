@@ -1,0 +1,340 @@
+{
+  "scene": {
+    "assetKey": "scene.officeShell",
+    "path": "images/scene/office-shell.png",
+    "width": 1672,
+    "height": 941,
+    "coordinateSystem": "logical-scene-px",
+    "origin": "top-left",
+    "backgroundTransparent": false
+  },
+  "assetAnchors": {
+    "sourceCanvas": { "width": 1254, "height": 1254 },
+    "placementConvention": {
+      "deskAndHub": "Align source visualBottomCenter to the scene anchor.",
+      "avatar": "Align source visualFootShadowCenter to avatarAnchor for every pose.",
+      "seatedAvatar": "Align each atDesk visualSeatCenterSource to desk seatAnchor; avatarAnchor remains reserved for idle, walk, and carry poses.",
+      "nameTag": "Place by its own visual center at nameTagAnchor; it is relative to the avatar head area, not to the PNG crop.",
+      "orb": "Place by visual center at orbAnchor; the point is to the avatar's right and does not imply business status."
+    },
+    "renderFormula": {
+      "left": "sceneAnchor.x - sourceAnchor.x * renderWidth / 1254",
+      "top": "sceneAnchor.y - sourceAnchor.y * renderHeight / 1254",
+      "scale": "Use equal x/y scaling and image-rendering: pixelated."
+    },
+    "furniture": {
+      "deskStandard": {
+        "path": "images/furniture/desk-standard-transparent.png",
+        "sourceAlphaBounds": { "x": 261, "y": 279, "width": 738, "height": 677 },
+        "visualBottomCenterSource": { "x": 630, "y": 955 },
+        "recommendedRenderSize": { "width": 210, "height": 210 }
+      },
+      "deskChairBack": {
+        "path": "images/furniture/desk-chair-back.png",
+        "sourceAlphaBounds": { "x": 476, "y": 655, "width": 289, "height": 299 },
+        "visualBottomCenterSource": { "x": 630, "y": 955 },
+        "recommendedRenderSize": { "width": 210, "height": 210 }
+      },
+      "deskFront": {
+        "path": "images/furniture/desk-front.png",
+        "sourceAlphaBounds": { "x": 261, "y": 279, "width": 738, "height": 677 },
+        "visualBottomCenterSource": { "x": 630, "y": 955 },
+        "recommendedRenderSize": { "width": 210, "height": 210 }
+      },
+      "artifactHub": {
+        "path": "images/furniture/artifact-hub-transparent.png",
+        "sourceAlphaBounds": { "x": 296, "y": 292, "width": 696, "height": 597 },
+        "visualBottomCenterSource": { "x": 644, "y": 888 },
+        "screenRectSource": { "x": 464, "y": 342, "width": 327, "height": 211 },
+        "recommendedRenderSize": { "width": 300, "height": 300 }
+      }
+    },
+    "artifacts": {
+      "prdBlue": {
+        "path": "images/artifact/prd-blue.png",
+        "sourceAlphaBounds": { "x": 332, "y": 230, "width": 590, "height": 732 },
+        "visualBottomCenterSource": { "x": 627, "y": 961 },
+        "recommendedRenderSize": { "width": 56, "height": 56 }
+      },
+      "featureGreen": {
+        "path": "images/artifact/feature-green.png",
+        "sourceAlphaBounds": { "x": 308, "y": 279, "width": 638, "height": 658 },
+        "visualBottomCenterSource": { "x": 627, "y": 936 },
+        "recommendedRenderSize": { "width": 56, "height": 56 }
+      },
+      "reportPurple": {
+        "path": "images/artifact/report-purple.png",
+        "sourceAlphaBounds": { "x": 285, "y": 191, "width": 710, "height": 805 },
+        "visualBottomCenterSource": { "x": 640, "y": 995 },
+        "recommendedRenderSize": { "width": 56, "height": 56 }
+      }
+    },
+    "orbs": {
+      "blue": {
+        "path": "images/orb/orb_blue.png",
+        "meaning": "Agent is actively assisting.",
+        "sourceAlphaBounds": { "x": 182, "y": 146, "width": 892, "height": 908 },
+        "visualCenterSource": { "x": 628, "y": 600 },
+        "recommendedRenderSize": { "width": 36, "height": 36 }
+      },
+      "gray": {
+        "path": "images/orb/orb_gray.png",
+        "meaning": "Agent is available with no active session.",
+        "sourceAlphaBounds": { "x": 192, "y": 168, "width": 867, "height": 881 },
+        "visualCenterSource": { "x": 625.5, "y": 608.5 },
+        "recommendedRenderSize": { "width": 36, "height": 36 }
+      },
+      "yellow": {
+        "path": "images/orb/orb_yellow.png",
+        "meaning": "Agent has produced a result and is awaiting human confirmation.",
+        "sourceAlphaBounds": { "x": 159, "y": 126, "width": 936, "height": 962 },
+        "visualCenterSource": { "x": 627, "y": 607 },
+        "recommendedRenderSize": { "width": 36, "height": 36 }
+      }
+    },
+    "avatars": {
+      "recommendedRenderSize": { "width": 180, "height": 180 },
+      "footAnchorRule": "The x coordinate is the center of the visible feet/ground-shadow span; y is the bottommost visible shadow/foot pixel. Each pose is rendered through the same formula, so no page-specific CSS offset is permitted.",
+      "byActor": {
+        "Alice": {
+          "idle": { "path": "images/avatars/Alice/idle.png", "sourceAlphaBounds": { "x": 455, "y": 238, "width": 343, "height": 727 }, "visualFootShadowCenterSource": { "x": 626.5, "y": 964 } },
+          "atDesk": { "path": "images/avatars/Alice/at-desk.png", "sourceAlphaBounds": { "x": 392, "y": 206, "width": 517, "height": 772 }, "visualFootShadowCenterSource": { "x": 650.5, "y": 977 }, "visualSeatCenterSource": { "x": 650.5, "y": 950 } },
+          "walk": { "path": "images/avatars/Alice/walk.png", "sourceAlphaBounds": { "x": 445, "y": 266, "width": 357, "height": 640 }, "visualFootShadowCenterSource": { "x": 623.5, "y": 905 } },
+          "carry": { "path": "images/avatars/Alice/carry.png", "sourceAlphaBounds": { "x": 310, "y": 169, "width": 659, "height": 843 }, "visualFootShadowCenterSource": { "x": 639.5, "y": 1011 } }
+        },
+        "Bob": {
+          "idle": { "path": "images/avatars/Bob/idle.png", "sourceAlphaBounds": { "x": 422, "y": 149, "width": 396, "height": 840 }, "visualFootShadowCenterSource": { "x": 620, "y": 988 } },
+          "atDesk": { "path": "images/avatars/Bob/at-desk.png", "sourceAlphaBounds": { "x": 340, "y": 250, "width": 580, "height": 683 }, "visualFootShadowCenterSource": { "x": 630, "y": 932 }, "visualSeatCenterSource": { "x": 630, "y": 900 } },
+          "walk": { "path": "images/avatars/Bob/walk.png", "sourceAlphaBounds": { "x": 405, "y": 220, "width": 447, "height": 770 }, "visualFootShadowCenterSource": { "x": 628.5, "y": 989 } },
+          "carry": { "path": "images/avatars/Bob/carry.png", "sourceAlphaBounds": { "x": 339, "y": 188, "width": 573, "height": 817 }, "visualFootShadowCenterSource": { "x": 625.5, "y": 1004 } }
+        },
+        "Jack": {
+          "idle": { "path": "images/avatars/Jack/idle.png", "sourceAlphaBounds": { "x": 423, "y": 217, "width": 385, "height": 764 }, "visualFootShadowCenterSource": { "x": 615.5, "y": 980 } },
+          "atDesk": { "path": "images/avatars/Jack/at-desk.png", "sourceAlphaBounds": { "x": 372, "y": 202, "width": 579, "height": 806 }, "visualFootShadowCenterSource": { "x": 661.5, "y": 1007 }, "visualSeatCenterSource": { "x": 661.5, "y": 970 } },
+          "walk": { "path": "images/avatars/Jack/walk.png", "sourceAlphaBounds": { "x": 380, "y": 135, "width": 503, "height": 885 }, "visualFootShadowCenterSource": { "x": 631.5, "y": 1019 } },
+          "carry": { "path": "images/avatars/Jack/carry.png", "sourceAlphaBounds": { "x": 320, "y": 155, "width": 625, "height": 879 }, "visualFootShadowCenterSource": { "x": 632.5, "y": 1033 } }
+        },
+        "Kara": {
+          "idle": { "path": "images/avatars/Kara/idle.png", "sourceAlphaBounds": { "x": 418, "y": 217, "width": 411, "height": 752 }, "visualFootShadowCenterSource": { "x": 623.5, "y": 968 } },
+          "atDesk": { "path": "images/avatars/Kara/at-desk.png", "sourceAlphaBounds": { "x": 389, "y": 344, "width": 471, "height": 540 }, "visualFootShadowCenterSource": { "x": 624.5, "y": 883 }, "visualSeatCenterSource": { "x": 624.5, "y": 865 } },
+          "walk": { "path": "images/avatars/Kara/walk.png", "sourceAlphaBounds": { "x": 384, "y": 214, "width": 480, "height": 799 }, "visualFootShadowCenterSource": { "x": 624, "y": 1012 } },
+          "carry": { "path": "images/avatars/Kara/carry.png", "sourceAlphaBounds": { "x": 418, "y": 204, "width": 463, "height": 752 }, "visualFootShadowCenterSource": { "x": 649.5, "y": 955 } }
+        },
+        "Leo": {
+          "idle": { "path": "images/avatars/Leo/idle.png", "sourceAlphaBounds": { "x": 440, "y": 258, "width": 392, "height": 734 }, "visualFootShadowCenterSource": { "x": 636, "y": 991 } },
+          "atDesk": { "path": "images/avatars/Leo/at-desk.png", "sourceAlphaBounds": { "x": 449, "y": 257, "width": 383, "height": 695 }, "visualFootShadowCenterSource": { "x": 640.5, "y": 951 }, "visualSeatCenterSource": { "x": 640.5, "y": 925 } },
+          "walk": { "path": "images/avatars/Leo/walk.png", "sourceAlphaBounds": { "x": 448, "y": 274, "width": 384, "height": 654 }, "visualFootShadowCenterSource": { "x": 640, "y": 927 } },
+          "carry": { "path": "images/avatars/Leo/carry.png", "sourceAlphaBounds": { "x": 371, "y": 192, "width": 561, "height": 768 }, "visualFootShadowCenterSource": { "x": 651.5, "y": 959 } }
+        },
+        "Quinn": {
+          "idle": { "path": "images/avatars/Quinn/idle.png", "sourceAlphaBounds": { "x": 433, "y": 247, "width": 374, "height": 742 }, "visualFootShadowCenterSource": { "x": 620, "y": 988 } },
+          "atDesk": { "path": "images/avatars/Quinn/at-desk.png", "sourceAlphaBounds": { "x": 390, "y": 238, "width": 501, "height": 773 }, "visualFootShadowCenterSource": { "x": 640.5, "y": 1010 }, "visualSeatCenterSource": { "x": 640.5, "y": 990 } },
+          "walk": { "path": "images/avatars/Quinn/walk.png", "sourceAlphaBounds": { "x": 439, "y": 292, "width": 379, "height": 616 }, "visualFootShadowCenterSource": { "x": 628.5, "y": 907 } },
+          "carry": { "path": "images/avatars/Quinn/carry.png", "sourceAlphaBounds": { "x": 358, "y": 199, "width": 540, "height": 744 }, "visualFootShadowCenterSource": { "x": 628, "y": 942 } }
+        },
+        "Rita": {
+          "idle": { "path": "images/avatars/Rita/idle.png", "sourceAlphaBounds": { "x": 386, "y": 242, "width": 421, "height": 738 }, "visualFootShadowCenterSource": { "x": 596.5, "y": 979 } },
+          "atDesk": { "path": "images/avatars/Rita/at-desk.png", "sourceAlphaBounds": { "x": 398, "y": 258, "width": 432, "height": 713 }, "visualFootShadowCenterSource": { "x": 614, "y": 970 }, "visualSeatCenterSource": { "x": 614, "y": 950 } },
+          "walk": { "path": "images/avatars/Rita/walk.png", "sourceAlphaBounds": { "x": 375, "y": 222, "width": 479, "height": 738 }, "visualFootShadowCenterSource": { "x": 614.5, "y": 959 } },
+          "carry": { "path": "images/avatars/Rita/carry.png", "sourceAlphaBounds": { "x": 345, "y": 193, "width": 540, "height": 746 }, "visualFootShadowCenterSource": { "x": 615, "y": 938 } }
+        }
+      }
+    }
+  },
+  "workspaces": [
+    {
+      "id": "pm-office",
+      "name": "PM Office",
+      "bounds": { "x": 45, "y": 108, "width": 604, "height": 516 },
+      "safePlacementBounds": { "x": 100, "y": 280, "width": 500, "height": 310 },
+      "notes": "Upper-left green room; desk anchors stay clear of top furniture, perimeter walls, and the lower planter."
+    },
+    {
+      "id": "dev-office",
+      "name": "Dev Office",
+      "bounds": { "x": 1055, "y": 108, "width": 580, "height": 516 },
+      "safePlacementBounds": { "x": 1110, "y": 270, "width": 390, "height": 320 },
+      "notes": "Upper-right blue room; intentionally leaves the far-right strip and lower doorway area clear for future Inspector/UI reserve."
+    },
+    {
+      "id": "qa-lab",
+      "name": "QA Lab",
+      "bounds": { "x": 308, "y": 702, "width": 1270, "height": 198 },
+      "safePlacementBounds": { "x": 410, "y": 742, "width": 1020, "height": 126 },
+      "notes": "Lower purple room; the shallow depth uses a single desk row and compact vertical avatar/tag offset."
+    }
+  ],
+  "desks": [
+    {
+      "id": "pm-alice",
+      "workspaceId": "pm-office",
+      "deskAnchor": { "x": 160, "y": 548 },
+      "occupant": { "id": "alice", "displayName": "Alice", "avatarKey": "Alice", "nameTagColor": "#EA6A47" },
+      "avatarAnchor": { "x": 160, "y": 465 },
+      "seatAnchor": { "x": 160, "y": 469 },
+      "nameTagAnchor": { "x": 160, "y": 325 },
+      "orbAnchor": { "x": 236, "y": 401 },
+      "online": true
+    },
+    {
+      "id": "pm-bob",
+      "workspaceId": "pm-office",
+      "deskAnchor": { "x": 350, "y": 548 },
+      "occupant": { "id": "bob", "displayName": "Bob", "avatarKey": "Bob", "nameTagColor": "#3B82F6" },
+      "avatarAnchor": { "x": 350, "y": 465 },
+      "seatAnchor": { "x": 350, "y": 469 },
+      "nameTagAnchor": { "x": 350, "y": 325 },
+      "orbAnchor": { "x": 426, "y": 401 },
+      "online": true
+    },
+    {
+      "id": "pm-cindy",
+      "workspaceId": "pm-office",
+      "deskAnchor": { "x": 540, "y": 548 },
+      "occupant": { "id": "cindy", "displayName": "Cindy", "avatarKey": null, "nameTagColor": "#9CA3AF" },
+      "avatarAnchor": { "x": 540, "y": 465 },
+      "seatAnchor": { "x": 540, "y": 465 },
+      "nameTagAnchor": { "x": 540, "y": 325 },
+      "orbAnchor": { "x": 616, "y": 401 },
+      "online": false
+    },
+    {
+      "id": "dev-jack",
+      "workspaceId": "dev-office",
+      "deskAnchor": { "x": 1175, "y": 375 },
+      "occupant": { "id": "jack", "displayName": "Jack", "avatarKey": "Jack", "nameTagColor": "#2563EB" },
+      "avatarAnchor": { "x": 1175, "y": 295 },
+      "seatAnchor": { "x": 1175, "y": 298 },
+      "nameTagAnchor": { "x": 1175, "y": 155 },
+      "orbAnchor": { "x": 1251, "y": 231 },
+      "online": true
+    },
+    {
+      "id": "dev-kara",
+      "workspaceId": "dev-office",
+      "deskAnchor": { "x": 1445, "y": 375 },
+      "occupant": { "id": "kara", "displayName": "Kara", "avatarKey": "Kara", "nameTagColor": "#EC4899" },
+      "avatarAnchor": { "x": 1445, "y": 295 },
+      "seatAnchor": { "x": 1445, "y": 300 },
+      "nameTagAnchor": { "x": 1445, "y": 155 },
+      "orbAnchor": { "x": 1521, "y": 231 },
+      "online": true
+    },
+    {
+      "id": "dev-leo",
+      "workspaceId": "dev-office",
+      "deskAnchor": { "x": 1175, "y": 585 },
+      "occupant": { "id": "leo", "displayName": "Leo", "avatarKey": "Leo", "nameTagColor": "#16A34A" },
+      "avatarAnchor": { "x": 1175, "y": 515 },
+      "seatAnchor": { "x": 1175, "y": 519 },
+      "nameTagAnchor": { "x": 1175, "y": 395 },
+      "orbAnchor": { "x": 1251, "y": 451 },
+      "online": true
+    },
+    {
+      "id": "dev-mia",
+      "workspaceId": "dev-office",
+      "deskAnchor": { "x": 1445, "y": 585 },
+      "occupant": { "id": "mia", "displayName": "Mia", "avatarKey": null, "nameTagColor": "#9CA3AF" },
+      "avatarAnchor": { "x": 1445, "y": 515 },
+      "seatAnchor": { "x": 1445, "y": 515 },
+      "nameTagAnchor": { "x": 1445, "y": 395 },
+      "orbAnchor": { "x": 1521, "y": 451 },
+      "online": false
+    },
+    {
+      "id": "qa-quinn",
+      "workspaceId": "qa-lab",
+      "deskAnchor": { "x": 550, "y": 868 },
+      "occupant": { "id": "quinn", "displayName": "Quinn", "avatarKey": "Quinn", "nameTagColor": "#7C3AED" },
+      "avatarAnchor": { "x": 550, "y": 840 },
+      "seatAnchor": { "x": 550, "y": 825 },
+      "nameTagAnchor": { "x": 550, "y": 705 },
+      "orbAnchor": { "x": 626, "y": 776 },
+      "online": true
+    },
+    {
+      "id": "qa-rita",
+      "workspaceId": "qa-lab",
+      "deskAnchor": { "x": 920, "y": 868 },
+      "occupant": { "id": "rita", "displayName": "Rita", "avatarKey": "Rita", "nameTagColor": "#D946EF" },
+      "avatarAnchor": { "x": 920, "y": 840 },
+      "seatAnchor": { "x": 920, "y": 825 },
+      "nameTagAnchor": { "x": 920, "y": 705 },
+      "orbAnchor": { "x": 996, "y": 776 },
+      "online": true
+    },
+    {
+      "id": "qa-tina",
+      "workspaceId": "qa-lab",
+      "deskAnchor": { "x": 1290, "y": 868 },
+      "occupant": { "id": "tina", "displayName": "Tina", "avatarKey": null, "nameTagColor": "#9CA3AF" },
+      "avatarAnchor": { "x": 1290, "y": 840 },
+      "seatAnchor": { "x": 1290, "y": 840 },
+      "nameTagAnchor": { "x": 1290, "y": 705 },
+      "orbAnchor": { "x": 1366, "y": 776 },
+      "online": false
+    }
+  ],
+  "artifactHub": {
+    "id": "artifact-hub",
+    "workspaceId": null,
+    "assetKey": "furniture.artifactHub",
+    "hubAnchor": { "x": 850, "y": 510 },
+    "artifactSlots": [
+      { "id": "prd-slot", "assetKey": "artifact.prdBlue", "anchor": { "x": 810, "y": 458 } },
+      { "id": "feature-slot", "assetKey": "artifact.featureGreen", "anchor": { "x": 850, "y": 458 } },
+      { "id": "report-slot", "assetKey": "artifact.reportPurple", "anchor": { "x": 890, "y": 458 } }
+    ],
+    "notes": "Located in the clear central tiled public area. Artifact slots are optional future contents, not permanent map labels."
+  },
+  "handoffAnchors": {
+    "policy": "Data only: do not render a persistent line or arrow between these points. Actors move only to approach points; hubDropPoint and hubPickupPoint are Artifact coordinates, not standing positions.",
+    "producerRoute": {
+      "deskId": "pm-alice",
+      "deskExit": { "x": 258, "y": 360 },
+      "staging": { "x": 710, "y": 278 },
+      "hubApproach": { "x": 744, "y": 470 },
+      "deskReturn": { "x": 160, "y": 465 }
+    },
+    "consumerRoute": {
+      "deskId": "dev-jack",
+      "deskExit": { "x": 1120, "y": 270 },
+      "staging": { "x": 1010, "y": 280 },
+      "hubApproach": { "x": 960, "y": 470 },
+      "deskReturn": { "x": 1175, "y": 295 }
+    },
+    "devProducerRoute": {
+      "deskId": "dev-jack",
+      "deskExit": { "x": 1120, "y": 270 },
+      "staging": { "x": 1010, "y": 280 },
+      "hubApproach": { "x": 960, "y": 470 },
+      "deskReturn": { "x": 1175, "y": 295 }
+    },
+    "qaConsumerRoute": {
+      "deskId": "qa-quinn",
+      "deskExit": { "x": 350, "y": 790 },
+      "staging": { "x": 270, "y": 650 },
+      "hubApproach": { "x": 744, "y": 560 },
+      "deskReturn": { "x": 550, "y": 825 }
+    },
+    "hubDropPoint": { "x": 850, "y": 458 },
+    "hubPickupPoint": { "x": 850, "y": 458 },
+    "artifactAnchors": {
+      "aliceDesk": { "x": 230, "y": 488 },
+      "jackDesk": { "x": 1235, "y": 315 },
+      "quinnDesk": { "x": 620, "y": 820 }
+    },
+    "carriedArtifactOffsets": {
+      "alice": { "x": 36, "y": -42 },
+      "jack": { "x": 46, "y": -50 },
+      "quinn": { "x": 42, "y": -48 }
+    },
+    "statusAnchors": {
+      "jackReceiptBubble": { "x": 1315, "y": 190 },
+      "jackCodingLabel": { "x": 1160, "y": 208 },
+      "quinnReceiptBubble": { "x": 680, "y": 735 },
+      "quinnTestingLabel": { "x": 530, "y": 750 }
+    }
+  }
+}

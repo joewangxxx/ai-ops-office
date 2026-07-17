@@ -1,0 +1,2874 @@
+{
+  "schema_version": 1,
+  "root": "C:/Users/29929/Desktop/AI-Wrokspace",
+  "summary": {
+    "expected_target_count": 28,
+    "found_target_count": 28,
+    "missing_target_count": 0,
+    "automated_technical_pass_count": 28,
+    "automated_technical_failure_count": 0,
+    "decode_failure_count": 0,
+    "baseline_entry_count": 81,
+    "non_target_change_count": 0,
+    "automated_status": "pass",
+    "manual_review_status": "pass",
+    "overall_status": "pass"
+  },
+  "metric_definitions": {
+    "runtime_180": "entire source canvas resized to 180x180 with nearest-neighbor resampling",
+    "foot_anchor": "stable bottom-center anchor derived at alpha>=64",
+    "non_target_change_count": "missing or SHA-modified baseline files plus added PNGs outside the exact 28-target whitelist",
+    "manual_review_boundary": "identity, direction, action semantics, prohibited content, and scene fit require human assessment"
+  },
+  "targets": {
+    "expected_count": 28,
+    "found_count": 28,
+    "missing_count": 0,
+    "technical_pass_count": 28,
+    "technical_failure_count": 0,
+    "decode_failure_count": 0,
+    "missing": [],
+    "assets": [
+      {
+        "path": "images/avatars/Alice/walk-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            410,
+            214,
+            813,
+            972
+          ],
+          "nonzero_alpha_count": 188861,
+          "partial_alpha_count": 4395,
+          "visible_alpha_count": 187620,
+          "visible_alpha_bbox": [
+            410,
+            214,
+            812,
+            971
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1383655,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            579.0,
+            970
+          ],
+          "normalized": [
+            0.462091,
+            0.774142
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            941,
+            970
+          ],
+          "foot_span": [
+            453,
+            705
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            59,
+            31,
+            117,
+            140
+          ],
+          "visible_size": [
+            58,
+            109
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Alice/walk-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            439,
+            221,
+            823,
+            950
+          ],
+          "nonzero_alpha_count": 186666,
+          "partial_alpha_count": 4101,
+          "visible_alpha_count": 185597,
+          "visible_alpha_bbox": [
+            439,
+            222,
+            822,
+            950
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1385850,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            626.5,
+            949
+          ],
+          "normalized": [
+            0.5,
+            0.757382
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            921,
+            949
+          ],
+          "foot_span": [
+            491,
+            762
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            63,
+            32,
+            118,
+            136
+          ],
+          "visible_size": [
+            55,
+            104
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Alice/carry-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            426,
+            148,
+            849,
+            1035
+          ],
+          "nonzero_alpha_count": 232279,
+          "partial_alpha_count": 4092,
+          "visible_alpha_count": 231129,
+          "visible_alpha_bbox": [
+            426,
+            148,
+            848,
+            1034
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1340237,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            627.5,
+            1033
+          ],
+          "normalized": [
+            0.500798,
+            0.824421
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 20,
+          "foot_band": [
+            999,
+            1033
+          ],
+          "foot_span": [
+            478,
+            777
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            61,
+            21,
+            122,
+            149
+          ],
+          "visible_size": [
+            61,
+            128
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Alice/carry-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            410,
+            145,
+            856,
+            1046
+          ],
+          "nonzero_alpha_count": 266544,
+          "partial_alpha_count": 4520,
+          "visible_alpha_count": 265181,
+          "visible_alpha_bbox": [
+            410,
+            146,
+            856,
+            1046
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1305972,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            637.0,
+            1045
+          ],
+          "normalized": [
+            0.50838,
+            0.833998
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 21,
+          "foot_band": [
+            1010,
+            1045
+          ],
+          "foot_span": [
+            471,
+            803
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            59,
+            21,
+            123,
+            150
+          ],
+          "visible_size": [
+            64,
+            129
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Bob/walk-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            399,
+            177,
+            839,
+            1012
+          ],
+          "nonzero_alpha_count": 221950,
+          "partial_alpha_count": 4556,
+          "visible_alpha_count": 220926,
+          "visible_alpha_bbox": [
+            399,
+            178,
+            839,
+            1012
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1350566,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            614.5,
+            1011
+          ],
+          "normalized": [
+            0.490423,
+            0.806864
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 21,
+          "foot_band": [
+            979,
+            1011
+          ],
+          "foot_span": [
+            478,
+            751
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            57,
+            25,
+            120,
+            145
+          ],
+          "visible_size": [
+            63,
+            120
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Bob/walk-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            416,
+            179,
+            832,
+            999
+          ],
+          "nonzero_alpha_count": 205273,
+          "partial_alpha_count": 4168,
+          "visible_alpha_count": 204252,
+          "visible_alpha_bbox": [
+            416,
+            179,
+            832,
+            999
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1367243,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            629.0,
+            998
+          ],
+          "normalized": [
+            0.501995,
+            0.796488
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            966,
+            998
+          ],
+          "foot_span": [
+            483,
+            775
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            60,
+            26,
+            119,
+            143
+          ],
+          "visible_size": [
+            59,
+            117
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Bob/carry-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            386,
+            184,
+            900,
+            1035
+          ],
+          "nonzero_alpha_count": 221052,
+          "partial_alpha_count": 4843,
+          "visible_alpha_count": 219649,
+          "visible_alpha_bbox": [
+            387,
+            184,
+            900,
+            1034
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1351464,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            655.5,
+            1033
+          ],
+          "normalized": [
+            0.523144,
+            0.824421
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            1000,
+            1033
+          ],
+          "foot_span": [
+            479,
+            832
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            55,
+            26,
+            129,
+            149
+          ],
+          "visible_size": [
+            74,
+            123
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Bob/carry-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            338,
+            140,
+            928,
+            1051
+          ],
+          "nonzero_alpha_count": 254309,
+          "partial_alpha_count": 4910,
+          "visible_alpha_count": 251995,
+          "visible_alpha_bbox": [
+            339,
+            140,
+            927,
+            1050
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1318207,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            587.5,
+            1049
+          ],
+          "normalized": [
+            0.468875,
+            0.837191
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 22,
+          "foot_band": [
+            1014,
+            1049
+          ],
+          "foot_span": [
+            405,
+            770
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            49,
+            20,
+            133,
+            151
+          ],
+          "visible_size": [
+            84,
+            131
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Jack/walk-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            398,
+            145,
+            863,
+            998
+          ],
+          "nonzero_alpha_count": 234849,
+          "partial_alpha_count": 4609,
+          "visible_alpha_count": 233608,
+          "visible_alpha_bbox": [
+            398,
+            145,
+            863,
+            998
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1337667,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            644.0,
+            997
+          ],
+          "normalized": [
+            0.513966,
+            0.79569
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 22,
+          "foot_band": [
+            964,
+            997
+          ],
+          "foot_span": [
+            482,
+            806
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            57,
+            21,
+            124,
+            143
+          ],
+          "visible_size": [
+            67,
+            122
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Jack/walk-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            420,
+            154,
+            844,
+            1012
+          ],
+          "nonzero_alpha_count": 218390,
+          "partial_alpha_count": 4890,
+          "visible_alpha_count": 217155,
+          "visible_alpha_bbox": [
+            420,
+            155,
+            844,
+            1012
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1354126,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            623.5,
+            1011
+          ],
+          "normalized": [
+            0.497606,
+            0.806864
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            978,
+            1011
+          ],
+          "foot_span": [
+            485,
+            762
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            60,
+            22,
+            121,
+            145
+          ],
+          "visible_size": [
+            61,
+            123
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Jack/carry-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            364,
+            173,
+            829,
+            1032
+          ],
+          "nonzero_alpha_count": 230726,
+          "partial_alpha_count": 4689,
+          "visible_alpha_count": 229412,
+          "visible_alpha_bbox": [
+            364,
+            174,
+            829,
+            1032
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1341790,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            627.5,
+            1031
+          ],
+          "normalized": [
+            0.500798,
+            0.822825
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            998,
+            1031
+          ],
+          "foot_span": [
+            489,
+            766
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 7
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            52,
+            25,
+            119,
+            148
+          ],
+          "visible_size": [
+            67,
+            123
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Jack/carry-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            357,
+            142,
+            933,
+            1024
+          ],
+          "nonzero_alpha_count": 264926,
+          "partial_alpha_count": 4348,
+          "visible_alpha_count": 263104,
+          "visible_alpha_bbox": [
+            358,
+            143,
+            933,
+            1024
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1307590,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            597.0,
+            1023
+          ],
+          "normalized": [
+            0.476457,
+            0.816441
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 22,
+          "foot_band": [
+            989,
+            1023
+          ],
+          "foot_span": [
+            382,
+            812
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            51,
+            20,
+            134,
+            147
+          ],
+          "visible_size": [
+            83,
+            127
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Kara/walk-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            429,
+            221,
+            834,
+            970
+          ],
+          "nonzero_alpha_count": 178232,
+          "partial_alpha_count": 3619,
+          "visible_alpha_count": 177088,
+          "visible_alpha_bbox": [
+            429,
+            221,
+            833,
+            970
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1394284,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            617.5,
+            969
+          ],
+          "normalized": [
+            0.492817,
+            0.773344
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 18,
+          "foot_band": [
+            940,
+            969
+          ],
+          "foot_span": [
+            496,
+            739
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            62,
+            32,
+            120,
+            139
+          ],
+          "visible_size": [
+            58,
+            107
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Kara/walk-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            432,
+            218,
+            828,
+            1000
+          ],
+          "nonzero_alpha_count": 202841,
+          "partial_alpha_count": 3793,
+          "visible_alpha_count": 201521,
+          "visible_alpha_bbox": [
+            432,
+            219,
+            828,
+            1000
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1369675,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            637.5,
+            999
+          ],
+          "normalized": [
+            0.508779,
+            0.797287
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            969,
+            999
+          ],
+          "foot_span": [
+            496,
+            779
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            62,
+            31,
+            119,
+            144
+          ],
+          "visible_size": [
+            57,
+            113
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Kara/carry-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            388,
+            135,
+            862,
+            1016
+          ],
+          "nonzero_alpha_count": 234177,
+          "partial_alpha_count": 4094,
+          "visible_alpha_count": 233038,
+          "visible_alpha_bbox": [
+            388,
+            135,
+            862,
+            1016
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1338339,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            643.0,
+            1015
+          ],
+          "normalized": [
+            0.513168,
+            0.810056
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            981,
+            1015
+          ],
+          "foot_span": [
+            485,
+            801
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            56,
+            19,
+            124,
+            146
+          ],
+          "visible_size": [
+            68,
+            127
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Kara/carry-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            410,
+            173,
+            878,
+            999
+          ],
+          "nonzero_alpha_count": 229287,
+          "partial_alpha_count": 3840,
+          "visible_alpha_count": 228297,
+          "visible_alpha_bbox": [
+            410,
+            173,
+            878,
+            998
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1343229,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            621.5,
+            997
+          ],
+          "normalized": [
+            0.49601,
+            0.79569
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 19,
+          "foot_band": [
+            965,
+            997
+          ],
+          "foot_span": [
+            459,
+            784
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            59,
+            25,
+            126,
+            143
+          ],
+          "visible_size": [
+            67,
+            118
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Leo/walk-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            437,
+            221,
+            821,
+            970
+          ],
+          "nonzero_alpha_count": 159115,
+          "partial_alpha_count": 4465,
+          "visible_alpha_count": 157940,
+          "visible_alpha_bbox": [
+            437,
+            221,
+            821,
+            970
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1413401,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            635.5,
+            969
+          ],
+          "normalized": [
+            0.507183,
+            0.773344
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 16,
+          "foot_band": [
+            940,
+            969
+          ],
+          "foot_span": [
+            504,
+            767
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            63,
+            32,
+            118,
+            139
+          ],
+          "visible_size": [
+            55,
+            107
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Leo/walk-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            444,
+            212,
+            824,
+            966
+          ],
+          "nonzero_alpha_count": 182712,
+          "partial_alpha_count": 4165,
+          "visible_alpha_count": 181720,
+          "visible_alpha_bbox": [
+            444,
+            212,
+            824,
+            966
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1389804,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            626.5,
+            965
+          ],
+          "normalized": [
+            0.5,
+            0.770152
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 18,
+          "foot_band": [
+            936,
+            965
+          ],
+          "foot_span": [
+            502,
+            751
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            64,
+            30,
+            118,
+            139
+          ],
+          "visible_size": [
+            54,
+            109
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Leo/carry-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            384,
+            177,
+            866,
+            1021
+          ],
+          "nonzero_alpha_count": 227729,
+          "partial_alpha_count": 3904,
+          "visible_alpha_count": 226864,
+          "visible_alpha_bbox": [
+            384,
+            177,
+            865,
+            1021
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1344787,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            651.0,
+            1020
+          ],
+          "normalized": [
+            0.519553,
+            0.814046
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 18,
+          "foot_band": [
+            987,
+            1020
+          ],
+          "foot_span": [
+            489,
+            813
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            55,
+            25,
+            124,
+            147
+          ],
+          "visible_size": [
+            69,
+            122
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Leo/carry-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            389,
+            177,
+            887,
+            997
+          ],
+          "nonzero_alpha_count": 227266,
+          "partial_alpha_count": 4477,
+          "visible_alpha_count": 226054,
+          "visible_alpha_bbox": [
+            389,
+            178,
+            886,
+            997
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1345250,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            598.0,
+            996
+          ],
+          "normalized": [
+            0.477255,
+            0.794892
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 20,
+          "foot_band": [
+            964,
+            996
+          ],
+          "foot_span": [
+            443,
+            753
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            56,
+            25,
+            127,
+            143
+          ],
+          "visible_size": [
+            71,
+            118
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Quinn/walk-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            430,
+            242,
+            802,
+            923
+          ],
+          "nonzero_alpha_count": 166437,
+          "partial_alpha_count": 4029,
+          "visible_alpha_count": 165355,
+          "visible_alpha_bbox": [
+            430,
+            243,
+            801,
+            923
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1406079,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            611.5,
+            922
+          ],
+          "normalized": [
+            0.488029,
+            0.735834
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 17,
+          "foot_band": [
+            896,
+            922
+          ],
+          "foot_span": [
+            477,
+            746
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            62,
+            35,
+            115,
+            132
+          ],
+          "visible_size": [
+            53,
+            97
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Quinn/walk-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            430,
+            254,
+            819,
+            921
+          ],
+          "nonzero_alpha_count": 172527,
+          "partial_alpha_count": 4262,
+          "visible_alpha_count": 171605,
+          "visible_alpha_bbox": [
+            430,
+            254,
+            819,
+            921
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1399989,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            613.5,
+            920
+          ],
+          "normalized": [
+            0.489625,
+            0.734238
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 18,
+          "foot_band": [
+            894,
+            920
+          ],
+          "foot_span": [
+            472,
+            755
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            62,
+            36,
+            118,
+            132
+          ],
+          "visible_size": [
+            56,
+            96
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Quinn/carry-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            359,
+            167,
+            885,
+            1021
+          ],
+          "nonzero_alpha_count": 265370,
+          "partial_alpha_count": 4399,
+          "visible_alpha_count": 264080,
+          "visible_alpha_bbox": [
+            360,
+            167,
+            885,
+            1021
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1307146,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            663.5,
+            1020
+          ],
+          "normalized": [
+            0.529529,
+            0.814046
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 21,
+          "foot_band": [
+            987,
+            1020
+          ],
+          "foot_span": [
+            506,
+            821
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            52,
+            24,
+            127,
+            147
+          ],
+          "visible_size": [
+            75,
+            123
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Quinn/carry-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            380,
+            192,
+            902,
+            981
+          ],
+          "nonzero_alpha_count": 226679,
+          "partial_alpha_count": 4545,
+          "visible_alpha_count": 225419,
+          "visible_alpha_bbox": [
+            380,
+            192,
+            902,
+            980
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1345837,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            595.5,
+            979
+          ],
+          "normalized": [
+            0.475259,
+            0.781325
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 21,
+          "foot_band": [
+            948,
+            979
+          ],
+          "foot_span": [
+            428,
+            763
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            55,
+            28,
+            129,
+            141
+          ],
+          "visible_size": [
+            74,
+            113
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Rita/walk-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            404,
+            218,
+            889,
+            981
+          ],
+          "nonzero_alpha_count": 198709,
+          "partial_alpha_count": 4933,
+          "visible_alpha_count": 197463,
+          "visible_alpha_bbox": [
+            404,
+            218,
+            889,
+            981
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1373807,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            593.5,
+            980
+          ],
+          "normalized": [
+            0.473663,
+            0.782123
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 21,
+          "foot_band": [
+            950,
+            980
+          ],
+          "foot_span": [
+            451,
+            736
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            58,
+            31,
+            128,
+            141
+          ],
+          "visible_size": [
+            70,
+            110
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Rita/walk-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            355,
+            215,
+            854,
+            987
+          ],
+          "nonzero_alpha_count": 212428,
+          "partial_alpha_count": 4964,
+          "visible_alpha_count": 211142,
+          "visible_alpha_bbox": [
+            356,
+            215,
+            854,
+            987
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1360088,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            633.0,
+            986
+          ],
+          "normalized": [
+            0.505188,
+            0.786911
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 22,
+          "foot_band": [
+            956,
+            986
+          ],
+          "foot_span": [
+            467,
+            799
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            51,
+            31,
+            123,
+            142
+          ],
+          "visible_size": [
+            72,
+            111
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Rita/carry-left.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            334,
+            154,
+            977,
+            1035
+          ],
+          "nonzero_alpha_count": 285663,
+          "partial_alpha_count": 5103,
+          "visible_alpha_count": 283990,
+          "visible_alpha_bbox": [
+            335,
+            155,
+            977,
+            1035
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1286853,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            626.0,
+            1034
+          ],
+          "normalized": [
+            0.499601,
+            0.825219
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 25,
+          "foot_band": [
+            1000,
+            1034
+          ],
+          "foot_span": [
+            423,
+            829
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            48,
+            22,
+            140,
+            149
+          ],
+          "visible_size": [
+            92,
+            127
+          ]
+        }
+      },
+      {
+        "path": "images/avatars/Rita/carry-right.png",
+        "technical": {
+          "image_format": "PNG",
+          "mode": "RGBA",
+          "size": [
+            1254,
+            1254
+          ],
+          "corner_alpha": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "alpha_bbox": [
+            275,
+            161,
+            922,
+            1064
+          ],
+          "nonzero_alpha_count": 294785,
+          "partial_alpha_count": 5399,
+          "visible_alpha_count": 293072,
+          "visible_alpha_bbox": [
+            275,
+            161,
+            921,
+            1063
+          ],
+          "visible_alpha_requirements": {
+            "minimum_pixels": 3145,
+            "minimum_bbox_width": 100,
+            "minimum_bbox_height": 251
+          },
+          "green_dominant_count": 0,
+          "chroma_key_like_count": 0,
+          "component_count_8": 1,
+          "automated_checks": {
+            "png": true,
+            "rgba": true,
+            "size_1254_square": true,
+            "transparent_corners": true,
+            "nonempty_alpha": true,
+            "meaningful_visible_alpha": true,
+            "clear_of_canvas_edges": true,
+            "single_component_8": true,
+            "no_green_dominant_pixels": true,
+            "no_chroma_key_like_pixels": true,
+            "valid_foot_anchor": true,
+            "no_hidden_rgb_under_zero_alpha": true
+          },
+          "automated_technical_status": "pass",
+          "green_dominant_interpretation": "clear"
+        },
+        "hidden_rgb": {
+          "transparent_pixel_count": 1277731,
+          "nonzero_rgb_count": 0,
+          "green_like_count": 0,
+          "chroma_key_like_count": 0
+        },
+        "foot_anchor": {
+          "source": [
+            598.5,
+            1062
+          ],
+          "normalized": [
+            0.477654,
+            0.847566
+          ],
+          "alpha_threshold": 64,
+          "stable_row_minimum": 24,
+          "foot_band": [
+            1027,
+            1062
+          ],
+          "foot_span": [
+            390,
+            807
+          ],
+          "ignored_pixels_below_anchor": 0,
+          "ignored_nonmain_component_pixels": 0
+        },
+        "runtime_180": {
+          "canvas_size": [
+            180,
+            180
+          ],
+          "visible_bbox": [
+            39,
+            23,
+            132,
+            153
+          ],
+          "visible_size": [
+            93,
+            130
+          ]
+        }
+      }
+    ]
+  },
+  "baseline": {
+    "baseline_path": ".planning/2026-07-16-avatar-horizontal-generation/baseline-sha256.csv",
+    "expected_entry_count": 81,
+    "baseline_entry_count": 81,
+    "entry_count_matches": true,
+    "duplicate_paths": [],
+    "target_overlap": [],
+    "invalid_entries": [],
+    "matched_count": 81,
+    "missing": [],
+    "modified": [],
+    "unexpected_added_non_target": [],
+    "non_target_change_count": 0,
+    "status": "pass"
+  },
+  "evidence": {
+    "transparent_contact_sheet": {
+      "path": ".planning/2026-07-16-avatar-horizontal-generation/horizontal-transparent-contact-sheet.png",
+      "status": "pass"
+    },
+    "movement_comparison_sheet": {
+      "path": ".planning/2026-07-16-avatar-horizontal-generation/horizontal-movement-comparison-sheet.png",
+      "status": "pass"
+    },
+    "office_shell_composite": {
+      "path": ".planning/2026-07-16-avatar-horizontal-generation/horizontal-office-shell-composite.png",
+      "status": "pass"
+    }
+  },
+  "manual_review": {
+    "manifest_path": ".planning/2026-07-16-avatar-horizontal-generation/asset-status-manifest.json",
+    "expected_count": 28,
+    "record_count": 28,
+    "passed_count": 28,
+    "missing_paths": [],
+    "unexpected_paths": [],
+    "duplicate_paths": [],
+    "errors": [],
+    "status": "pass"
+  }
+}

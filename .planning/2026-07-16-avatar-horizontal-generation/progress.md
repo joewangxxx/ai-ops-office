@@ -1,0 +1,85 @@
+# Progress
+
+## 2026-07-16
+
+- Started the approved 28-asset horizontal movement generation goal.
+- Loaded the required image generation and execution skills.
+- Created a persistent task plan and delegated three independent read-only audits.
+- Current phase: preflight and baseline.
+- Confirmed the current `images/` tree contains 81 PNGs and all 28 target paths are absent.
+- Captured and stability-checked the 81-file SHA-256 baseline.
+- Completed the independent 49-reference technical audit and visual inspection of Alice's eight actor references plus the office shell.
+- Visually inspected all seven Bob and all seven Jack movement/carry references.
+- Visually inspected all seven Kara and all seven Leo movement/carry references.
+- Visually inspected all seven Quinn and all seven Rita movement/carry references. All 49 actor references and the scene reference have now been inspected.
+- Located the built-in ImageGen output store and identified the reusable validation/chroma-key primitives.
+- Completed Phase 1. Entered Phase 2 for individual generation and candidate validation, starting with Alice.
+- Generated, chroma-keyed, technically validated, and visually accepted Alice `walk-left` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Alice `walk-right` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Alice `carry-left` on attempt 1.
+- Alice `carry-right` ImageGen call attempt 1 failed with a transient network error and produced no candidate; retrying as attempt 2.
+- Generated, chroma-keyed, technically validated, and visually accepted Alice `carry-right` on attempt 2.
+- Added the first tested horizontal-validator functions: exact whitelist, technical inventory, and complete-set-only transparent 7×4 contact sheet.
+- Generated and visually reviewed `alice-horizontal-group-qa.png` with actual 180×180 renders and office-shell composites; 4/4 passed.
+- Promoted Alice 4/4 to official paths without overwriting any file; original baseline remains 81/81 unchanged.
+- Generated, chroma-keyed, technically validated, and visually accepted Bob `walk-left` on attempt 1.
+- Generated Bob `walk-right` attempt 1 and rejected it at the group-scale gate; preparing targeted attempt 2.
+- Generated, chroma-keyed, and accepted Bob `walk-right` attempt 2 after scale correction; walk pair now meets the group tolerance.
+- Generated, chroma-keyed, technically validated, and visually accepted Bob `carry-left` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Bob `carry-right` on attempt 1.
+- Generated and reviewed `bob-horizontal-group-qa.png`; Bob passed 4/4 at actual 180px and in-scene.
+- Promoted Bob 4/4 to official paths without overwriting any file; original baseline remains 81/81 unchanged.
+- Generated, chroma-keyed, technically validated, and visually accepted Jack `walk-left` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Jack `walk-right` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Jack `carry-left` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Jack `carry-right` on attempt 1.
+- Generated and reviewed `jack-horizontal-group-qa.png`; Jack passed 4/4 at actual 180px and in-scene.
+- Promoted Jack 4/4 to official paths without overwriting any file; original baseline remains 81/81 unchanged.
+- Corrected Jack Carry promotion paths to the exact whitelist root paths; verified both SHA-256 values and removed only the two misplaced new copies plus their empty directory.
+- Generated, chroma-keyed, technically validated, and visually accepted Kara `walk-left` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Kara `walk-right` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Kara `carry-left` on attempt 1.
+- Generated Kara `carry-right` attempt 1; rejected it for an unauthorized gold earring and retained it for audit evidence.
+- Generated Kara `carry-right` attempt 2; the earring defect is fixed, but rejected it for exceeding the left/right Carry scale tolerance.
+- Generated Kara `carry-right` attempt 3; it passes all single-image gates but remains provisional pending native group-scale correction via a second `carry-left` attempt.
+- Reconnected after an interrupted/no-output `carry-left` calibration call; regenerated, processed, and accepted Kara `carry-left` attempt 2.
+- Generated and reviewed `kara-horizontal-group-qa.png`; Kara passed 4/4 at actual 180px and in-scene.
+- Promoted Kara 4/4 to exact whitelist paths; candidate-to-official hashes match and the original 81-file baseline remains unchanged.
+- Generated, chroma-keyed, technically validated, and visually accepted Leo `walk-left` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Leo `walk-right` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Leo `carry-left` and `carry-right` on attempt 1.
+- Generated and reviewed `leo-horizontal-group-qa.png`; Leo passed 4/4 at actual 180px and in-scene.
+- Promoted Leo 4/4 to exact whitelist paths; original 81-file baseline and candidate hashes verified.
+- Generated, chroma-keyed, technically validated, and visually accepted Quinn `walk-left` and `walk-right` on attempt 1.
+- Generated, chroma-keyed, technically validated, and visually accepted Quinn `carry-left` and `carry-right` on attempt 1.
+- Generated and reviewed `quinn-horizontal-group-qa.png`; Quinn passed 4/4 at actual 180px and in-scene.
+- Promoted Quinn 4/4 to exact whitelist paths; original 81-file baseline and candidate hashes verified.
+- Generated, chroma-keyed, technically validated, and visually accepted Rita `walk-left` and `walk-right` on attempt 1.
+- Generated and accepted Rita `carry-left` attempt 1; generated Rita `carry-right` attempt 1 but rejected it at the group-scale gate.
+- Generated Rita `carry-right` attempt 2; rejected it for scale overshoot and a disconnected alpha component.
+- Generated, processed, and visually accepted Rita `carry-right` attempt 3.
+- Generated and reviewed `rita-horizontal-group-qa.png`; Rita passed 4/4 at actual 180px and in-scene.
+- Promoted Rita 4/4 to exact whitelist paths; all 28 official horizontal targets now exist.
+- Ran the strict horizontal validator on all 28 official targets; automated technical checks passed 28/28, the original 81-file SHA baseline matched 81/81, and non-target changes were 0.
+- Generated and visually reviewed the final 7x4 transparent contact sheet, the 7x8 up/down movement comparison sheet, and the 28-cell 180px office-shell composite.
+- Final evidence review passed all 28 assets for identity, strict left/right direction, Walk/Carry semantics, folder count/readability, independent posing, scale, foot placement, and scene clarity.
+- Built the final 28-entry `asset-status-manifest.json`, including all 34 retained source/alpha outputs, two no-output call events, accepted-attempt mappings, hashes, technical metrics, manual sign-off, group evidence, and promotion checks.
+- Built the full per-attempt `prompt-set.md` and the per-image report at `docs/avatar-horizontal-asset-generation-report.md`, explicitly disclosing the near-green source-background deviation.
+- Re-ran the strict validator with the manual manifest; final JSON now reports automated pass, manual pass, and overall pass with 28/28 and zero non-target changes.
+- Final verification passed: 19/19 validator tests, Python compilation, strict validator exit 0, exact targets 28, total image PNGs 109, baseline 81/81, residual `Carry/` directories 0, and all manifest/report/evidence cross-checks consistent.
+- Started a new independent acceptance review at the user's request. Restored the active plan, inspected the dirty worktree without reverting user changes, and confirmed all 28 target paths are present.
+- Read the Goal's task plan, findings, progress, final report, and evidence inventory. The Goal claims 28/28 automated/manual/scene acceptance; these claims remain provisional until fresh validator/test execution and independent visual inspection are complete.
+- Logged and corrected one audit-command quoting error; the failed command did not execute or modify project files.
+- Fresh independent commands passed: 19/19 validator tests, `py_compile`, and strict complete-set validation with 28/28 technical/manual passes and zero baseline changes.
+- Independently inspected the transparent 7x4 contact sheet and 7x8 directional comparison. Direction, identity, Walk/Carry semantics, and pair consistency currently pass; horizontal folder prominence remains under review in the real office composite.
+- Independently inspected the full office-shell composite; scale, grounding, direction, identity, and folder readability pass at the intended 180x180 render size.
+- Logged a read-only JSON schema mistake (`assets` vs `targets.assets`) and corrected the audit path; no project asset was changed.
+- Cross-checked all target hashes and runtime metrics: 28 unique hashes, no duplicates, 109 total PNGs. Flagged per-image foot anchors as a mandatory next-task integration requirement.
+- Inspected the highest foot-delta/folder-prominence pair, Quinn Carry, at original resolution; both files pass identity, asymmetry, folder contact, alpha-edge, and badge-occlusion review.
+- Inspected final Kara `carry-right` and Rita `carry-right` at original resolution because their rejected-candidate histories were the riskiest; both accepted files pass.
+# 2026-07-17 前端接入预审
+
+- 检查了布局清单、Avatar 展示解析、故事角色渲染、PRD 交接故事与相关测试。
+- 确认新增 28 张图片目前尚未被运行时引用，水平移动仍落回旧 `walk.png` / `carry.png`。
+- 确认下一任务需要同时处理资产清单、四方向判定、坐姿产品规则、锚点数据和测试基线，避免只加路径却没有真正切换运行时。
+- Phase 5 独立验收完成，素材生成 Goal 正式收口；下一开发任务已确定为四方向运行时一次性切换。

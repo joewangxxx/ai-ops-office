@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "usage": "Patch-ready metadata for extending docs/office-layout.json; this file does not modify the layout.",
+  "sourceCanvas": { "width": 1254, "height": 1254 },
+  "alphaBoundsConvention": "x/y/width/height, converted from Pillow exclusive-right/exclusive-bottom alpha_bbox for alpha>0 in validation-after.json and verified against the live PNG alpha masks",
+  "recommendedRenderSize": { "seated": { "width": 150, "height": 150 }, "movement": { "width": 180, "height": 180 } },
+  "actors": {
+    "Alice": {
+      "seatedIdleBack": { "path": "images/avatars/Alice/seated-idle-back.png", "sourceAlphaBounds": { "x": 458, "y": 277, "width": 342, "height": 688 }, "visualSeatedBaseCenterSource": { "x": 628.5, "y": 964 } },
+      "seatedWorkingBack": { "path": "images/avatars/Alice/seated-working-back.png", "sourceAlphaBounds": { "x": 445, "y": 280, "width": 365, "height": 684 }, "visualSeatedBaseCenterSource": { "x": 627.5, "y": 963 } },
+      "walkUp": { "path": "images/avatars/Alice/walk-up.png", "sourceAlphaBounds": { "x": 470, "y": 219, "width": 303, "height": 777 }, "visualFootShadowCenterSource": { "x": 601.0, "y": 995 } },
+      "walkDown": { "path": "images/avatars/Alice/walk-down.png", "sourceAlphaBounds": { "x": 454, "y": 182, "width": 334, "height": 885 }, "visualFootShadowCenterSource": { "x": 653.0, "y": 1066 } },
+      "carryUp": { "path": "images/avatars/Alice/carry-up.png", "sourceAlphaBounds": { "x": 462, "y": 178, "width": 367, "height": 838 }, "visualFootShadowCenterSource": { "x": 665.5, "y": 1015 } },
+      "carryDown": { "path": "images/avatars/Alice/carry-down.png", "sourceAlphaBounds": { "x": 466, "y": 164, "width": 320, "height": 880 }, "visualFootShadowCenterSource": { "x": 649.5, "y": 1043 } }
+    },
+    "Bob": {
+      "seatedIdleBack": { "path": "images/avatars/Bob/seated-idle-back.png", "sourceAlphaBounds": { "x": 431, "y": 258, "width": 395, "height": 716 }, "visualSeatedBaseCenterSource": { "x": 627.5, "y": 973 } },
+      "seatedWorkingBack": { "path": "images/avatars/Bob/seated-working-back.png", "sourceAlphaBounds": { "x": 448, "y": 261, "width": 365, "height": 707 }, "visualSeatedBaseCenterSource": { "x": 628.5, "y": 967 } },
+      "walkUp": { "path": "images/avatars/Bob/walk-up.png", "sourceAlphaBounds": { "x": 448, "y": 189, "width": 336, "height": 826 }, "visualFootShadowCenterSource": { "x": 658.0, "y": 1014 } },
+      "walkDown": { "path": "images/avatars/Bob/walk-down.png", "sourceAlphaBounds": { "x": 453, "y": 148, "width": 356, "height": 879 }, "visualFootShadowCenterSource": { "x": 592.5, "y": 1026 } },
+      "carryUp": { "path": "images/avatars/Bob/carry-up.png", "sourceAlphaBounds": { "x": 458, "y": 167, "width": 453, "height": 867 }, "visualFootShadowCenterSource": { "x": 650.5, "y": 1033 } },
+      "carryDown": { "path": "images/avatars/Bob/carry-down.png", "sourceAlphaBounds": { "x": 431, "y": 138, "width": 443, "height": 942 }, "visualFootShadowCenterSource": { "x": 584.5, "y": 1079 } }
+    },
+    "Jack": {
+      "seatedIdleBack": { "path": "images/avatars/Jack/seated-idle-back.png", "sourceAlphaBounds": { "x": 437, "y": 237, "width": 379, "height": 725 }, "visualSeatedBaseCenterSource": { "x": 626.5, "y": 960 } },
+      "seatedWorkingBack": { "path": "images/avatars/Jack/seated-working-back.png", "sourceAlphaBounds": { "x": 437, "y": 252, "width": 380, "height": 707 }, "visualSeatedBaseCenterSource": { "x": 626.5, "y": 958 } },
+      "walkUp": { "path": "images/avatars/Jack/walk-up.png", "sourceAlphaBounds": { "x": 420, "y": 141, "width": 404, "height": 948 }, "visualFootShadowCenterSource": { "x": 666.5, "y": 1087 } },
+      "walkDown": { "path": "images/avatars/Jack/walk-down.png", "sourceAlphaBounds": { "x": 413, "y": 166, "width": 419, "height": 896 }, "visualFootShadowCenterSource": { "x": 666.0, "y": 1061 } },
+      "carryUp": { "path": "images/avatars/Jack/carry-up.png", "sourceAlphaBounds": { "x": 438, "y": 127, "width": 507, "height": 918 }, "visualFootShadowCenterSource": { "x": 666.5, "y": 1044 } },
+      "carryDown": { "path": "images/avatars/Jack/carry-down.png", "sourceAlphaBounds": { "x": 418, "y": 163, "width": 408, "height": 893 }, "visualFootShadowCenterSource": { "x": 661.5, "y": 1055 } }
+    },
+    "Kara": {
+      "seatedIdleBack": { "path": "images/avatars/Kara/seated-idle-back.png", "sourceAlphaBounds": { "x": 441, "y": 254, "width": 376, "height": 635 }, "visualSeatedBaseCenterSource": { "x": 629.0, "y": 888 } },
+      "seatedWorkingBack": { "path": "images/avatars/Kara/seated-working-back.png", "sourceAlphaBounds": { "x": 442, "y": 256, "width": 375, "height": 632 }, "visualSeatedBaseCenterSource": { "x": 628.5, "y": 886 } },
+      "walkUp": { "path": "images/avatars/Kara/walk-up.png", "sourceAlphaBounds": { "x": 422, "y": 167, "width": 413, "height": 811 }, "visualFootShadowCenterSource": { "x": 666.0, "y": 976 } },
+      "walkDown": { "path": "images/avatars/Kara/walk-down.png", "sourceAlphaBounds": { "x": 429, "y": 176, "width": 396, "height": 772 }, "visualFootShadowCenterSource": { "x": 660.0, "y": 947 } },
+      "carryUp": { "path": "images/avatars/Kara/carry-up.png", "sourceAlphaBounds": { "x": 425, "y": 193, "width": 440, "height": 798 }, "visualFootShadowCenterSource": { "x": 638.5, "y": 989 } },
+      "carryDown": { "path": "images/avatars/Kara/carry-down.png", "sourceAlphaBounds": { "x": 441, "y": 218, "width": 387, "height": 756 }, "visualFootShadowCenterSource": { "x": 597.0, "y": 973 } }
+    },
+    "Leo": {
+      "seatedIdleBack": { "path": "images/avatars/Leo/seated-idle-back.png", "sourceAlphaBounds": { "x": 459, "y": 271, "width": 348, "height": 689 }, "visualSeatedBaseCenterSource": { "x": 635.0, "y": 958 } },
+      "seatedWorkingBack": { "path": "images/avatars/Leo/seated-working-back.png", "sourceAlphaBounds": { "x": 460, "y": 272, "width": 348, "height": 684 }, "visualSeatedBaseCenterSource": { "x": 634.0, "y": 955 } },
+      "walkUp": { "path": "images/avatars/Leo/walk-up.png", "sourceAlphaBounds": { "x": 447, "y": 167, "width": 364, "height": 845 }, "visualFootShadowCenterSource": { "x": 665.0, "y": 1011 } },
+      "walkDown": { "path": "images/avatars/Leo/walk-down.png", "sourceAlphaBounds": { "x": 454, "y": 188, "width": 370, "height": 780 }, "visualFootShadowCenterSource": { "x": 597.5, "y": 967 } },
+      "carryUp": { "path": "images/avatars/Leo/carry-up.png", "sourceAlphaBounds": { "x": 441, "y": 161, "width": 462, "height": 883 }, "visualFootShadowCenterSource": { "x": 581.5, "y": 1043 } },
+      "carryDown": { "path": "images/avatars/Leo/carry-down.png", "sourceAlphaBounds": { "x": 457, "y": 189, "width": 360, "height": 823 }, "visualFootShadowCenterSource": { "x": 595.5, "y": 1011 } }
+    },
+    "Quinn": {
+      "seatedIdleBack": { "path": "images/avatars/Quinn/seated-idle-back.png", "sourceAlphaBounds": { "x": 415, "y": 259, "width": 408, "height": 707 }, "visualSeatedBaseCenterSource": { "x": 617.0, "y": 964 } },
+      "seatedWorkingBack": { "path": "images/avatars/Quinn/seated-working-back.png", "sourceAlphaBounds": { "x": 408, "y": 270, "width": 419, "height": 688 }, "visualSeatedBaseCenterSource": { "x": 616.5, "y": 957 } },
+      "walkUp": { "path": "images/avatars/Quinn/walk-up.png", "sourceAlphaBounds": { "x": 457, "y": 216, "width": 342, "height": 771 }, "visualFootShadowCenterSource": { "x": 673.0, "y": 986 } },
+      "walkDown": { "path": "images/avatars/Quinn/walk-down.png", "sourceAlphaBounds": { "x": 447, "y": 224, "width": 364, "height": 772 }, "visualFootShadowCenterSource": { "x": 682.0, "y": 994 } },
+      "carryUp": { "path": "images/avatars/Quinn/carry-up.png", "sourceAlphaBounds": { "x": 441, "y": 171, "width": 452, "height": 791 }, "visualFootShadowCenterSource": { "x": 666.5, "y": 961 } },
+      "carryDown": { "path": "images/avatars/Quinn/carry-down.png", "sourceAlphaBounds": { "x": 448, "y": 190, "width": 365, "height": 822 }, "visualFootShadowCenterSource": { "x": 680.5, "y": 1010 } }
+    },
+    "Rita": {
+      "seatedIdleBack": { "path": "images/avatars/Rita/seated-idle-back.png", "sourceAlphaBounds": { "x": 454, "y": 276, "width": 347, "height": 656 }, "visualSeatedBaseCenterSource": { "x": 631.0, "y": 931 } },
+      "seatedWorkingBack": { "path": "images/avatars/Rita/seated-working-back.png", "sourceAlphaBounds": { "x": 457, "y": 279, "width": 340, "height": 652 }, "visualSeatedBaseCenterSource": { "x": 629.5, "y": 930 } },
+      "walkUp": { "path": "images/avatars/Rita/walk-up.png", "sourceAlphaBounds": { "x": 457, "y": 195, "width": 319, "height": 790 }, "visualFootShadowCenterSource": { "x": 640.0, "y": 984 } },
+      "walkDown": { "path": "images/avatars/Rita/walk-down.png", "sourceAlphaBounds": { "x": 423, "y": 209, "width": 363, "height": 777 }, "visualFootShadowCenterSource": { "x": 651.0, "y": 985 } },
+      "carryUp": { "path": "images/avatars/Rita/carry-up.png", "sourceAlphaBounds": { "x": 443, "y": 190, "width": 435, "height": 795 }, "visualFootShadowCenterSource": { "x": 628.0, "y": 984 } },
+      "carryDown": { "path": "images/avatars/Rita/carry-down.png", "sourceAlphaBounds": { "x": 411, "y": 198, "width": 412, "height": 788 }, "visualFootShadowCenterSource": { "x": 642.5, "y": 984 } }
+    }
+  },
+  "seatedBackAnchorByDeskId": {
+    "pm-alice": { "x": 160, "y": 564 },
+    "pm-bob": { "x": 350, "y": 564 },
+    "pm-cindy": { "x": 540, "y": 564 },
+    "dev-jack": { "x": 1175, "y": 391 },
+    "dev-kara": { "x": 1445, "y": 391 },
+    "dev-leo": { "x": 1175, "y": 601 },
+    "dev-mia": { "x": 1445, "y": 601 },
+    "qa-quinn": { "x": 550, "y": 884 },
+    "qa-rita": { "x": 920, "y": 884 },
+    "qa-tina": { "x": 1290, "y": 884 }
+  },
+  "audit": {
+    "selectedSourceOfTruth": "validation-after.json plus live PNG verification for bounds and movement anchors; exported findings anchors re-derived from the accepted validator for seated anchors",
+    "missingValues": [],
+    "livePngVsValidationMismatches": [],
+    "seatedFindingsAnchorVsValidatorMismatches": [],
+    "reportVsSelectedAlphaBoundsMismatches": [
+      { "actor": "Bob", "asset": "seatedIdleBack", "report": { "x": 434, "y": 235, "width": 403, "height": 689 }, "selected": { "x": 431, "y": 258, "width": 395, "height": 716 } },
+      { "actor": "Bob", "asset": "seatedWorkingBack", "report": { "x": 434, "y": 236, "width": 458, "height": 688 }, "selected": { "x": 448, "y": 261, "width": 365, "height": 707 } },
+      { "actor": "Jack", "asset": "seatedIdleBack", "report": { "x": 423, "y": 204, "width": 431, "height": 731 }, "selected": { "x": 437, "y": 237, "width": 379, "height": 725 } },
+      { "actor": "Jack", "asset": "seatedWorkingBack", "report": { "x": 422, "y": 210, "width": 443, "height": 725 }, "selected": { "x": 437, "y": 252, "width": 380, "height": 707 } },
+      { "actor": "Kara", "asset": "seatedIdleBack", "report": { "x": 442, "y": 277, "width": 384, "height": 654 }, "selected": { "x": 441, "y": 254, "width": 376, "height": 635 } },
+      { "actor": "Kara", "asset": "seatedWorkingBack", "report": { "x": 443, "y": 278, "width": 383, "height": 652 }, "selected": { "x": 442, "y": 256, "width": 375, "height": 632 } },
+      { "actor": "Leo", "asset": "seatedIdleBack", "report": { "x": 449, "y": 301, "width": 356, "height": 615 }, "selected": { "x": 459, "y": 271, "width": 348, "height": 689 } },
+      { "actor": "Leo", "asset": "seatedWorkingBack", "report": { "x": 449, "y": 301, "width": 389, "height": 615 }, "selected": { "x": 460, "y": 272, "width": 348, "height": 684 } },
+      { "actor": "Rita", "asset": "seatedIdleBack", "report": { "x": 436, "y": 334, "width": 428, "height": 664 }, "selected": { "x": 454, "y": 276, "width": 347, "height": 656 } },
+      { "actor": "Rita", "asset": "seatedWorkingBack", "report": { "x": 436, "y": 334, "width": 436, "height": 664 }, "selected": { "x": 457, "y": 279, "width": 340, "height": 652 } }
+    ],
+    "manualReviewStatusInconsistency": { "validationAfter": { "manualReviewedCount": 0, "overallStatus": "manual_review_required", "perAssetStatus": "not_assessed" }, "report": "claims all 42 passed identity/action, prohibited-content, and scene-composite review", "resolution": "not a metadata blocker; the validation JSON contains technical scan state while the report records separate visual review" },
+    "anchorWordingClarification": "The report says each seated-working asset can share the idle anchor; the findings and accepted validator yield distinct source anchors per seated file. Use one shared scene-side seatedBackAnchor per desk and each asset's distinct visualSeatedBaseCenterSource above."
+  }
+}

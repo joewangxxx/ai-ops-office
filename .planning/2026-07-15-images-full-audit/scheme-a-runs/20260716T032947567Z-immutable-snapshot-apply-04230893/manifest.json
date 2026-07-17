@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "targets": [
+    {
+      "path": "images/artifact/feature-green.png",
+      "sha256": "757f7e31965d3e47b02d2b95932ac2e7938fa625a93b6895dd87cf286ae9266d"
+    },
+    {
+      "path": "images/artifact/prd-blue.png",
+      "sha256": "2d8b596d70e4cc15774b4f2311f6d4ce35d90aafddd43c29cf853fe538e1ddac"
+    },
+    {
+      "path": "images/artifact/report-purple.png",
+      "sha256": "5482481e99df4a3be278da9e2d6d5f643872278f9518e5e325b369eede16a0b1"
+    },
+    {
+      "path": "images/avatars/Alice/at-desk.png",
+      "sha256": "60e7019298586c27c4073f9e92d3dc63188a31b724c478d78470e2afdbc7f053"
+    },
+    {
+      "path": "images/avatars/Alice/carry.png",
+      "sha256": "5c7c71f3d48893fdd7a2fec4e32d3a2191e191e750227d99a6f186dc8959b00b"
+    },
+    {
+      "path": "images/avatars/Alice/idle.png",
+      "sha256": "67abbe969025a4c9849523c8e0af2b03899843036fbb9f372d501295a578b2e5"
+    },
+    {
+      "path": "images/avatars/Alice/walk.png",
+      "sha256": "62cf54955f37d918071aa0e6219f9cd6fdb05b7d82b23a5baa9cf9e81c62ecc3"
+    },
+    {
+      "path": "images/avatars/Jack/at-desk.png",
+      "sha256": "04776869cf7384273dac36f8b9b9cca066f7cbe694776e94be4fd1a00978daba"
+    },
+    {
+      "path": "images/avatars/Jack/carry.png",
+      "sha256": "4d5b85f09cb28826e134455302f4d806eb2fbf4b7033dffa87c7c6db5186920e"
+    },
+    {
+      "path": "images/avatars/Jack/idle.png",
+      "sha256": "ebfd3d4ccf9d49d17793ce67a8fe01fbcf6a79556bfb4d25fb1143a981c7b5e3"
+    },
+    {
+      "path": "images/avatars/Jack/walk.png",
+      "sha256": "cfb5ce0ab821eae52436a6925b9f75e49bc566bc23a27240558e3b6cc0b7b476"
+    },
+    {
+      "path": "images/avatars/Kara/at-desk.png",
+      "sha256": "0878112f639669414c786b1145e4a0e3468dce298f45ee4e9f1bbbde5131bc3a"
+    },
+    {
+      "path": "images/avatars/Kara/carry.png",
+      "sha256": "57731021c56ba85e622978171868c89cf273b8d0b5c4604d4ad3b1fcde70b913"
+    },
+    {
+      "path": "images/avatars/Kara/idle.png",
+      "sha256": "2aeee00beb37bc380ef9ce82ce7f5d9cac844923f4e563f5f89c9853ee7786bd"
+    },
+    {
+      "path": "images/avatars/Kara/walk-down.png",
+      "sha256": "abbdb9198092c34e6e78242cd307e48bb40ed45165997a657bbff09239044d3e"
+    },
+    {
+      "path": "images/avatars/Kara/walk.png",
+      "sha256": "2ad2bf28666ee910da135c0fb97656c89ab5aae0568e389f5ccebeb91f0efbb5"
+    },
+    {
+      "path": "images/avatars/Leo/at-desk.png",
+      "sha256": "b53cf2108e74e4db36b5864f88b2d35d9522cd4a2c00300ec9483d796b4f8d4c"
+    },
+    {
+      "path": "images/avatars/Leo/carry.png",
+      "sha256": "b1d496d444bd74bf7cd4d6492d4d33266b46f50f8ff1cd58746967d7cc793425"
+    },
+    {
+      "path": "images/avatars/Leo/idle.png",
+      "sha256": "b4461fb48e51852222fd93966fa786b0b4c5842d572ca0fdbb2d656d21e53cf8"
+    },
+    {
+      "path": "images/avatars/Leo/walk.png",
+      "sha256": "98fd0b5ac23265e9a6f63faf9c66e77566175544bef0d5961731ad45b23b7e1b"
+    },
+    {
+      "path": "images/avatars/Quinn/at-desk.png",
+      "sha256": "46827f18e0f27c1be551326ad6cdf9b1a16fd42432f3a0bc07d1d976ec746a6b"
+    },
+    {
+      "path": "images/avatars/Quinn/carry.png",
+      "sha256": "0bf392b86325d26ca47a65c4c10844f0286b3b1051f89e6e4aa2db1bfadf88f8"
+    },
+    {
+      "path": "images/avatars/Quinn/idle.png",
+      "sha256": "832ac6c0e8cb7430245e0e2da4452f3b3e77540a18e72c4d4879643e37606302"
+    },
+    {
+      "path": "images/avatars/Quinn/walk.png",
+      "sha256": "d61af3af6040435de70158795a2dc7c66e5ed45348a2e4c69adc918f3140934c"
+    },
+    {
+      "path": "images/avatars/Rita/at-desk.png",
+      "sha256": "039b505aaafb9cb0b6f1520e839640d3447432de0410af1b68e20a2e345df4bf"
+    },
+    {
+      "path": "images/avatars/Rita/carry.png",
+      "sha256": "fa5d11770fcba5eeb1b8a726b4553d92a4ab894d9f05125c3c11c3085584a65f"
+    },
+    {
+      "path": "images/avatars/Rita/idle.png",
+      "sha256": "398457fefbafe89c6dcf66870cfac69745201e964ad9378e22b8afa84879c853"
+    },
+    {
+      "path": "images/avatars/Rita/walk.png",
+      "sha256": "67cec77f21d9c93cb1b78703a2f8e5bee8bd9a00881f059e5ececa3c30effca1"
+    },
+    {
+      "path": "images/furniture/artifact-hub-transparent.png",
+      "sha256": "a91614089b0e0380050103aa4bf9dd79ac2464e1711c16e491861f622a349fb7"
+    },
+    {
+      "path": "images/furniture/desk-chair-back.png",
+      "sha256": "9e48d08ac690fab0fc8c14e87a1b8c97d17daf3f0db461281787f04f740bab73"
+    },
+    {
+      "path": "images/furniture/desk-front.png",
+      "sha256": "b725e21fb22aa5a2b275d0a0f8e838c7a62393bf1b3df9550643e27d97030e4e"
+    },
+    {
+      "path": "images/furniture/desk-standard-transparent.png",
+      "sha256": "774f958a76f21a8afe6839e1e82a6bb8822b8316b1c07c82b4b41b9e4a08b8b0"
+    },
+    {
+      "path": "images/orb/orb_blue.png",
+      "sha256": "9941b650296f26678956749a30269ec0b0bb7d890c58b1fbacc234b9d04b8e2e"
+    },
+    {
+      "path": "images/orb/orb_gray.png",
+      "sha256": "000d0f4dd048e440e1a280e8e2591ee89fe6b9d910f62c6e8492b27656dafc7c"
+    },
+    {
+      "path": "images/orb/orb_yellow.png",
+      "sha256": "79ad5d1859b7920ffc7f3f9430f0b6b9fe7224080cb7a7c3de60496eec32b35f"
+    }
+  ]
+}
