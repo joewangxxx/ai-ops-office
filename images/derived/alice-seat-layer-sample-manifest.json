@@ -1,0 +1,62 @@
+{
+  "sampleOnly": true,
+  "layerOrder": [
+    "sceneBackground",
+    "deskBack",
+    "chair",
+    "avatar",
+    "deskForeground"
+  ],
+  "deskBack": {
+    "path": "images/derived/alice-desk-back-clean-sample.png",
+    "visualBottomCenterSource": {
+      "x": 630,
+      "y": 955
+    },
+    "recommendedRenderSize": {
+      "width": 210,
+      "height": 210
+    }
+  },
+  "deskForeground": {
+    "path": "images/derived/alice-desk-foreground-clean-sample.png",
+    "visualBottomCenterSource": {
+      "x": 630,
+      "y": 955
+    },
+    "recommendedRenderSize": {
+      "width": 210,
+      "height": 210
+    }
+  },
+  "chair": {
+    "path": "images/derived/alice-desk-chair-wide-sample.png",
+    "sceneAnchor": {
+      "x": 160,
+      "y": 584
+    },
+    "visualBottomCenterSource": {
+      "x": 620.0,
+      "y": 945
+    },
+    "recommendedRenderSize": {
+      "width": 260,
+      "height": 260
+    }
+  },
+  "avatar": {
+    "path": "images/avatars/Alice/seated-working-back.png",
+    "sceneAnchor": {
+      "x": 160,
+      "y": 564
+    },
+    "visualSeatedBaseCenterSource": {
+      "x": 627.5,
+      "y": 963
+    },
+    "recommendedRenderSize": {
+      "width": 150,
+      "height": 150
+    }
+  }
+}
