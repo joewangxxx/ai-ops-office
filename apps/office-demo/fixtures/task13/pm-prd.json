@@ -1,0 +1,25 @@
+{
+  "eventId": "task13-fixture-pm-prd",
+  "eventType": "artifact.submitted",
+  "schemaVersion": "1.0",
+  "occurredAt": "2026-07-22T12:00:00.000Z",
+  "correlationId": "task13-fixture-pm-prd",
+  "source": { "system": "fixture-placeholder", "actorId": "pm-alice" },
+  "payload": {
+    "artifact": {
+      "id": "task13-external-prd",
+      "category": "prd",
+      "title": "Task 13 External Search PRD",
+      "evidence": {
+        "kind": "prd",
+        "summary": "Defines the external search handoff.",
+        "priority": "P1",
+        "scope": ["External search"],
+        "userStories": [{ "id": "US-13", "statement": "An operator can search across projects." }],
+        "acceptanceCriteria": ["Relevant results are returned."]
+      }
+    },
+    "producerDeskId": "pm-alice",
+    "assigneeDeskId": "dev-jack"
+  }
+}

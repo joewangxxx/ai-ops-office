@@ -13,7 +13,7 @@ function artifactAnchor(artifact: OfficeSnapshot['artifacts'][string], motion: M
 }
 
 export function RuntimeArtifactSprite({ motion, snapshot }: { motion: MotionPresentation | null; snapshot: OfficeSnapshot }) {
-  return Object.values(snapshot.artifacts).map((artifact) => {
+  return Object.values(snapshot.artifacts).filter((artifact) => artifact.location !== 'desk').map((artifact) => {
     const asset = officeLayout.assetAnchors.artifacts[artifactAssetByCategory[artifact.category]];
     const placement = calculateScenePlacement({
       sceneAnchor: artifactAnchor(artifact, motion?.motionId === snapshot.activeMotion?.id && snapshot.activeMotion?.artifactId === artifact.id ? motion : null),
@@ -24,7 +24,7 @@ export function RuntimeArtifactSprite({ motion, snapshot }: { motion: MotionPres
     return <img
       alt=""
       aria-hidden="true"
-      className="office-sprite office-sprite--story-artifact"
+      className="office-sprite office-sprite--runtime-artifact"
       data-artifact-location={artifact.location}
       data-testid={`runtime-artifact-${artifact.id}`}
       draggable={false}

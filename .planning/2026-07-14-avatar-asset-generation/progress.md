@@ -24,4 +24,27 @@
 - Alice independent strict audit returned PASS 6/6; updated all Alice report rows to passed and recorded the seated-anchor integration note.
 - Validator/contact-sheet helper completed independent review with 12/12 tests passing; inspected current partial seated and movement sheets.
 - Jack generation agent produced 6/6 files before its response stream disconnected; began root-level independent technical and visual audit instead of trusting incomplete agent handoff.
-- Marked Phase A complete and began Phase B.
+- Independent Jack review passed 5/6 initial selections and rejected only carry-up because the folder was ambiguous at 180px.
+- Generated, keyed, promoted, and independently re-audited targeted Jack carry-up attempt 3; the folder is now clearly readable and Jack is accepted 6/6.
+- Marked Phase D complete and began parallel production of Bob, Kara, Leo, Quinn, and Rita (Phase E).
+- Generated and locally validated all six Quinn assets on attempt 1 each; started independent Quinn cross-review.
+- Independent Quinn cross-review passed all six assets without retry.
+- Bob completed 6/6; independent cross-review passed all six, with one targeted carry-up retry.
+- Kara completed 6/6; independent cross-review passed all six, with matte-only edge contraction on walk-down.
+- Leo completed 6/6; independent cross-review passed all six after targeted carry-folder retries.
+- Rita production began after Bob completed, keeping all writes isolated to Rita's character directories.
+- Re-ran the reusable validator test suite from its module directory; 12/12 tests pass.
+- Rita completed 6/6 after targeted seated-pose retries; all movement assets passed on attempt 1.
+- Marked Phase E complete with 42/42 final target assets present.
+- Generated the canonical seated and movement contact sheets plus final technical JSON; scan reports 42/42 automated pass and 0 missing/failures.
+- Began independent Rita review and final 42-cell contact-sheet audit (Phase F).
+- Independent Rita audit passed 6/6.
+- Final 42-cell auditor rejected only Leo walk-up and carry-up for fixed-180px scale drift despite technical pass.
+- Confirmed no prior Leo carry-up candidate had acceptable scale; used the third allowed targeted retry for carry-up and first targeted retry for walk-up.
+- Re-keyed the two corrected Leo assets and regenerated the complete validator JSON and both canonical contact sheets; technical scan remains 42/42 pass while visual re-audit runs.
+- Two independent reviewers passed the corrected Leo scale, identity, direction, folder semantics, foot anchors, and updated contact-sheet cells.
+- Marked Phase F complete and began the fresh completion-evidence gate (Phase G).
+- Fresh full validator run: 42 present, 42 technical pass, 0 missing, 0 failures.
+- Fresh validator unit test run: 12/12 pass.
+- Final report audit passed all 42 rows after the Leo scale correction; final scope audit confirmed 28/28 legacy reference hashes unchanged and no attributable product-code/layout edits.
+- Updated the formal report conclusion and marked Phase G complete.

@@ -12,6 +12,13 @@ describe('contextual Inspector and map selection', () => {
     expect(screen.getByText('Features In Progress')).toBeInTheDocument();
     expect(screen.getByText('Test Reports')).toBeInTheDocument();
     expect(screen.getAllByTestId('handoff-row')).toHaveLength(3);
+
+    fireEvent.click(screen.getByRole('button', { name: 'People Online' }));
+    expect(screen.getByText('Product Managers Online')).toBeInTheDocument();
+    expect(screen.getByText('Developers Online')).toBeInTheDocument();
+    expect(screen.getByText('QA Engineers Online')).toBeInTheDocument();
+    expect(screen.getByText('3 / 4')).toBeInTheDocument();
+    expect(screen.getAllByText('2 / 3')).toHaveLength(2);
   });
 
   it('switches all six selection kinds through accessible map and Inspector controls', () => {
@@ -19,7 +26,7 @@ describe('contextual Inspector and map selection', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Open Dev Office overview' }));
     expect(screen.getByRole('heading', { name: 'Dev Office Overview' })).toBeInTheDocument();
-    expect(screen.getByText('Developers Online 3 / 4')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Developers 3 / 4' })).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', { name: 'Open Alice detail' }));
     expect(screen.getByRole('heading', { name: 'Alice' })).toBeInTheDocument();
@@ -35,12 +42,14 @@ describe('contextual Inspector and map selection', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Open Artifact Hub overview' }));
     expect(screen.getByRole('heading', { name: 'Artifact Hub' })).toBeInTheDocument();
     expect(screen.getByText('Stored Artifacts Today')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'PRDs 1' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Features 2' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Reports 1' })).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', { name: 'Show Office Summary' }));
-    fireEvent.click(screen.getByRole('button', { name: 'Today' }));
     fireEvent.click(screen.getByRole('button', { name: 'PRDs Submitted' }));
-    fireEvent.click(screen.getByRole('button', { name: 'Login Requirement PRD v1.0' }));
-    expect(screen.getByRole('heading', { name: 'Login Requirement PRD v1.0' })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Account Security PRD v1.0' }));
+    expect(screen.getByRole('heading', { name: 'Account Security PRD v1.0' })).toBeInTheDocument();
     expect(screen.getByText('Submitted By')).toBeInTheDocument();
     expect(screen.queryByText(/^Type$/)).not.toBeInTheDocument();
     expect(screen.queryByText(/^Source$/)).not.toBeInTheDocument();

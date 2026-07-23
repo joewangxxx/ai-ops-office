@@ -1,14 +1,10 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { App } from '../src/app/App';
-import { applyOfficeEvent, createOfficeState, toOfficeSnapshot } from '../src/backend/officeDomain';
+import { applyBusinessEvent, createOfficeState, toOfficeSnapshot } from '../src/backend/officeDomain';
+import { submittedEvent } from './helpers/officeEventTestUtils';
 
-const completion = {
-  type: 'artifact.completed' as const,
-  artifact: { id: 'task8-integration-prd', category: 'prd' as const, title: 'Task 8 Integration PRD' },
-  producerDeskId: 'pm-alice',
-  assigneeDeskId: 'dev-jack',
-};
+const submission = submittedEvent({ id: 'task8-integration-prd', title: 'Task 8 Integration PRD' });
 
 const jsonResponse = (body: unknown, ok = true, status = 200) => ({ ok, status, json: async () => body }) as Response;
 
@@ -32,7 +28,7 @@ describe('Task 8 Inspector integration', () => {
   });
 
   it('does not interrupt an active motion while switching Inspector views', async () => {
-    const moving = toOfficeSnapshot(applyOfficeEvent(createOfficeState(), completion));
+    const moving = toOfficeSnapshot(applyBusinessEvent(createOfficeState(), submission));
     vi.stubGlobal('fetch', vi.fn(async () => jsonResponse(moving)));
     render(<App />);
 
@@ -43,11 +39,13 @@ describe('Task 8 Inspector integration', () => {
     expect(screen.getByTestId('moving-avatar-alice')).toBe(actor);
   });
 
-  it('connects Complete and Assign to the existing office event API', async () => {
+  it('connects Submit and Assign to the v1 business event API', async () => {
     const initial = toOfficeSnapshot(createOfficeState());
-    const accepted = toOfficeSnapshot(applyOfficeEvent(createOfficeState(), completion));
+    const accepted = toOfficeSnapshot(applyBusinessEvent(createOfficeState(), submission));
     const fetchMock = vi.fn(async (input: RequestInfo | URL, init?: RequestInit) => {
-      if (String(input) === '/api/office-events') return jsonResponse(accepted);
+      if (String(input) === '/api/business-events') return jsonResponse({
+        status: 'accepted', eventId: 'task8-integration', revision: accepted.revision, snapshot: accepted,
+      });
       return jsonResponse(initial);
     });
     vi.stubGlobal('fetch', fetchMock);
@@ -55,11 +53,15 @@ describe('Task 8 Inspector integration', () => {
 
     fireEvent.click(screen.getByRole('tab', { name: 'Event Console' }));
     fireEvent.change(screen.getByRole('textbox', { name: 'Artifact Title' }), { target: { value: 'Task 8 Integration PRD' } });
-    fireEvent.click(screen.getByRole('button', { name: 'Complete and Assign' }));
+    fireEvent.change(screen.getByRole('textbox', { name: 'Evidence Summary' }), { target: { value: 'Integration evidence.' } });
+    fireEvent.change(screen.getByRole('textbox', { name: 'Scope' }), { target: { value: 'Integration' } });
+    fireEvent.change(screen.getByRole('textbox', { name: 'User Stories' }), { target: { value: 'A user completes the flow.' } });
+    fireEvent.change(screen.getByRole('textbox', { name: 'Acceptance Criteria' }), { target: { value: 'The flow succeeds.' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Submit and Assign' }));
 
-    await waitFor(() => expect(fetchMock).toHaveBeenCalledWith('/api/office-events', expect.objectContaining({
+    await waitFor(() => expect(fetchMock).toHaveBeenCalledWith('/api/business-events', expect.objectContaining({
       method: 'POST',
-      body: expect.stringContaining('"type":"artifact.completed"'),
+      body: expect.stringContaining('"eventType":"artifact.submitted"'),
     })));
     expect(await screen.findByText('Business event received: Task 8 Integration PRD')).toBeInTheDocument();
   });

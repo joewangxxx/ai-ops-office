@@ -1,54 +1,67 @@
 import { describe, expect, it } from 'vitest';
 import { createOfficeApiStore } from '../src/backend/viteOfficeApi';
+import { submittedEvent } from './helpers/officeEventTestUtils';
 
-const validCompletion = {
-  type: 'artifact.completed',
-  artifact: { id: 'task8-api-prd', category: 'prd', title: 'Task 8 API PRD' },
-  producerDeskId: 'pm-alice',
-  assigneeDeskId: 'dev-jack',
-};
+const validSubmission = submittedEvent({
+  id: 'task8-api-prd',
+  title: 'Task 8 API PRD',
+  eventId: 'task8-api-submitted',
+});
 
 describe('Task 8 office API validation', () => {
-  it('accepts the standard artifact.completed payload', () => {
+  it('accepts the standard artifact.submitted envelope', () => {
     const api = createOfficeApiStore();
 
-    expect(api.handle('POST', '/api/office-events', validCompletion)).toMatchObject({
-      status: 200,
-      body: { artifacts: { 'task8-api-prd': { producerDeskId: 'pm-alice', assigneeDeskId: 'dev-jack' } } },
+    expect(api.handle('POST', '/api/business-events', validSubmission)).toMatchObject({
+      status: 202,
+      body: { snapshot: { artifacts: { 'task8-api-prd': { producerDeskId: 'pm-alice', assigneeDeskId: 'dev-jack' } } } },
     });
   });
 
   it.each([
-    [{ ...validCompletion, artifact: { ...validCompletion.artifact, title: '   ' } }, 400],
-    [{ ...validCompletion, artifact: { ...validCompletion.artifact, category: 'memo' } }, 400],
-    [{ ...validCompletion, producerDeskId: 'missing' }, 404],
-    [{ ...validCompletion, producerDeskId: 'pm-cindy' }, 409],
-    [{ ...validCompletion, producerDeskId: 'dev-jack', assigneeDeskId: 'qa-quinn' }, 409],
-  ] as const)('maps invalid completion %o to status %s', (event, status) => {
+    [{ ...validSubmission, payload: { ...validSubmission.payload, artifact: { ...validSubmission.payload.artifact, title: '   ' } } }, 400],
+    [{ ...validSubmission, payload: { ...validSubmission.payload, artifact: { ...validSubmission.payload.artifact, category: 'memo' } } }, 400],
+    [{ ...validSubmission, payload: { ...validSubmission.payload, producerDeskId: 'missing' } }, 404],
+    [{ ...validSubmission, payload: { ...validSubmission.payload, producerDeskId: 'pm-cindy' } }, 409],
+    [{ ...validSubmission, payload: { ...validSubmission.payload, producerDeskId: 'dev-jack', assigneeDeskId: 'qa-quinn' } }, 409],
+  ] as const)('maps invalid submission %o to status %s', (event, status) => {
     const api = createOfficeApiStore();
-    const result = api.handle('POST', '/api/office-events', event);
+    const result = api.handle('POST', '/api/business-events', event);
 
     expect(result.status).toBe(status);
     expect(result.body).toEqual({ error: expect.any(String) });
     expect(api.handle('GET', '/api/office-state').body).toMatchObject({ revision: 0, artifacts: {} });
   });
 
-  it('returns 409 for a duplicate Artifact ID', () => {
+  it('returns 409 when a different event reuses an Artifact ID', () => {
     const api = createOfficeApiStore();
-    expect(api.handle('POST', '/api/office-events', validCompletion).status).toBe(200);
+    expect(api.handle('POST', '/api/business-events', validSubmission).status).toBe(202);
+    const conflictingArtifact = {
+      ...validSubmission,
+      eventId: 'task8-api-other-event',
+      correlationId: 'task8-api-other-event',
+    };
 
-    expect(api.handle('POST', '/api/office-events', validCompletion)).toEqual({
+    expect(api.handle('POST', '/api/business-events', conflictingArtifact)).toEqual({
       status: 409,
       body: { error: 'Artifact already exists: task8-api-prd' },
     });
   });
 
-  it('keeps reset and internal motion confirmation available outside the Event Console', () => {
+  it('keeps reset and internal motion confirmation on their event-driven endpoints', () => {
     const api = createOfficeApiStore();
-    const completed = api.handle('POST', '/api/office-events', validCompletion);
-    const motionId = (completed.body as { activeMotion: { id: string } }).activeMotion.id;
+    const submitted = api.handle('POST', '/api/business-events', validSubmission);
+    const motionId = (submitted.body as { snapshot: { activeMotion: { id: string } } }).snapshot.activeMotion.id;
 
-    expect(api.handle('POST', '/api/office-events', { type: 'motion.completed', motionId }).status).toBe(200);
-    expect(api.handle('POST', '/api/office-reset')).toMatchObject({ status: 200, body: { revision: 0, activeMotion: null } });
+    expect(api.handle('POST', '/api/runtime-events', { type: 'motion.completed', motionId }).status).toBe(202);
+    expect(api.handle('POST', '/api/business-events', {
+      eventId: 'task8-api-reset',
+      eventType: 'projection.reset',
+      schemaVersion: '1.0',
+      occurredAt: '2026-07-22T06:02:00.000Z',
+      correlationId: 'task8-api-reset',
+      source: { system: 'task8-test' },
+      payload: { reason: 'manual-reset' },
+    })).toMatchObject({ status: 202, body: { snapshot: { epoch: 1, revision: 1, activeMotion: null } } });
   });
 });

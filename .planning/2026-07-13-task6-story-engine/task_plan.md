@@ -25,12 +25,12 @@ Status: completed
 - Extend layout data with Dev/QA routes and Feature anchors.
 
 ### Phase 3: Generic story engine and UI projection
-Status: in_progress
+Status: completed
 - Replace Alice/Jack-specific frame logic with pure generic Actors, Artifacts, signals, Orb states, and scenario projection.
 - Wire an animation-safe controller and scene renderer that keeps a paused waypoint fixed and supports reduced motion.
 
 ### Phase 4: Regression, browser acceptance, and report
-Status: pending
+Status: completed
 - Run the complete suite and build, verify pause/resume live, inspect console/page errors, and create all required desktop/mobile screenshots.
 
 ## Errors Encountered
@@ -40,3 +40,4 @@ Status: pending
 | Initial combined tool invocation was parsed as JavaScript instead of PowerShell | 1 | Used the execution wrapper correctly; no workspace files changed. |
 | Full `npm test` timed out after 64 seconds | 1 | Existing Task 5 test repeatedly clicked Next without advancing waypoint timers; replaced that obsolete synchronous loop with contract-level assertions. A fresh full suite then passed. |
 | First browser state-advance batch exceeded the 30-second command limit | 1 | The browser reached `dev-notified`; continue with smaller state batches and verify the state after each capture. |
+| Browser semantic focus and inline selector attempts failed during mobile capture | 1 | Used the browser tool's Base64 JavaScript-evaluation form only to activate the already-known Quinn detail button; mobile drawer capture then succeeded. |

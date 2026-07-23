@@ -10,6 +10,8 @@ export type RenderSize = {
   height: number;
 };
 
+export type SourceRect = ScenePoint & RenderSize;
+
 export type Scene = {
   assetKey: string;
   path: string;
@@ -24,15 +26,56 @@ export type AnchoredAsset = {
 
 export type FurnitureAsset = AnchoredAsset & {
   visualBottomCenterSource: ScenePoint;
+  sourceAlphaBounds?: SourceRect;
+  screenRectSource?: SourceRect;
+  decorationAvoidanceRectsSource?: Array<SourceRect & { id: string }>;
 };
 
 export type OrbAsset = AnchoredAsset & {
+  meaning: string;
+  sourceAlphaBounds: SourceRect;
   visualCenterSource: ScenePoint;
 };
 
 export type AvatarPoseAsset = {
   path: string;
+  sourceAlphaBounds: SourceRect;
   visualFootShadowCenterSource: ScenePoint;
+};
+
+export type AtDeskAvatarPoseAsset = AvatarPoseAsset & {
+  visualSeatCenterSource: ScenePoint;
+};
+
+export type SeatedAvatarPoseAsset = {
+  path: string;
+  sourceAlphaBounds: SourceRect;
+  visualSeatedBaseCenterSource: ScenePoint;
+};
+
+export type MovementAvatarPoseAsset = {
+  path: string;
+  sourceAlphaBounds: SourceRect;
+  visualFootShadowCenterSource: ScenePoint;
+};
+
+export type AvatarPoseName = 'idle' | 'atDesk' | 'walk' | 'carry';
+
+export type AvatarActorAssets = {
+  idle: AvatarPoseAsset;
+  atDesk: AtDeskAvatarPoseAsset;
+  walk: AvatarPoseAsset;
+  carry: AvatarPoseAsset;
+  seatedIdleBack: SeatedAvatarPoseAsset;
+  seatedWorkingBack: SeatedAvatarPoseAsset;
+  walkUp: MovementAvatarPoseAsset;
+  walkDown: MovementAvatarPoseAsset;
+  walkLeft: MovementAvatarPoseAsset;
+  walkRight: MovementAvatarPoseAsset;
+  carryUp: MovementAvatarPoseAsset;
+  carryDown: MovementAvatarPoseAsset;
+  carryLeft: MovementAvatarPoseAsset;
+  carryRight: MovementAvatarPoseAsset;
 };
 
 export type DeskDefinition = {
@@ -46,6 +89,9 @@ export type DeskDefinition = {
     nameTagColor: string;
   };
   avatarAnchor: ScenePoint;
+  seatAnchor: ScenePoint;
+  seatedBackAnchor: ScenePoint;
+  chairBackAnchor: ScenePoint;
   nameTagAnchor: ScenePoint;
   orbAnchor: ScenePoint;
   online: boolean;
@@ -59,22 +105,62 @@ export type WorkspaceDefinition = {
   notes: string;
 };
 
+export type HandoffRoute = {
+  deskId: string;
+  deskExit: ScenePoint;
+  staging: ScenePoint;
+  hubApproach: ScenePoint;
+  deskReturn: ScenePoint;
+};
+
+export type HandoffAnchors = {
+  policy: string;
+  routesByDesk: Record<string, { toHub: ScenePoint[]; fromHub: ScenePoint[] }>;
+  producerRoute: HandoffRoute;
+  consumerRoute: HandoffRoute;
+  devProducerRoute: HandoffRoute;
+  qaConsumerRoute: HandoffRoute;
+  hubDropPoint: ScenePoint;
+  hubPickupPoint: ScenePoint;
+  artifactAnchors: {
+    aliceDesk: ScenePoint;
+    jackDesk: ScenePoint;
+    quinnDesk: ScenePoint;
+  };
+  carriedArtifactOffsets: {
+    alice: ScenePoint;
+    jack: ScenePoint;
+    quinn: ScenePoint;
+  };
+  statusAnchors: {
+    jackReceiptBubble: ScenePoint;
+    jackCodingLabel: ScenePoint;
+    quinnReceiptBubble: ScenePoint;
+    quinnTestingLabel: ScenePoint;
+  };
+};
+
 export type OfficeLayout = {
   scene: Scene;
   assetAnchors: {
     sourceCanvas: RenderSize;
     furniture: {
-      deskStandard: FurnitureAsset;
+      deskBack: FurnitureAsset;
+      deskChairBack: FurnitureAsset;
+      deskForeground: FurnitureAsset;
       artifactHub: FurnitureAsset;
     };
-    orbs: {
-      gray: OrbAsset;
+    artifacts: {
+    prdBlue: FurnitureAsset;
+      featureGreen: FurnitureAsset;
+      reportPurple: FurnitureAsset;
     };
+    orbs: Record<'blue' | 'gray' | 'yellow', OrbAsset>;
     avatars: {
       recommendedRenderSize: RenderSize;
-      byActor: Record<string, {
-        atDesk: AvatarPoseAsset;
-      }>;
+      seatedRecommendedRenderSize: RenderSize;
+      movementRecommendedRenderSize: RenderSize;
+      byActor: Record<string, AvatarActorAssets>;
     };
   };
   workspaces: WorkspaceDefinition[];
@@ -82,7 +168,13 @@ export type OfficeLayout = {
   artifactHub: {
     id: string;
     hubAnchor: ScenePoint;
+    artifactSlots: Array<{
+      id: string;
+      assetKey: 'artifact.prdBlue' | 'artifact.featureGreen' | 'artifact.reportPurple';
+      anchor: ScenePoint;
+    }>;
   };
+  handoffAnchors: HandoffAnchors;
 };
 
 export const officeLayout = officeLayoutJson as OfficeLayout;

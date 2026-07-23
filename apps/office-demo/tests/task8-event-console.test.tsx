@@ -12,6 +12,7 @@ function renderConsole(overrides: Partial<React.ComponentProps<typeof EventConso
     onSubmit: vi.fn(async () => undefined),
     onReset: vi.fn(async () => undefined),
     suffixFactory: () => 'fixed-001',
+    metadataFactory: () => ({ eventId: 'task8-console-event', occurredAt: '2026-07-22T06:00:00.000Z' }),
     ...overrides,
   };
   render(<EventConsole {...props} />);
@@ -19,6 +20,13 @@ function renderConsole(overrides: Partial<React.ComponentProps<typeof EventConso
 }
 
 const optionLabels = (name: string) => within(screen.getByRole('combobox', { name })).getAllByRole('option').map((option) => option.textContent);
+
+function fillPrdEvidence() {
+  fireEvent.change(screen.getByRole('textbox', { name: 'Evidence Summary' }), { target: { value: 'Defines the login requirement.' } });
+  fireEvent.change(screen.getByRole('textbox', { name: 'Scope' }), { target: { value: 'Login' } });
+  fireEvent.change(screen.getByRole('textbox', { name: 'User Stories' }), { target: { value: 'A user can sign in.' } });
+  fireEvent.change(screen.getByRole('textbox', { name: 'Acceptance Criteria' }), { target: { value: 'Valid credentials succeed.' } });
+}
 
 describe('Task 8 Event Console', () => {
   it('filters online producers and assignees by the selected Artifact route', () => {
@@ -37,22 +45,31 @@ describe('Task 8 Event Console', () => {
     expect(optionLabels('Assignee')).toEqual(['Alice', 'Bob']);
   });
 
-  it('generates a stable read-only ID and submits the exact completed event', async () => {
+  it('generates a stable read-only ID and submits the exact v1 submitted event', async () => {
     const onSubmit = vi.fn(async () => undefined);
     renderConsole({ onSubmit });
 
     fireEvent.change(screen.getByRole('textbox', { name: 'Artifact Title' }), { target: { value: 'Login Requirement PRD v2.0' } });
+    fillPrdEvidence();
     expect(screen.getByRole('textbox', { name: 'Generated Artifact ID' })).toHaveValue('prd-login-requirement-prd-v2-0-fixed-001');
-    expect(screen.getByTestId('event-preview')).toHaveTextContent('"type": "artifact.completed"');
+    expect(screen.getByTestId('event-preview')).toHaveTextContent('"eventType": "artifact.submitted"');
+    expect(screen.getByTestId('event-preview')).toHaveTextContent('"schemaVersion": "1.0"');
     expect(screen.getByTestId('event-preview')).not.toHaveTextContent('motion.completed');
     expect(screen.getByTestId('event-preview')).not.toHaveTextContent('artifact.accepted');
 
-    fireEvent.click(screen.getByRole('button', { name: 'Complete and Assign' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Submit and Assign' }));
     await waitFor(() => expect(onSubmit).toHaveBeenCalledWith({
-      type: 'artifact.completed',
-      artifact: { id: 'prd-login-requirement-prd-v2-0-fixed-001', category: 'prd', title: 'Login Requirement PRD v2.0' },
-      producerDeskId: 'pm-alice',
-      assigneeDeskId: 'dev-jack',
+      eventId: 'task8-console-event',
+      eventType: 'artifact.submitted',
+      schemaVersion: '1.0',
+      occurredAt: '2026-07-22T06:00:00.000Z',
+      correlationId: 'task8-console-event',
+      source: { system: 'event-console', actorId: 'pm-alice' },
+      payload: {
+        artifact: { id: 'prd-login-requirement-prd-v2-0-fixed-001', category: 'prd', title: 'Login Requirement PRD v2.0', evidence: { kind: 'prd', summary: 'Defines the login requirement.', priority: 'P1', scope: ['Login'], userStories: [{ id: 'US-1', statement: 'A user can sign in.' }], acceptanceCriteria: ['Valid credentials succeed.'] } },
+        producerDeskId: 'pm-alice',
+        assigneeDeskId: 'dev-jack',
+      },
     }));
     expect(screen.getByText('Business event received: Login Requirement PRD v2.0')).toBeInTheDocument();
     expect(screen.getByRole('textbox', { name: 'Artifact Title' })).toHaveValue('');
@@ -63,7 +80,8 @@ describe('Task 8 Event Console', () => {
     const onSubmit = vi.fn(() => new Promise<void>((resolve) => { finish = resolve; }));
     renderConsole({ onSubmit });
     fireEvent.change(screen.getByRole('textbox', { name: 'Artifact Title' }), { target: { value: 'Double Click PRD' } });
-    const submit = screen.getByRole('button', { name: 'Complete and Assign' });
+    fillPrdEvidence();
+    const submit = screen.getByRole('button', { name: 'Submit and Assign' });
 
     fireEvent.click(submit);
     fireEvent.click(submit);
@@ -77,10 +95,11 @@ describe('Task 8 Event Console', () => {
     const onSubmit = vi.fn(async () => { throw new OfficeApiError(409, 'Artifact already exists: duplicate'); });
     renderConsole({ onSubmit });
     fireEvent.change(screen.getByRole('textbox', { name: 'Artifact Title' }), { target: { value: 'Duplicate PRD' } });
+    fillPrdEvidence();
     fireEvent.change(screen.getByRole('combobox', { name: 'Producer' }), { target: { value: 'pm-bob' } });
     fireEvent.change(screen.getByRole('combobox', { name: 'Assignee' }), { target: { value: 'dev-kara' } });
 
-    fireEvent.click(screen.getByRole('button', { name: 'Complete and Assign' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Submit and Assign' }));
 
     expect(await screen.findByRole('alert')).toHaveTextContent('Artifact already exists: duplicate');
     expect(screen.getByRole('textbox', { name: 'Artifact Title' })).toHaveValue('Duplicate PRD');

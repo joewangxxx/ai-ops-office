@@ -74,3 +74,46 @@ All findings here are project-state observations. No external web content is use
 - Partial sheets show Jack identity is stable: angular spiky black hair, vivid cobalt shirt, no glasses, black trousers.
 - Carry-up folder is present along Jack's right side in the raw alpha asset, although only a small tan edge remains visible at 180px; final semantic review must judge whether that is sufficiently clear.
 - Seated-idle is a rear three-quarter top-down seated pose with relaxed arm and no visible eye; one ear/side skin contour is visible but no frontal face.
+
+## Jack final acceptance
+- Independent strict review passed the initial seated-idle, seated-working, walk-up, walk-down, and carry-down assets on technical, identity/action, prohibited-content, and scene-composite criteria.
+- The original selected `carry-up.png` was rejected despite technical pass because the folder collapsed to a narrow tan strip at the 180px scene scale.
+- Targeted carry-up attempt 3 exposes a broad blank light-tan rectangular face with multiple visible edges and clear right-hand contact while preserving Jack's rear/up stride, hair, clothing, scale, and foot anchor.
+- Final Jack bboxes are seated-idle `(423,204)-(854,935)`, seated-working `(422,210)-(865,935)`, walk-up `(420,141)-(824,1089)`, walk-down `(413,166)-(832,1062)`, carry-up `(438,127)-(945,1045)`, and carry-down `(418,163)-(826,1056)`.
+- All six Jack finals are PNG/RGBA/1254x1254 with transparent corners, one connected foreground component, no visible green-dominant pixels, and automated technical status pass. Jack is accepted 6/6 and the full-flow calibration is stable.
+
+## Bob, Kara, and Leo acceptance
+- Independent cross-review passed Bob 6/6 and Kara 6/6. All 12 finals are PNG/RGBA/1254x1254, single-component, clear of canvas edges, and free of visible chroma residue or prohibited content.
+- Bob preserves broad fluffy black hair, rectangular glasses in front views, dark navy shirt with a pale vertical placket and no chest badge, and longer-limbed proportions. Carry-up attempt 1 was rejected for a one-pixel island and weak 180px folder readability; attempt 2 passes.
+- Kara preserves the violet rounded bob with flipped ends, purple top, petite proportions, and exactly one gold four-point left-chest emblem in front views only. Walk-down required `--edge-contract 1` to remove a stray low-alpha pixel without visual silhouette loss; this was matte cleanup, not a generation retry.
+- Independent review passed Leo 6/6. Leo preserves asymmetrical side-swept black hair, rectangular glasses in front views, a desaturated navy shirt, slim proportions, and exactly one small pale left-chest square in front views only.
+- Leo carry-up attempts 1–2 and carry-down attempt 1 were rejected because the folder read as fragmented or bag/shield-like; the per-character audit initially accepted carry-up attempt 3 and carry-down attempt 2 as single blank folders.
+- Bob, Kara, and Leo seated pairs each show a clear relaxed-versus-forward-arms action difference while retaining stable hair/torso scale; their movement assets pass the standardized office-shell foot-anchor composites.
+
+## Quinn final acceptance
+- Root visual review and independent cross-review both pass Quinn 6/6: stable rounded blocky black hair/rear tuft, oversized square glasses only in front views, royal-blue shirt, compact broad-headed proportions, and exactly one white left-chest square in front views.
+- All six Quinn assets were accepted on generation attempt 1 and pass automated PNG/alpha/component/green checks.
+- The seated pair has a clear relaxed-arms versus raised-forward-arms difference at the shared placement. Walk directions remain legible at 180px; carry-up and carry-down each show one blank light-tan file folder with a visible tab and unambiguous hand contact.
+
+## Rita production and final technical scan
+- Rita production completed 6/6. Seated-idle required attempt 2 after attempt 1 read as standing; seated-working required attempt 3 after two edits drifted vertically and reduced hair consistency.
+- Accepted seated sprites preserve loose warm-chestnut shoulder-length hair with flipped ends and no tie, ponytail, or bun. Accepted movement sprites preserve the long side-bang structure plus a narrow medium-high tie point and long curved rear ponytail, not Alice's round high bun.
+- Walk/carry directions are clear; carry-up and carry-down each contain a single blank light-tan folder with readable edges and hand contact at 180px.
+- Full validator scan reports 42/42 present, 42 automated technical pass, 0 missing, and 0 automated technical failures.
+- Canonical scene evidence was generated at `tmp/imagegen/validation/seated-contact-sheet.png` and `tmp/imagegen/validation/movement-contact-sheet.png`; root visual inspection finds no missing cell, label mismatch, direction error, or unclear final folder.
+- Manual semantic review remains documented in this report/findings rather than inferred by the technical JSON, whose `manual_review_required` status is intentional.
+
+## Final fixed-canvas scale correction
+- Cross-character review of the complete movement sheet found Leo `walk-up` and `carry-up` rendered only about 92.6px and 94.3px tall at the fixed 180px canvas, versus 112.0px and 118.1px for Leo's corresponding down assets.
+- Existing Leo carry-up attempts 1–3 were independently rechecked; all remained about 94px tall, so no earlier generated candidate could solve the scale failure.
+- Targeted walk-up retry 1 produced bbox `(447,167)-(811,1012)`, about 121.3px at fixed 180px. Targeted carry-up retry 3 (attempt 4 total) produced bbox `(441,161)-(903,1044)`, about 126.7px.
+- The updated assets remain PNG/RGBA/1254x1254, single-component, chroma-clean, rear/up, and identity-consistent.
+- Two independent reviewers passed the corrected assets. At 180px, walk-up is about 52.1×121.3px versus walk-down 53.0×111.8px; carry-up is about 66.3×126.6px versus carry-down 51.5×118.1px, with the extra width attributable to the visible folder rather than the character body.
+- The corrected up heights fall within the cross-character ranges on the final contact sheet; no further scale change is warranted.
+
+## Completion scope audit
+- Final filesystem audit confirms 42/42 target files, 42/42 automated technical pass, two decodable canonical contact sheets, one parseable technical JSON, and a 42-row report.
+- All 28 legacy `idle.png` / `at-desk.png` / `walk.png` / `carry.png` files match their `HEAD` blobs exactly; no reference was overwritten.
+- No new target filename is referenced by tracked frontend/layout code, and no avatar-task tool or agent wrote frontend, `office-layout.json`, coordinate, or event-system files.
+- The worktree contains unrelated story/frontend changes, including concurrent saves during the task; their diffs are story-playback work and contain no avatar-target references. They were preserved untouched.
+- Validator JSON intentionally reports `manual_review_required` because it does not write semantic judgments. Independent visual/action/composite passes for all 42 assets are recorded in this findings file and the formal report.

@@ -1,4 +1,4 @@
-import type { RenderSize, ScenePoint } from '../data/officeLayout';
+import type { RenderSize, ScenePoint, SourceRect } from '../data/officeLayout';
 
 type ScenePlacementInput = {
   sceneAnchor: ScenePoint;
@@ -47,5 +47,14 @@ export function sceneRectToRelativeStyle(rect: ScenePoint & RenderSize, sceneSiz
     left: `${(rect.x / sceneSize.width) * 100}%`,
     top: `${(rect.y / sceneSize.height) * 100}%`,
     width: `${(rect.width / sceneSize.width) * 100}%`,
+  };
+}
+
+export function sourceRectToAssetRelativeStyle(sourceRect: SourceRect, sourceCanvas: RenderSize) {
+  return {
+    height: `${(sourceRect.height / sourceCanvas.height) * 100}%`,
+    left: `${(sourceRect.x / sourceCanvas.width) * 100}%`,
+    top: `${(sourceRect.y / sourceCanvas.height) * 100}%`,
+    width: `${(sourceRect.width / sourceCanvas.width) * 100}%`,
   };
 }

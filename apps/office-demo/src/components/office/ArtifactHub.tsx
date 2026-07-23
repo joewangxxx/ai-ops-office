@@ -1,13 +1,14 @@
 import { officeLayout, toPublicAssetPath } from '../../data/officeLayout';
-import { hubArtifactCounts } from '../../data/demoScenario';
+import { hubArtifactCounts, type HubArtifactCount } from '../../data/demoScenario';
 import type { Selection } from '../../types/selection';
-import { calculateScenePlacement, toSceneRelativeStyle } from '../../utils/scenePlacement';
+import { calculateScenePlacement, sourceRectToAssetRelativeStyle, toSceneRelativeStyle } from '../../utils/scenePlacement';
 
 type ArtifactHubProps = {
   onSelect: (selection: Selection) => void;
+  counts?: readonly HubArtifactCount[];
 };
 
-export function ArtifactHub({ onSelect }: ArtifactHubProps) {
+export function ArtifactHub({ counts = hubArtifactCounts, onSelect }: ArtifactHubProps) {
   const asset = officeLayout.assetAnchors.furniture.artifactHub;
   const position = calculateScenePlacement({
     sceneAnchor: officeLayout.artifactHub.hubAnchor,
@@ -15,6 +16,7 @@ export function ArtifactHub({ onSelect }: ArtifactHubProps) {
     renderSize: asset.recommendedRenderSize,
     sourceCanvas: officeLayout.assetAnchors.sourceCanvas,
   });
+  const screenStyle = sourceRectToAssetRelativeStyle(asset.screenRectSource!, officeLayout.assetAnchors.sourceCanvas);
 
   return (
     <button
@@ -30,8 +32,13 @@ export function ArtifactHub({ onSelect }: ArtifactHubProps) {
       type="button"
     >
       <img alt="" aria-hidden="true" className="office-sprite__image" draggable={false} src={toPublicAssetPath(asset.path)} />
-      <div aria-hidden="true" className="artifact-hub__metrics">
-        {hubArtifactCounts.map(({ category, count, label }) => <span key={category}>{`${label.slice(0, -1)} ${count}`}</span>)}
+      <div aria-hidden="true" className="artifact-hub__metrics" data-count-column="2ch" data-testid="artifact-hub-screen" style={{ ...screenStyle, overflow: 'hidden' }}>
+        {counts.map(({ category, count, label }) => (
+          <span className="artifact-hub__metric" key={category}>
+            <span className="artifact-hub__metric-label">{label.slice(0, -1)}</span>
+            <strong className="artifact-hub__metric-count">{count}</strong>
+          </span>
+        ))}
       </div>
     </button>
   );

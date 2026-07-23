@@ -5,6 +5,13 @@ node_modules/
 # Build output
 dist/
 **/dist/
+**/dist-server/
+**/.data/
+
+# Local task and browser artifacts
+tmp/
+**/.playwright-cli/
+**/output/playwright/
 
 # Local environment and logs
 .env

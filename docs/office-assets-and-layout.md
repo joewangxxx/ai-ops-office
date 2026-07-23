@@ -1,15 +1,19 @@
 # AI OPS Office Demo — 素材资产清单与坐标布局
 
-本文件只定义素材、场景逻辑坐标和未来交接所需的锚点数据。它不创建 React 工程、不实现 UI 或动画，也不改动任何 `images/` 下的原始素材。
+本文件记录正式素材清单、场景逻辑坐标、运行时选图规则和交接锚点。运行时唯一资产注册表是 `docs/office-layout.json`；当前注册表包含 **109 条唯一 PNG 路径**，其中包含 7 名角色的 98 个 Avatar 姿势（每人 14 个）。本文只解释该数据合同，不改动任何 `images/` 原始素材。
 
 ## 场景坐标与锚点规则
 
 - 唯一场景坐标系是 `images/scene/office-shell.png` 的 **1672 × 941** 逻辑像素；原点 `(0, 0)` 位于左上角，`x` 向右、`y` 向下。
 - 场景底图是唯一不透明素材。其余家具、Artifact、Orb 与 Avatar 均是 **1254 × 1254** 的透明 PNG 画布，视觉内容没有贴在左上角。
 - **桌子 / Hub**：`deskAnchor` / `hubAnchor` 对齐图片的“可见内容底边中心”（包含椅子或阴影的最低可见像素）。
-- **Avatar**：`avatarAnchor` 对齐脚底或地面阴影的中心。每个角色每个姿势在 JSON 内记录各自源图脚点；渲染器以同一换算公式放置，不能写角色级或页面级 CSS 偏移。
-- **名字标签**：`nameTagAnchor` 是标签视觉中心，位于 Avatar 头顶上方；离线人员只显示该灰色标签。
-- **Orb**：`orbAnchor` 是 Orb 视觉中心，在 Avatar 右侧；它只表示 Agent 状态，名字颜色仅用于区分人员。蓝色表示 Agent 正在协助；灰色表示 Agent 可用且暂无 active session；黄色表示 Agent 已输出结果、等待人工确认。
+- **静态背向坐姿**：在线工位固定使用 `seatedWorkingBack`；离线工位不渲染 Avatar。`seatedIdleBack` 只保留在资产清单中，V1 运行时不选择。坐姿以自身的 `visualSeatedBaseCenterSource` 对齐工位 `seatedBackAnchor`，固定按 **150 × 150** 渲染。
+- **移动 Avatar**：业务姿势保持 `atDesk | walk | carry`。显示层按相邻路径点计算 `up | down | left | right`：`abs(dx) >= abs(dy)` 时选择水平轴，否则选择垂直轴；等幅对角线优先水平轴，重复点视为非法路线。随后映射到 `walkUp/walkDown/walkLeft/walkRight` 或 `carryUp/carryDown/carryLeft/carryRight`。移动姿势按 **180 × 180** 渲染，并用每张图自己的 `visualFootShadowCenterSource` 对齐角色场景脚点。
+- **兼容资产**：旧 `idle/atDesk/walk/carry` 及其锚点继续登记用于资产完整性，但移动运行时禁止选择通用 `walk/carry`，也禁止通过镜像生成左右方向。
+- **工位图层**：每个工位按 `desk-back → desk-chair-back → avatar → desk-foreground` 合成。显示器、键盘与桌面主体位于人物后；前景只保留不会穿过人物头部的桌腿与窄前沿。
+- **按需 DOM**：注册表只保存路径字符串，不导入或预解码 98 张 Avatar。页面只为当前被选中的坐姿或移动状态创建 `<img src>`；未选中的姿势不进入 DOM，因此不会因完成注册而一次加载全部大画布对象图。
+- **名字标签**：静态坐姿和移动 Avatar 共用同一规则。先由当前姿势的 `sourceAlphaBounds` 换算人物可见边界，再把标签底边中心放在可见头顶上方 10 个逻辑像素；静态工位如与显示器或键鼠关键区域碰撞，则进行最小水平避让。离线人员继续使用空工位 fallback 标签。
+- **Orb**：按当前 Avatar 与 Orb 各自的 `sourceAlphaBounds` 计算可见边缘，使 Orb 可见左边缘与 Avatar 可见右边缘保持目标 10 个逻辑像素（整数场景落点允许实际处于 8–12）。`orbAnchor` 仍表示 Orb 的 `visualCenterSource` 落点；蓝、灰、黄三种业务含义不变。
 - 通用放置公式（对所有透明素材一致）：`left = sceneX - sourceAnchorX × renderWidth / 1254`，`top = sceneY - sourceAnchorY × renderHeight / 1254`。渲染使用等比缩放与 `image-rendering: pixelated`。
 
 ## 素材资产清单
@@ -19,7 +23,9 @@
 | 素材 key | 相对路径 | 用途 | 源尺寸 | 透明 | 建议渲染尺寸 |
 |---|---|---|---:|---|---:|
 | `scene.officeShell` | `images/scene/office-shell.png` | 唯一场景底图 / 坐标基准 | 1672 × 941 | 否 | 1672 × 941 |
-| `furniture.deskStandard` | `images/furniture/desk-standard-transparent.png` | 十个工位桌椅 | 1254 × 1254 | 是 | 210 × 210 |
+| `furniture.deskBack` | `images/furniture/desk-back.png` | 显示器、键盘与桌面后层 | 1254 × 1254 | 是 | 210 × 210 |
+| `furniture.deskChairBack` | `images/furniture/desk-chair-back.png` | 放大的完整工位椅后层 | 1254 × 1254 | 是 | 260 × 260 |
+| `furniture.deskForeground` | `images/furniture/desk-foreground.png` | 不穿过人物头部的桌腿与窄前沿 | 1254 × 1254 | 是 | 210 × 210 |
 | `furniture.artifactHub` | `images/furniture/artifact-hub-transparent.png` | 中央 Artifact Hub | 1254 × 1254 | 是 | 300 × 300 |
 | `artifact.prdBlue` | `images/artifact/prd-blue.png` | PRD 类型 Artifact | 1254 × 1254 | 是 | 56 × 56 |
 | `artifact.featureGreen` | `images/artifact/feature-green.png` | Feature 类型 Artifact | 1254 × 1254 | 是 | 56 × 56 |
@@ -56,7 +62,56 @@
 | `avatar.rita.walk` | `images/avatars/Rita/walk.png` | Rita 行走 | 1254 × 1254 | 是 | 180 × 180 |
 | `avatar.rita.carry` | `images/avatars/Rita/carry.png` | Rita 携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
 
-`office-layout.json` 的 `assetAnchors` 保存了每张透明素材的 alpha 可见边界，以及家具、Hub、Orb 和 28 个 Avatar 姿势的源图锚点。这是所有姿势统一对齐的唯一来源。
+以下 42 条是 Scheme A 新接入的背向坐姿和上下方向移动资源；key 与 `office-layout.json` 完全一致。
+
+| 素材 key | 相对路径 | 用途 | 源尺寸 | 透明 | 建议渲染尺寸 |
+|---|---|---|---:|---|---:|
+| `avatar.alice.seatedIdleBack` | `images/avatars/Alice/seated-idle-back.png` | Alice 背向坐姿、无 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.alice.seatedWorkingBack` | `images/avatars/Alice/seated-working-back.png` | Alice 背向坐姿、有 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.alice.walkUp` | `images/avatars/Alice/walk-up.png` | Alice 向上移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.alice.walkDown` | `images/avatars/Alice/walk-down.png` | Alice 向下移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.alice.carryUp` | `images/avatars/Alice/carry-up.png` | Alice 向上携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.alice.carryDown` | `images/avatars/Alice/carry-down.png` | Alice 向下携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.bob.seatedIdleBack` | `images/avatars/Bob/seated-idle-back.png` | Bob 背向坐姿、无 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.bob.seatedWorkingBack` | `images/avatars/Bob/seated-working-back.png` | Bob 背向坐姿、有 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.bob.walkUp` | `images/avatars/Bob/walk-up.png` | Bob 向上移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.bob.walkDown` | `images/avatars/Bob/walk-down.png` | Bob 向下移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.bob.carryUp` | `images/avatars/Bob/carry-up.png` | Bob 向上携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.bob.carryDown` | `images/avatars/Bob/carry-down.png` | Bob 向下携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.jack.seatedIdleBack` | `images/avatars/Jack/seated-idle-back.png` | Jack 背向坐姿、无 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.jack.seatedWorkingBack` | `images/avatars/Jack/seated-working-back.png` | Jack 背向坐姿、有 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.jack.walkUp` | `images/avatars/Jack/walk-up.png` | Jack 向上移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.jack.walkDown` | `images/avatars/Jack/walk-down.png` | Jack 向下移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.jack.carryUp` | `images/avatars/Jack/carry-up.png` | Jack 向上携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.jack.carryDown` | `images/avatars/Jack/carry-down.png` | Jack 向下携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.kara.seatedIdleBack` | `images/avatars/Kara/seated-idle-back.png` | Kara 背向坐姿、无 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.kara.seatedWorkingBack` | `images/avatars/Kara/seated-working-back.png` | Kara 背向坐姿、有 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.kara.walkUp` | `images/avatars/Kara/walk-up.png` | Kara 向上移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.kara.walkDown` | `images/avatars/Kara/walk-down.png` | Kara 向下移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.kara.carryUp` | `images/avatars/Kara/carry-up.png` | Kara 向上携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.kara.carryDown` | `images/avatars/Kara/carry-down.png` | Kara 向下携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.leo.seatedIdleBack` | `images/avatars/Leo/seated-idle-back.png` | Leo 背向坐姿、无 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.leo.seatedWorkingBack` | `images/avatars/Leo/seated-working-back.png` | Leo 背向坐姿、有 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.leo.walkUp` | `images/avatars/Leo/walk-up.png` | Leo 向上移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.leo.walkDown` | `images/avatars/Leo/walk-down.png` | Leo 向下移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.leo.carryUp` | `images/avatars/Leo/carry-up.png` | Leo 向上携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.leo.carryDown` | `images/avatars/Leo/carry-down.png` | Leo 向下携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.quinn.seatedIdleBack` | `images/avatars/Quinn/seated-idle-back.png` | Quinn 背向坐姿、无 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.quinn.seatedWorkingBack` | `images/avatars/Quinn/seated-working-back.png` | Quinn 背向坐姿、有 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.quinn.walkUp` | `images/avatars/Quinn/walk-up.png` | Quinn 向上移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.quinn.walkDown` | `images/avatars/Quinn/walk-down.png` | Quinn 向下移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.quinn.carryUp` | `images/avatars/Quinn/carry-up.png` | Quinn 向上携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.quinn.carryDown` | `images/avatars/Quinn/carry-down.png` | Quinn 向下携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.rita.seatedIdleBack` | `images/avatars/Rita/seated-idle-back.png` | Rita 背向坐姿、无 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.rita.seatedWorkingBack` | `images/avatars/Rita/seated-working-back.png` | Rita 背向坐姿、有 Active Work | 1254 × 1254 | 是 | 150 × 150 |
+| `avatar.rita.walkUp` | `images/avatars/Rita/walk-up.png` | Rita 向上移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.rita.walkDown` | `images/avatars/Rita/walk-down.png` | Rita 向下移动 | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.rita.carryUp` | `images/avatars/Rita/carry-up.png` | Rita 向上携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+| `avatar.rita.carryDown` | `images/avatars/Rita/carry-down.png` | Rita 向下携带 Artifact | 1254 × 1254 | 是 | 180 × 180 |
+
+另有 28 条左右方向资源：每名角色各自登记 `walkLeft`、`walkRight`、`carryLeft`、`carryRight`，路径分别为角色目录下的 `walk-left.png`、`walk-right.png`、`carry-left.png`、`carry-right.png`。其独立 alpha bounds 与脚底锚点以 `.planning/2026-07-16-avatar-horizontal-generation/horizontal-validation.json` 的验收数据为准。
+
+`office-layout.json` 的 `assetAnchors` 保存了每张透明素材的 alpha 可见边界，以及家具、Hub、Orb 和 98 个 Avatar 姿势的源图锚点。这是所有姿势统一对齐的唯一来源。
 
 ## Workspace 区域边界
 
@@ -74,36 +129,24 @@
 
 所有值都是场景逻辑像素。离线人员的 Avatar 与 Orb 点仍然保留，便于未来上线时零改版切换；当前只渲染桌子与灰色名字标签。
 
-| Desk ID | 区域 | 人员 | 在线 | Desk 底边中心 | Avatar 脚点 | 名字标签点 | Orb 点 | 当前显示 |
-|---|---|---|---|---:|---:|---:|---:|---|
-| `pm-alice` | PM | Alice | 是 | `(160, 548)` | `(160, 465)` | `(160, 325)` | `(236, 401)` | 桌子、Avatar、彩色名签、Orb |
-| `pm-bob` | PM | Bob | 是 | `(350, 548)` | `(350, 465)` | `(350, 325)` | `(426, 401)` | 桌子、Avatar、彩色名签、Orb |
-| `pm-cindy` | PM | Cindy | 否 | `(540, 548)` | `(540, 465)` | `(540, 325)` | `(616, 401)` | 桌子、灰色名签 |
-| `dev-jack` | Dev | Jack | 是 | `(1175, 375)` | `(1175, 295)` | `(1175, 155)` | `(1251, 231)` | 桌子、Avatar、彩色名签、Orb |
-| `dev-kara` | Dev | Kara | 是 | `(1445, 375)` | `(1445, 295)` | `(1445, 155)` | `(1521, 231)` | 桌子、Avatar、彩色名签、Orb |
-| `dev-leo` | Dev | Leo | 是 | `(1175, 585)` | `(1175, 515)` | `(1175, 395)` | `(1251, 451)` | 桌子、Avatar、彩色名签、Orb |
-| `dev-mia` | Dev | Mia | 否 | `(1445, 585)` | `(1445, 515)` | `(1445, 395)` | `(1521, 451)` | 桌子、灰色名签 |
-| `qa-quinn` | QA | Quinn | 是 | `(550, 868)` | `(550, 840)` | `(550, 705)` | `(626, 776)` | 桌子、Avatar、彩色名签、Orb |
-| `qa-rita` | QA | Rita | 是 | `(920, 868)` | `(920, 840)` | `(920, 705)` | `(996, 776)` | 桌子、Avatar、彩色名签、Orb |
-| `qa-tina` | QA | Tina | 否 | `(1290, 868)` | `(1290, 840)` | `(1290, 705)` | `(1366, 776)` | 桌子、灰色名签 |
+| Desk ID | 区域 | 人员 | 在线 | Desk 底边中心 | 背向坐姿点 | Avatar 脚点 | 名字标签点 | Orb 点 | 当前显示 |
+|---|---|---|---|---:|---:|---:|---:|---:|---|
+| `pm-alice` | PM | Alice | 是 | `(160, 548)` | `(160, 564)` | `(160, 465)` | `(160, 325)` | `(236, 401)` | 桌子、Avatar、彩色名签、Orb |
+| `pm-bob` | PM | Bob | 是 | `(350, 548)` | `(350, 564)` | `(350, 465)` | `(350, 325)` | `(426, 401)` | 桌子、Avatar、彩色名签、Orb |
+| `pm-cindy` | PM | Cindy | 否 | `(540, 548)` | `(540, 564)` | `(540, 465)` | `(540, 325)` | `(616, 401)` | 桌子、灰色名签 |
+| `dev-jack` | Dev | Jack | 是 | `(1175, 375)` | `(1175, 391)` | `(1175, 295)` | `(1175, 155)` | `(1251, 231)` | 桌子、Avatar、彩色名签、Orb |
+| `dev-kara` | Dev | Kara | 是 | `(1445, 375)` | `(1445, 391)` | `(1445, 295)` | `(1445, 155)` | `(1521, 231)` | 桌子、Avatar、彩色名签、Orb |
+| `dev-leo` | Dev | Leo | 是 | `(1175, 585)` | `(1175, 601)` | `(1175, 515)` | `(1175, 395)` | `(1251, 451)` | 桌子、Avatar、彩色名签、Orb |
+| `dev-mia` | Dev | Mia | 否 | `(1445, 585)` | `(1445, 601)` | `(1445, 515)` | `(1445, 395)` | `(1521, 451)` | 桌子、灰色名签 |
+| `qa-quinn` | QA | Quinn | 是 | `(550, 868)` | `(550, 884)` | `(550, 840)` | `(550, 705)` | `(626, 776)` | 桌子、Avatar、彩色名签、Orb |
+| `qa-rita` | QA | Rita | 是 | `(920, 868)` | `(920, 884)` | `(920, 840)` | `(920, 705)` | `(996, 776)` | 桌子、Avatar、彩色名签、Orb |
+| `qa-tina` | QA | Tina | 否 | `(1290, 868)` | `(1290, 884)` | `(1290, 840)` | `(1290, 705)` | `(1366, 776)` | 桌子、灰色名签 |
 
-## Artifact Hub 与未来交接锚点
+## Artifact Hub 与交接锚点
 
-Artifact Hub 使用 `furniture.artifactHub`，视觉底边中心固定在 **`(850, 510)`**。未来可选 Artifact 放置槽为 PRD `(810, 458)`、Feature `(850, 458)`、Report `(890, 458)`；它们只是动态内容落点，不是底图常驻文字。
+Artifact Hub 使用 `furniture.artifactHub`，视觉底边中心固定在 **`(850, 510)`**。Artifact 放置槽为 PRD `(810, 458)`、Feature `(850, 458)`、Report `(890, 458)`；它们是动态内容落点，不是底图常驻文字。
 
-PM → Hub → Dev 的预留交接数据位于 JSON 的 `handoffAnchors.pmToHubToDev`：
-
-| 阶段 | 锚点 | 用途 |
-|---|---:|---|
-| PM 起点 | Alice 脚点 `(160, 465)` | 交接发起者起点；替换为其他 PM 时使用其 `avatarAnchor`。 |
-| PM 暂存点 | `(610, 560)` | 离开 PM 工位前的净空点。 |
-| Hub 西侧接近点 | `(745, 540)` | 接近 Hub 的第一公共区节点。 |
-| Hub 取放点 | `(850, 458)` | Artifact 在 Hub 台面上的统一 drop / pickup snap 点。 |
-| Hub 东侧接近点 | `(960, 540)` | 接收方离开 Hub 的公共区节点。 |
-| Dev 暂存点 | `(1080, 540)` | 进入 Dev 工作区前的净空点。 |
-| Dev 终点 | Jack 脚点 `(1175, 335)` | 交接接收者终点；替换为其他 Dev 时使用其 `avatarAnchor`。 |
-
-这些点只供未来运行时路径规划与动画取用；**不绘制永久交接路线**。运行时应根据角色、Artifact 类型和碰撞边界动态求路径，且在预留 Inspector/UI 区域出现时保持其净空。
+`handoffAnchors.routesByDesk` 为 7 个在线工位分别登记 `toHub` 与 `fromHub`。去程从该工位 `avatarAnchor` 起步并到达统一 Hub 交接点，返程是其严格逆序；所有相邻点均不同、位于场景边界内，整组路线覆盖上下左右四个方向。业务动作只携带路径与 `walk/carry`，具体方向图片由展示层逐段计算。
 
 ## 开发校对图
 

@@ -1907,19 +1907,19 @@
           0
         ],
         "alpha_bbox": [
-          443,
+          442,
           256,
-          816,
+          817,
           888
         ],
-        "nonzero_alpha_count": 184299,
-        "partial_alpha_count": 2549,
-        "visible_alpha_count": 183566,
+        "nonzero_alpha_count": 184291,
+        "partial_alpha_count": 2322,
+        "visible_alpha_count": 183470,
         "visible_alpha_bbox": [
-          443,
-          257,
+          442,
+          256,
           816,
-          888
+          887
         ],
         "visible_alpha_requirements": {
           "minimum_pixels": 3145,
@@ -3665,19 +3665,19 @@
           0
         ],
         "alpha_bbox": [
-          456,
+          457,
           279,
-          798,
-          930
+          797,
+          931
         ],
-        "nonzero_alpha_count": 173604,
-        "partial_alpha_count": 2875,
-        "visible_alpha_count": 172862,
+        "nonzero_alpha_count": 173927,
+        "partial_alpha_count": 2596,
+        "visible_alpha_count": 173304,
         "visible_alpha_bbox": [
-          456,
+          457,
           279,
-          798,
-          930
+          797,
+          931
         ],
         "visible_alpha_requirements": {
           "minimum_pixels": 3145,
@@ -4296,9 +4296,9 @@
         889
       ],
       "working_bbox": [
-        443,
+        442,
         256,
-        816,
+        817,
         888
       ],
       "bbox_center_delta": [
@@ -4306,7 +4306,7 @@
         0.5
       ],
       "bbox_size_delta": [
-        -3,
+        -1,
         -3
       ],
       "upper_hair_mask_overlap": {
@@ -4320,11 +4320,11 @@
           521
         ],
         "idle_pixels": 76343,
-        "working_pixels": 75216,
-        "intersection_pixels": 75208,
-        "union_pixels": 76351,
-        "iou": 0.98503,
-        "dice": 0.992458
+        "working_pixels": 75387,
+        "intersection_pixels": 75378,
+        "union_pixels": 76352,
+        "iou": 0.987243,
+        "dice": 0.993581
       },
       "manual_review": {
         "identity_consistency": {
@@ -4458,18 +4458,18 @@
         932
       ],
       "working_bbox": [
-        456,
+        457,
         279,
-        798,
-        930
+        797,
+        931
       ],
       "bbox_center_delta": [
         -0.5,
-        0.5
+        1.0
       ],
       "bbox_size_delta": [
-        -5,
-        -5
+        -7,
+        -4
       ],
       "upper_hair_mask_overlap": {
         "status": "proxy_only",
@@ -4482,11 +4482,11 @@
           552
         ],
         "idle_pixels": 74572,
-        "working_pixels": 73343,
-        "intersection_pixels": 73274,
-        "union_pixels": 74641,
-        "iou": 0.981686,
-        "dice": 0.990758
+        "working_pixels": 73129,
+        "intersection_pixels": 73072,
+        "union_pixels": 74629,
+        "iou": 0.979137,
+        "dice": 0.989458
       },
       "manual_review": {
         "identity_consistency": {

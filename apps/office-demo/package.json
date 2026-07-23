@@ -5,8 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "test": "vitest run"
+    "build": "tsc -b && vite build && vite build --config vite.server.config.ts",
+    "server": "node dist-server/main.js",
+    "fixture:pm": "node scripts/submit-external-fixture.mjs fixtures/task13/pm-prd.json",
+    "fixture:dev": "node scripts/submit-external-fixture.mjs fixtures/task13/dev-feature.json",
+    "fixture:qa": "node scripts/submit-external-fixture.mjs fixtures/task13/qa-report.json",
+    "test": "vitest run",
+    "verify:assets": "vitest run tests/asset-manifest.test.ts",
+    "verify": "npm test && npm run verify:assets && npm run build"
   },
   "dependencies": {
     "react": "^19.1.1",

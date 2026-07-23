@@ -86,12 +86,18 @@ const readPngIhdr = (relativePath: string) => {
 };
 
 describe('officeLayout asset manifest', () => {
-  test('registers exactly 81 image paths', () => {
-    expect(registeredPaths).toHaveLength(81);
+  test('registers exactly 109 image paths', () => {
+    expect(registeredPaths).toHaveLength(109);
   });
 
   test('registers no duplicate image paths', () => {
     expect(new Set(registeredPaths).size).toBe(registeredPaths.length);
+  });
+
+  test('registers no derived, sample, or actor-prefixed production furniture paths', () => {
+    expect(registeredPaths.filter((path) => path.includes('/derived/'))).toEqual([]);
+    expect(registeredPaths.filter((path) => path.toLowerCase().includes('sample'))).toEqual([]);
+    expect(registeredPaths.filter((path) => /^images\/furniture\/alice-/i.test(path))).toEqual([]);
   });
 
   test('resolves every registered path with exact filesystem case', () => {
@@ -130,6 +136,28 @@ describe('officeLayout asset manifest', () => {
           colorType: 6,
         });
       });
+  });
+
+  test('matches all 28 audited horizontal alpha bounds and foot anchors', () => {
+    const validation = JSON.parse(readFileSync(resolve(REPOSITORY_ROOT, '.planning/2026-07-16-avatar-horizontal-generation/horizontal-validation.json'), 'utf8')) as {
+      targets: { assets: Array<{ path: string; technical: { alpha_bbox: [number, number, number, number] }; foot_anchor: { source: [number, number] } }> };
+    };
+    const keyByFile = {
+      'walk-left.png': 'walkLeft',
+      'walk-right.png': 'walkRight',
+      'carry-left.png': 'carryLeft',
+      'carry-right.png': 'carryRight',
+    } as const;
+
+    expect(validation.targets.assets).toHaveLength(28);
+    for (const audited of validation.targets.assets) {
+      const [, , actorName, fileName] = audited.path.split('/');
+      const pose = keyByFile[fileName as keyof typeof keyByFile];
+      const asset = officeLayout.assetAnchors.avatars.byActor[actorName!][pose];
+      const [x, y, right, bottom] = audited.technical.alpha_bbox;
+      expect(asset.sourceAlphaBounds, audited.path).toEqual({ x, y, width: right - x, height: bottom - y });
+      expect(asset.visualFootShadowCenterSource, audited.path).toEqual({ x: audited.foot_anchor.source[0], y: audited.foot_anchor.source[1] });
+    }
   });
 });
 

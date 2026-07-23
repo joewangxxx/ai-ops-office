@@ -1,15 +1,15 @@
 # Frontend Avatar Mapping and Seated Anchor Calibration Design
 
 ## Goal
-Define a safe implementation plan and execution prompt that registers all 42 approved avatar assets and integrates/calibrates the seated idle/working pairs without redesigning the story engine.
+Define a safe implementation plan and execution prompt for the final 70-file per-character pose matrix across seven actors: the 42 existing new-model assets plus 28 independently generated horizontal assets, followed by a one-time runtime pose-model migration.
 
 ## Phase 1: Current frontend audit
-Status: in_progress
+Status: complete
 - Inspect current avatar asset types, layout data, desk anchors, layer order, render sizes, story pose mapping, and relevant tests.
 
 ## Phase 2: Integration design
-Status: pending
-- Define pose vocabulary, asset registry, seated anchor model, rendering rules, and scope boundaries.
+Status: in_progress
+- Define the full replacement pose vocabulary, directional movement rules, asset registry, seated/movement anchor model, rendering rules, migration boundary, and asset-repair gate.
 - Define calibration workflow and visual acceptance evidence.
 
 ## Phase 3: Execution plan and prompt
@@ -18,7 +18,8 @@ Status: pending
 
 ## Constraints
 - Do not regenerate or edit approved images.
-- Do not redesign the event/story engine in this task.
-- Register all 42 assets, but only seated idle/working require active rendering and anchor calibration now.
+- Do not edit images currently being repaired by the user.
+- The design must cover the story-engine changes required by directional walk/carry poses, but implementation waits for a separate approved execution plan.
+- Do not ship or accept a mixed legacy/new runtime pose model.
 - Preserve existing user changes and unrelated dirty-worktree files.
 

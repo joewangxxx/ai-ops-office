@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import type { OfficeEvent, OfficeMotion } from '../backend/officeDomain';
+import type { MotionCompletedSignal } from '../backend/businessEvents';
+import type { OfficeMotion } from '../backend/officeDomain';
 import { directionBetween, type MovementDirection } from '../utils/avatarPresentation';
 
 export type MotionPresentation = {
@@ -11,22 +12,24 @@ export type MotionPresentation = {
   transitionDurationMs: number;
 };
 
+const MOTION_CONFIRM_RETRY_MS = 500;
+
 export function useOfficeMotionRunner(
   motion: OfficeMotion | null,
-  postEvent: (event: OfficeEvent) => Promise<unknown>,
+  postRuntimeEvent: (event: MotionCompletedSignal) => Promise<unknown>,
   reducedMotion: boolean,
 ): MotionPresentation | null {
   const [progress, setProgress] = useState<{ motionId: string | null; waypointIndex: number }>({ motionId: null, waypointIndex: 0 });
   const completedMotionIds = useRef(new Set<string>());
-  const postEventRef = useRef(postEvent);
+  const postRuntimeEventRef = useRef(postRuntimeEvent);
   const motionId = motion?.id ?? null;
   const transitionDurationMs = motion?.transitionDurationMs ?? 0;
   const waypointCount = motion?.waypoints.length ?? 0;
   const waypointIndex = progress.motionId === motionId ? progress.waypointIndex : 0;
 
   useEffect(() => {
-    postEventRef.current = postEvent;
-  }, [postEvent]);
+    postRuntimeEventRef.current = postRuntimeEvent;
+  }, [postRuntimeEvent]);
 
   useEffect(() => {
     if (!motionId) {
@@ -41,13 +44,24 @@ export function useOfficeMotionRunner(
     const lastIndex = waypointCount - 1;
     if (lastIndex < 1) return undefined;
 
+    let retryTimer: number | undefined;
+    let cancelled = false;
+    const confirmMotion = () => {
+      if (completedMotionIds.current.has(motionId)) return;
+      void postRuntimeEventRef.current({ type: 'motion.completed', motionId })
+        .then(() => { completedMotionIds.current.add(motionId); })
+        .catch(() => {
+          if (!cancelled) retryTimer = window.setTimeout(confirmMotion, MOTION_CONFIRM_RETRY_MS);
+        });
+    };
+
     if (reducedMotion) {
-      setProgress({ motionId, waypointIndex: lastIndex });
-      if (!completedMotionIds.current.has(motionId)) {
-        completedMotionIds.current.add(motionId);
-        void postEventRef.current({ type: 'motion.completed', motionId }).catch(() => undefined);
+      if (waypointIndex < lastIndex) {
+        setProgress({ motionId, waypointIndex: lastIndex });
+        return undefined;
       }
-      return undefined;
+      confirmMotion();
+      return () => { cancelled = true; if (retryTimer !== undefined) window.clearTimeout(retryTimer); };
     }
 
     if (waypointIndex < lastIndex) {
@@ -59,11 +73,13 @@ export function useOfficeMotionRunner(
     }
 
     const timer = window.setTimeout(() => {
-      if (completedMotionIds.current.has(motionId)) return;
-      completedMotionIds.current.add(motionId);
-      void postEventRef.current({ type: 'motion.completed', motionId }).catch(() => undefined);
+      confirmMotion();
     }, transitionDurationMs);
-    return () => window.clearTimeout(timer);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+      if (retryTimer !== undefined) window.clearTimeout(retryTimer);
+    };
   }, [motionId, progress.motionId, reducedMotion, transitionDurationMs, waypointCount, waypointIndex]);
 
   return useMemo(() => {

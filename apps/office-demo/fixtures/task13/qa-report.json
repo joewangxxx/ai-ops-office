@@ -1,0 +1,26 @@
+{
+  "eventId": "task13-fixture-qa-report",
+  "eventType": "artifact.submitted",
+  "schemaVersion": "1.0",
+  "occurredAt": "2026-07-22T12:02:00.000Z",
+  "correlationId": "task13-fixture-qa-report",
+  "source": { "system": "fixture-placeholder", "actorId": "qa-quinn" },
+  "payload": {
+    "artifact": {
+      "id": "task13-external-report",
+      "category": "report",
+      "title": "Task 13 External Search Report",
+      "evidence": {
+        "kind": "report",
+        "summary": "Verifies the external search handoff.",
+        "result": "passed",
+        "testCases": { "total": 18, "passed": 18, "failed": 0 },
+        "coverage": 93,
+        "regression": "passed",
+        "bugs": []
+      }
+    },
+    "producerDeskId": "qa-quinn",
+    "assigneeDeskId": "pm-alice"
+  }
+}

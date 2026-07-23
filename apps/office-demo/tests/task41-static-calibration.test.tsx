@@ -9,13 +9,20 @@ type FutureLayout = {
     sourceCanvas: { width: number; height: number };
     furniture: {
       deskChairBack: { path: string };
-      deskFront: { path: string };
+      deskBack: { path: string };
+      deskForeground: { path: string };
       artifactHub: {
         screenRectSource: { x: number; y: number; width: number; height: number };
       };
     };
   };
-  desks: Array<{ id: string; online: boolean; seatAnchor: { x: number; y: number } }>;
+  desks: Array<{
+    id: string;
+    online: boolean;
+    seatAnchor: { x: number; y: number };
+    seatedBackAnchor: { x: number; y: number };
+    chairBackAnchor: { x: number; y: number };
+  }>;
 };
 
 const task41Layout = officeLayout as unknown as FutureLayout;
@@ -36,12 +43,15 @@ describe('Task 4.1 static map calibration', () => {
     });
   });
 
-  it('provides full-canvas desk layers, seat anchors, and a Hub screen rect in layout data', () => {
+  it('provides full-canvas desk layers, seated anchors, and a Hub screen rect in layout data', () => {
+    expect(task41Layout.assetAnchors.furniture.deskBack.path).toBe('images/furniture/desk-back.png');
     expect(task41Layout.assetAnchors.furniture.deskChairBack.path).toBe('images/furniture/desk-chair-back.png');
-    expect(task41Layout.assetAnchors.furniture.deskFront.path).toBe('images/furniture/desk-front.png');
+    expect(task41Layout.assetAnchors.furniture.deskForeground.path).toBe('images/furniture/desk-foreground.png');
     expect(task41Layout.assetAnchors.furniture.artifactHub.screenRectSource).toMatchObject({ x: 464, y: 342 });
     expect(task41Layout.desks).toHaveLength(10);
     expect(task41Layout.desks.every((desk) => Number.isFinite(desk.seatAnchor.x) && Number.isFinite(desk.seatAnchor.y))).toBe(true);
+    expect(task41Layout.desks.every((desk) => Number.isFinite(desk.seatedBackAnchor.x) && Number.isFinite(desk.seatedBackAnchor.y))).toBe(true);
+    expect(task41Layout.desks.every((desk) => Number.isFinite(desk.chairBackAnchor.x) && Number.isFinite(desk.chairBackAnchor.y))).toBe(true);
   });
 
   it('layers every online desk as chair, seated Avatar, and desk front while offline desks have no Avatar', () => {
@@ -49,7 +59,8 @@ describe('Task 4.1 static map calibration', () => {
 
     for (const desk of task41Layout.desks) {
       expect(screen.getByTestId(`desk-chair-${desk.id}`)).toBeInTheDocument();
-      expect(screen.getByTestId(`desk-front-${desk.id}`)).toBeInTheDocument();
+      expect(screen.getByTestId(`desk-back-${desk.id}`)).toBeInTheDocument();
+      expect(screen.getByTestId(`desk-foreground-${desk.id}`)).toBeInTheDocument();
       if (desk.online) {
         expect(screen.getByTestId(`avatar-${desk.id}`)).toBeInTheDocument();
       } else {
@@ -83,10 +94,10 @@ describe('Task 4.1 static map calibration', () => {
     expect(screen.getByText('Mia Offline')).toBeInTheDocument();
 
     const output = screen.getByRole('button', { name: 'Features In Progress 3' });
-    expect(screen.queryByRole('button', { name: 'Login Feature v1.0' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Account Security Feature v1.0' })).not.toBeInTheDocument();
     fireEvent.click(output);
-    fireEvent.click(screen.getByRole('button', { name: 'Login Feature v1.0' }));
-    expect(screen.getByRole('heading', { name: 'Login Feature v1.0' })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Account Security Feature v1.0' }));
+    expect(screen.getByRole('heading', { name: 'Account Security Feature v1.0' })).toBeInTheDocument();
   });
 
   it('describes report handoff storage at Artifact Hub', () => {
