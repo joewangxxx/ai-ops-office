@@ -1,0 +1,7 @@
+[
+  {
+    "keyHash": "41eb7e46e1d9df8e433bd36c6f0818cfcb74d4b4117de046c49fc27d8ec8810a",
+    "sourceSystem": "task16-browser",
+    "allowedEventTypes": ["artifact.submitted", "artifact.accepted"]
+  }
+]
